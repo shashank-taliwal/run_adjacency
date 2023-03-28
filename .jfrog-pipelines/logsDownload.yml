@@ -1,0 +1,13 @@
+pipelines:
+  - name: longLogsPipeline
+    steps:
+
+      - name: long_logs
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - wget https://norvig.com/big.txt
+            - cat big.txt  >> bigger_file.txt
+            - cat big.txt >> bigger_file.txt
+            - cat bigger_file.txt
