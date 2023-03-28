@@ -1,0 +1,25 @@
+pipelines:
+  - name: approval_gate_pipeline
+    steps:
+      - name: approval_gate_step1
+        type: Bash
+        configuration:
+          chronological: true
+          requiresApproval:
+            approvers:
+              - member
+        execution:
+          onStart:
+            - echo "test"
+          onExecute:
+            - printenv
+            
+      - name: approval_gate_step2
+        type: Bash
+        configuration:
+          chronological: true
+          inputSteps:
+            - name: approval_gate_step1
+        execution:
+          onExecute:
+            - printenv
