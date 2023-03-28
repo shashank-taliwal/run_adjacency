@@ -1,0 +1,21 @@
+pipelines:
+  - name: chronology_pipeline #make sure you have more than 1 node
+    configuration:
+      chronological: true
+    steps:
+      - name: chronological_step1
+        type: Bash
+        configuration:
+          environmentVariables:
+            BRANCH_NAME: ''
+        execution:
+          onStart:
+            - >-
+              if [ -z "$BRANCH_NAME" ]; then echo "pass in a branch name"; exit 1;
+              fi
+            - >-
+              export BRANCH_LOWERCASE_NAME=$(echo master | tr A-Z a-z | tr
+              "/" "-")
+            - echo $BRANCH_LOWERCASE_NAME
+          onExecute:
+            - printenv
