@@ -1,0 +1,22 @@
+pipelines:
+
+  - name: longRunNameAndRunDescriptionPipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          TEST_ENV: "pipelines"
+          JUST_FES: "options"
+          LOL_FOO: "test"
+    steps:
+      - name: runNameAndRunDescriptionStep
+        type: Bash
+        configuration:
+          environmentVariables:
+            key1: "value1"
+            key2: "value2"
+            key3: "value3"
+        execution:
+          onExecute:
+            - printenv
+            - set_run_name 'test_run_name_too_long_test_run_name_too_long_test_run_name_too_long_test_run_name_too_long_test_run_name_too_long_test_run_name_too_long'
+            - update_run_description 'test_run_description_too_long_test_run_description_too_long_test_run_description_too_long_test_run_description_too_long_test_run_description_too_long_test_run_description_too_long_test_run_description_too_long'
