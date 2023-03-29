@@ -20,7 +20,7 @@ pipelines:
           JUST_FES: "options"
           LOL_FOO: "test"
     steps:
-      - name: 1col_step1
+      - name: oneCol_step1
         type: Bash
         configuration:
           environmentVariables:
@@ -36,11 +36,11 @@ pipelines:
             - echo $key2
             - echo $key3
             
-      - name: 2col_step1
+      - name: twoCol_step1
         type: Bash
         configuration:
           inputSteps:
-            - name: 1col_step1
+            - name: oneCol_step1
         execution:
           onExecute:
             - printenv
@@ -48,11 +48,11 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
                        
-      - name: 2col_step2
+      - name: twoCol_step2
         type: Bash
         configuration:
           inputSteps:
-            - name: 1col_step1
+            - name: oneCol_step1
           outputResources:
             - name: res_output
         execution:
@@ -63,11 +63,11 @@ pipelines:
             - echo $LOL_FOO   
             - write_output res_output test=$commitSha runID=$current_runid
             
-      - name: 2col_step3
+      - name: twoCol_step3
         type: Bash
         configuration:
           inputSteps:
-            - name: 1col_step1
+            - name: oneCol_step1
         execution:
           onExecute:
             - printenv
@@ -75,11 +75,11 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
                         
-      - name: 2col_step4
+      - name: twoCol_step4
         type: Bash
         configuration:
           inputSteps:
-            - name: 1col_step1
+            - name: oneCol_step1
         execution:
           onExecute:
             - printenv
@@ -87,11 +87,11 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
                                     
-      - name: 2col_step5
+      - name: twoCol_step5
         type: Bash
         configuration:
           inputSteps:
-            - name: 1col_step1
+            - name: oneCol_step1
         execution:
           onExecute:
             - printenv
@@ -99,7 +99,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
                                          
-      - name: 3col_step1
+      - name: threeCol_step1
         type: Bash
         configuration:
           inputResources:
@@ -112,7 +112,7 @@ pipelines:
             - echo $LOL_FOO
             - sleep 30s
             
-      - name: 3col_step2
+      - name: threeCol_step2
         type: Bash
         configuration:
           inputResources:
@@ -125,7 +125,7 @@ pipelines:
             - echo $LOL_FOO
             - sleep 30s
                     
-      - name: 3col_step3
+      - name: threeCol_step3
         type: Bash
         configuration:
           inputResources:
@@ -138,87 +138,87 @@ pipelines:
             - echo $LOL_FOO 
             - sleep 30s
                                 
-      - name: 4col_step1
+      - name: fourCol_step1
         type: Bash
         configuration:
           inputResources:
             - name: connect_too_many_steps
           inoutSteps:
-            - name: 3col_step1
-            - name: 3col_step2
+            - name: threeCol_step1
+            - name: threeCol_step2
         execution:
           onExecute:
             - printenv
             
-      - name: 5col_step1
+      - name: fiveCol_step1
         type: Bash
         configuration:
           inputResources:
             - name: connect_too_many_steps
           inoutSteps:
-            - name: 4col_step1
+            - name: fourCol_step1
         execution:
           onExecute:
             - printenv
                         
-      - name: 6col_step1
+      - name: sixCol_step1
         type: Bash
         configuration:
           inputResources:
             - name: connect_too_many_steps
           inoutSteps:
-            - name: 5col_step1
+            - name: fiveCol_step1
         execution:
           onExecute:
             - printenv
                              
-      - name: 6col_step2
+      - name: sixCol_step2
         type: Bash
         configuration:
           inoutSteps:
-            - name: 5col_step1
+            - name: fiveCol_step1
         execution:
           onExecute:
             - printenv
             - sleep 30s
       
-      - name: 6col_step3
+      - name: sixCol_step3
         type: Bash
         configuration:
           inoutSteps:
-            - name: 5col_step1
+            - name: fiveCol_step1
         execution:
           onExecute:
             - printenv
             - sleep 30s
             
-      - name: 6col_step4
+      - name: sixCol_step4
         type: Bash
         configuration:
           inoutSteps:
-            - name: 5col_step1
+            - name: fiveCol_step1
         execution:
           onExecute:
             - printenv
             - sleep 30s
           
-      - name: 6col_step5
+      - name: sixCol_step5
         type: Bash
         configuration:
           inoutSteps:
-            - name: 5col_step1
+            - name: fiveCol_step1
         execution:
           onExecute:
             - printenv
             - sleep 30s
             
-      - name: 7col_step1
+      - name: sevenCol_step1
         type: Bash
         configuration:
           inputResources:
             - name: connect_too_many_steps
           inoutSteps:
-            - name: 6col_step1
+            - name: sixCol_step1
         execution:
           onExecute:
             - printenv 
