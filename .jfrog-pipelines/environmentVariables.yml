@@ -61,6 +61,45 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO   
             
+            
+  - name: environment_variable_override_pipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          TEST_ENV: "pipelines"
+          JUST_FES: "options"
+          LOL_FOO: "test"
+          ENV_TO_OVERRIDE: "inPipeline"
+    steps:
+      - name: environment_variable_step1
+        type: Bash
+        configuration:
+          environmentVariables:
+            key1: "value1"
+            key2: "value2"
+            key3: "value3"
+            ENV_TO_OVERRIDE: "inStepOverRiden"
+        execution:
+          onExecute:
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+            - echo $ENV_TO_OVERRIDE
+            - echo $key1
+            - echo $key2
+            - echo $key3
+            
+      - name: environment_variable_step2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: environment_variable_step1
+        execution:
+          onExecute:
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO   
+            
   - name: pipelineWithOutEnvironmentVariable
     steps:
             
