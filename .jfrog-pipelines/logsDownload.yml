@@ -15,10 +15,10 @@ resources:
       runID: 1
 
 pipelines:
-  - name: longLogsPipeline
+  - name: long_Logs_Pipeline
     steps:
 
-      - name: long_logs
+      - name: long_logs_step
         type: Bash
         execution:
           onExecute:
