@@ -1,5 +1,5 @@
 pipelines:
-  - name: approval_gate_pipeline
+  - name: approval_gate_member_chronology_pipeline
     steps:
       - name: approval_gate_step1
         type: Bash
@@ -20,6 +20,31 @@ pipelines:
           chronological: true
           inputSteps:
             - name: approval_gate_step1
+        execution:
+          onExecute:
+            - printenv
+            
+  - name: admin_approval_pipeline
+    steps:
+      - name: admin_approval_gate_step1
+        type: Bash
+        configuration:
+          chronological: true
+          requiresApproval:
+            approvers:
+              - admin
+        execution:
+          onStart:
+            - echo "test"
+          onExecute:
+            - printenv
+            
+      - name: admin_approval_gate_step2
+        type: Bash
+        configuration:
+          chronological: true
+          inputSteps:
+            - name: admin_approval_gate_step1
         execution:
           onExecute:
             - printenv
