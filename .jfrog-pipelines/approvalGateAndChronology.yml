@@ -7,7 +7,7 @@ pipelines:
           requiresApproval:
             approvers:
               - member
-          chronological: true
+#           chronological: true
         execution:
           onStart:
             - echo "test"
