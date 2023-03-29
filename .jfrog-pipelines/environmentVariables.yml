@@ -99,6 +99,7 @@ pipelines:
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO   
+            - echo $ENV_TO_OVERRIDE
             
   - name: pipelineWithOutEnvironmentVariable
     steps:
