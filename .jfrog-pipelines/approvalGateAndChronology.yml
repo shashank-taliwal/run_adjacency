@@ -29,7 +29,6 @@ pipelines:
       - name: admin_approval_gate_step1
         type: Bash
         configuration:
-          chronological: true
           requiresApproval:
             approvers:
               - admin
@@ -42,7 +41,6 @@ pipelines:
       - name: admin_approval_gate_step2
         type: Bash
         configuration:
-          chronological: true
           inputSteps:
             - name: admin_approval_gate_step1
         execution:
