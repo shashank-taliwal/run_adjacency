@@ -7,15 +7,9 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            BRANCH_NAME: ''
+            BRANCH_NAME: test
         execution:
           onStart:
-            - >-
-              if [ -z "$BRANCH_NAME" ]; then echo "pass in a branch name"; exit 1;
-              fi
-            - >-
-              export BRANCH_LOWERCASE_NAME=$(echo master | tr A-Z a-z | tr
-              "/" "-")
-            - echo $BRANCH_LOWERCASE_NAME
+            - echo $BRANCH_NAME
           onExecute:
             - printenv
