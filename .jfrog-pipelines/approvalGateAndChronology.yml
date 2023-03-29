@@ -4,10 +4,10 @@ pipelines:
       - name: approval_gate_step1
         type: Bash
         configuration:
-          chronological: true
           requiresApproval:
             approvers:
               - member
+          chronological: true
         execution:
           onStart:
             - echo "test"
