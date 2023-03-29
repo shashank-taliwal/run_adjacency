@@ -73,9 +73,9 @@ pipelines:
             - pip install --upgrade pip
             - hash -d pip
             - pip install pytest
-            - cd $res_resource_A_Pipeinfo_gitRepo_v1_resourcePath
+            - cd $res_A_Pipeinfo_gitRepo_v1_resourcePath
             - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
-            - save_tests $res_resource_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
+            - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
             - restore_run_files my_files tests/core/sampleExecutionFile/calc.py
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
             
@@ -83,7 +83,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: resource_A_Pipeinfo_gitRepo_v1
+            - name: A_Pipeinfo_gitRepo_v1
           integrations:
             - name: varsha_github
         execution:
