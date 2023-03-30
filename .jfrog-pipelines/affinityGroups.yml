@@ -163,8 +163,6 @@ pipelines:
           affinityGroup: stepag1
           inputResources:
             - name: pb1res
-          inputSteps:
-            - name: fourCol_step1ag
         execution:
           onExecute:
             - printenv
