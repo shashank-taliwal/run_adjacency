@@ -177,8 +177,6 @@ pipelines:
           affinityGroup: stepag1  
           inputResources:
             - name: pb1res
-          inputSteps:
-            - name: fiveCol_step1ag
         execution:
           onExecute:
             - printenv
@@ -188,7 +186,7 @@ pipelines:
         configuration:
           affinityGroup: stepag1 
           inputSteps:
-            - name: fiveCol_step1ag
+            - name: sixCol_step1ag
         execution:
           onExecute:
             - printenv
@@ -199,7 +197,7 @@ pipelines:
         configuration:
           affinityGroup: stepag1 
           inputSteps:
-            - name: fiveCol_step1ag
+            - name: sixCol_step1ag
         execution:
           onExecute:
             - printenv
@@ -210,7 +208,7 @@ pipelines:
         configuration:
           affinityGroup: stepag2
           inputSteps:
-            - name: fiveCol_step1ag
+            - name: sixCol_step1ag
         execution:
           onExecute:
             - printenv
@@ -221,7 +219,7 @@ pipelines:
         configuration:
           affinityGroup: stepag2
           inputSteps:
-            - name: fiveCol_step1ag
+            - name: sixCol_step1ag
         execution:
           onExecute:
             - printenv
