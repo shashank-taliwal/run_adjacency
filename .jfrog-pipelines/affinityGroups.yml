@@ -155,6 +155,8 @@ pipelines:
           onExecute:
             - printenv
             
+  - name: affinityGroupPipeline4
+    steps:          
       - name: fiveCol_step1ag
         type: Bash
         configuration:
