@@ -1,0 +1,238 @@
+resources:
+  - name: pb1res
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+      
+  - name: pb1outputRes
+    type: PropertyBag
+    configuration:
+      test: ''
+      
+pipelines:
+
+  - name: affinityGroupPipeline1
+    configuration:
+      affinityGroup: pipe1
+      environmentVariables:
+        readOnly: 
+          TEST_ENV: "pipelines"
+          JUST_FES: "options"
+          LOL_FOO: "test"
+    steps:
+      - name: oneCol_step1
+        type: Bash
+        configuration:
+          environmentVariables:
+            key1: "value1"
+            key2: "value2"
+            key3: "value3"
+        execution:
+          onExecute:
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+            - echo $key1
+            - echo $key2
+            - echo $key3
+            
+      - name: twoCol_step1
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: oneCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+                       
+      - name: twoCol_step2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: oneCol_step1
+          outputResources:
+            - name: res_output
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO   
+            - write_output res_output test=$commitSha runID=$current_runid
+            
+      - name: twoCol_step3
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: oneCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+                        
+      - name: twoCol_step4
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: oneCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+                                    
+      - name: twoCol_step5
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: oneCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+            
+  - name: affinityGroupPipeline2
+    configuration:
+      affinityGroup: pipe2 
+    steps:
+      - name: threeCol_step1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res_output
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+            - sleep 30s
+            
+      - name: threeCol_step2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res_output
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO
+            - sleep 30s
+                    
+      - name: threeCol_step3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res_output
+        execution:
+          onExecute:
+            - printenv
+            - echo $TEST_ENV
+            - echo $JUST_FES
+            - echo $LOL_FOO 
+            - sleep 30s
+                                
+      - name: fourCol_step1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: connect_too_many_steps
+          inputSteps:
+            - name: threeCol_step1
+            - name: threeCol_step2
+        execution:
+          onExecute:
+            - printenv
+            
+      - name: fiveCol_step1
+        type: Bash
+        configuration:
+          affinityGroup: stepag1     
+          inputResources:
+            - name: connect_too_many_steps
+          inputSteps:
+            - name: fourCol_step1
+        execution:
+          onExecute:
+            - printenv
+            
+  - name: affinityGroupPipeline3  
+    steps:
+      - name: sixCol_step1
+        type: Bash
+        configuration:
+          affinityGroup: stepag1  
+          inputResources:
+            - name: connect_too_many_steps
+          inputSteps:
+            - name: fiveCol_step1
+        execution:
+          onExecute:
+            - printenv
+                             
+      - name: sixCol_step2
+        type: Bash
+        configuration:
+          affinityGroup: stepag1 
+          inputSteps:
+            - name: fiveCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - sleep 30s
+      
+      - name: sixCol_step3
+        type: Bash
+        configuration:
+          affinityGroup: stepag1 
+          inputSteps:
+            - name: fiveCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - sleep 30s
+            
+      - name: sixCol_step4
+        type: Bash
+        configuration:
+          affinityGroup: stepag2
+          inputSteps:
+            - name: fiveCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - sleep 30s
+          
+      - name: sixCol_step5
+        type: Bash
+        configuration:
+          affinityGroup: stepag2
+          inputSteps:
+            - name: fiveCol_step1
+        execution:
+          onExecute:
+            - printenv
+            - sleep 30s
+            
+      - name: sevenCol_step1
+        type: Bash
+        configuration:
+          affinityGroup: stepag2
+          inputResources:
+            - name: connect_too_many_steps
+          inputSteps:
+            - name: sixCol_step1
+        execution:
+          onExecute:
+            - printenv 
