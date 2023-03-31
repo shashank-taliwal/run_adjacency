@@ -1,0 +1,137 @@
+pipelines:
+  - name: MatrixStepNodePool_PipelineRutime
+    configuration:
+      runtime:
+        type: image
+        image:
+          auto:
+            language: node
+            versions:
+              - '16'
+    steps:
+      - name: matrixStepWithRuntimeInPipelineAndNodePoolsInSteplet
+        type: Matrix
+        configuration:
+          multiNode: true
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+          nodePools:
+            - win_2019
+            - u18dynamic
+            - testu18
+        execution:
+          onExecute:
+            - echo Im executing
+          onSuccess:
+            - echo 'i am onsuccess'
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
+            
+  - name: simpleMultiEnvsMatrix
+    steps:
+      - name: trigger_mat
+        type: Matrix
+        stepletMultipliers:
+          environmentVariables:
+            - steplet: value
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+              type3: step3
+            - keytest1: valuetest1
+              keytest2: valuetest2
+              keytest3: valuetest3
+              keytest4: valuetest4
+        execution:
+          onExecute:
+            - echo Im executing
+          onSuccess:
+            - echo 'i am onsuccess'
+            - write_output triggerMatrixRuntime trigger=$run_id
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
+        
+  - name: matrixStepMultiNodeWithHostAsRuntime
+    steps:
+      - name: matrix_1io
+        type: Matrix
+        configuration:
+          multiNode: true
+          runtime:
+            type: host
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+            - test1: env1
+            - test2: env2
+          
+        execution:
+          onExecute:
+            - echo Im executing
+          onSuccess:
+            - echo 'i am onsuccess'
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
+
+  - name: matrixStepMultiNodeMultiNodePoolsWithEnvs
+    steps:
+      - name: matrix_nodepool_and_env
+        type: Matrix
+        configuration:
+          multiNode: true
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+            - test1: env1
+            - test2: env2
+          nodePools:
+            - win_2019
+            - u18dynamic
+            - testu18
+        execution:
+          onExecute:
+            - echo Im executing
+          onSuccess:
+            - echo 'i am onsuccess'
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
+
+  - name: matrixStepMultiNodeMultiNodePoolsWithEnvsHostAsRuntime
+    steps:
+      - name: matrix_nodepool_and_env
+        type: Matrix
+        configuration:
+          multiNode: true
+          runtime:
+            type: host
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+            - test1: env1
+            - test2: env2
+          nodePools:
+            - win_2019
+            - u18dynamic
+            - testu18
+        execution:
+          onExecute:
+            - echo Im executing
+          onSuccess:
+            - echo 'i am onsuccess'
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
