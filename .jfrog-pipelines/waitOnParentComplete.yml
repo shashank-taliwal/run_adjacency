@@ -13,7 +13,7 @@ resources:
         include: main
 
 pipelines:
-  - name: A_parent
+  - name: A_waitOnParentComplete_parentPipeline
     steps:  
       - name: createImage
         type: Bash
@@ -27,7 +27,7 @@ pipelines:
             - write_output WONParentComplete_resource test=${run_number}
             - tdcdadad
 
-  - name: A_waitOnParent
+  - name: A_waitOnParentComplete_childPipeline
     configuration:
       dependencyMode:
         waitOnParentComplete: true
