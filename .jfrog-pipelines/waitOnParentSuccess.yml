@@ -1,0 +1,70 @@
+resources:
+  - name: WONParentSucess_resource
+    type: PropertyBag
+    configuration:
+      test: test
+
+  - name: dependencyModeRepoSimpleMain
+    type: GitRepo
+    configuration:
+      gitProvider: varsha_github
+      path: Varsha-Arun/simple
+      branches:
+        include: main
+
+pipelines:
+  - name: A_parentSuccess
+    steps:  
+      - name: parentStepForSuccess
+        type: Bash
+        configuration:
+          inputResources:
+            - name: dependencyModeRepoSimpleMain
+          outputResources:
+            - name: WONParentSucess_resource
+        execution:
+          onExecute:
+            - write_output WONParentSucess_resource test=${run_number}
+
+  - name: A_childWaitingForParentSuccess
+    configuration:
+      dependencyMode:
+        waitOnParentSuccess: true
+    steps:  
+      - name: A_waitOnParentSuccess
+        type: Bash
+        configuration:
+          inputResources:
+            - name: WONParentSucess_resource
+        execution:
+          onExecute:
+            - echo ${res_WONParentSucess_resource_test}
+            
+            
+  - name: B_parentSuccess_failCase
+    steps:  
+      - name: B_parentStepForFailure
+        type: Bash
+        configuration:
+          inputResources:
+            - name: dependencyModeRepoSimpleMain
+          outputResources:
+            - name: WONParentSucess_resource
+        execution:
+          onExecute:
+            - write_output WONParentSucess_resource test=${run_number}
+            - testsssDADA
+
+  - name: B_childWaitingForParentSuccess_failCase
+    configuration:
+      dependencyMode:
+        waitOnParentSuccess: true
+    steps:  
+      - name: B_waitOnParentNeverTriggered
+        type: Bash
+        configuration:
+          inputResources:
+            - name: WONParentSucess_resource
+        execution:
+          onExecute:
+            - echo ${res_WONParentSucess_resource_test}
