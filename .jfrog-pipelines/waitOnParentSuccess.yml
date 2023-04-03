@@ -13,9 +13,9 @@ resources:
         include: main
 
 pipelines:
-  - name: A_parentSuccess
+  - name: A_waitOnParentSuccess_parentPipeline
     steps:  
-      - name: parentStepForSuccess
+      - name: A_parentStepForSuccess
         type: Bash
         configuration:
           inputResources:
@@ -26,7 +26,7 @@ pipelines:
           onExecute:
             - write_output WONParentSucess_resource test=${run_number}
 
-  - name: A_childWaitingForParentSuccess
+  - name: A_waitOnParentSuccess_childPipeline
     configuration:
       dependencyMode:
         waitOnParentSuccess: true
@@ -41,7 +41,7 @@ pipelines:
             - echo ${res_WONParentSucess_resource_test}
             
             
-  - name: B_parentSuccess_failCase
+  - name: B_waitOnParentSuccess_parentPipeline_failCase
     steps:  
       - name: B_parentStepForFailure
         type: Bash
@@ -55,7 +55,7 @@ pipelines:
             - write_output WONParentSucess_resource test=${run_number}
             - testsssDADA
 
-  - name: B_childWaitingForParentSuccess_failCase
+  - name: B_waitOnParentSuccess_childPipeline_failCase
     configuration:
       dependencyMode:
         waitOnParentSuccess: true
