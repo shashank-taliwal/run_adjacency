@@ -7,7 +7,9 @@ resources:
 pipelines:
 
   - name: waitOnChildComplete_parentPipeline
-    
+    configuration:
+      dependencyMode:
+        waitOnChildComplete: true
     steps:
       - name: P_WF_step1WOCC
         type: Bash
@@ -21,9 +23,7 @@ pipelines:
             - write_output propertyBagWOCC test=$run_number
 
   - name: waitOnChildComplete_childPipeline
-    configuration:
-      dependencyMode:
-        waitOnChildComplete: true
+    
     steps:
       - name: P_WF_step2WOCC
         type: Bash
