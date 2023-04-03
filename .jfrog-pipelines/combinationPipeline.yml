@@ -1,0 +1,95 @@
+pipelines:
+  - name: combinationWorkflowPipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          MY_MESSAGE: '"Hello World!"'
+    steps:
+      - name: stepCombA
+        type: Bash
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"      
+      - name: stepCombB
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombA
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombC
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombB
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombD
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombB
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombE
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombD
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombF
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombD
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombG
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombF
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombH
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombG
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombI
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombG
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+      - name: stepCombJ
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombH
+            - name: stepCombI
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
