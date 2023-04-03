@@ -15,8 +15,8 @@ pipelines:
       - name: stepCombB
         type: Bash
         configuration:
-          dependencyMode:
-            waitOnChildComplete: true
+#           dependencyMode:
+#             waitOnChildComplete: true
           inputSteps:
             - name: stepCombA
           affinityGroup: nodeBC
@@ -37,8 +37,8 @@ pipelines:
       - name: stepCombD
         type: Bash
         configuration:
-          dependencyMode:
-            waitOnParentComplete: true
+#           dependencyMode:
+#             waitOnParentComplete: true
           affinityGroup: nodeDE
           inputSteps:
             - name: stepCombB
@@ -100,8 +100,8 @@ pipelines:
       - name: stepCombJ
         type: Bash
         configuration:
-          dependencyMode:
-            waitOnParentSuccess: true
+#           dependencyMode:
+#             waitOnParentSuccess: true
           inputSteps:
             - name: stepCombH
             - name: stepCombI
