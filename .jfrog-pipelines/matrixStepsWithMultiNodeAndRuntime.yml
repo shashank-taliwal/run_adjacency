@@ -81,7 +81,7 @@ pipelines:
           onComplete:
             - echo 'i am oncomplete'
             
-  - name: Trigger_Matrix_Tests
+  - name: Trigger_Matrix_Test
     steps:
       - name: trigger
         type: Bash
@@ -99,7 +99,7 @@ pipelines:
           onComplete:
             - echo 'i am oncomplete'
         
-  - name: Matrix_Step_Type_Host
+  - name: Matrix_Step_Type_Host_multiNode
     steps:
       - name: matrix_1
         type: Matrix
