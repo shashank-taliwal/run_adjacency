@@ -1,0 +1,119 @@
+resources:
+  - name: my_jenkins_pb
+    type: PropertyBag
+    configuration:
+      passing: 0
+      failing: 0
+
+  - name: sample_script_repo
+    type: GitRepo
+    configuration:
+      gitProvider: varsha_github
+      path: Varsha-Arun/sample-script
+      branches:
+        include: master
+
+pipelines:
+  - name: jenkins_varsha
+#     configuration:
+#       nodePool: u18dynamic
+    steps:
+#     - name: var_bash_step
+#       type: Bash
+# #       configuration:
+# #         outputResources:
+# #           - name: my_jenkins_pb  # optional
+#       execution:
+#         onExecute:
+#           - echo "hello"
+          
+     
+#     - name: jfrog_jenkins_freestyle
+#       type: Jenkins
+#       configuration:
+#         jenkinsJobName: var_freestyle_proj
+#         integrations:
+#           - name: jenkins
+#         inputSteps:
+#           - name: var_bash_step
+# #         inputResources:
+# #           - name: my_jenkins_pb
+    
+#     - name: jfrog_multibranch_freestyle
+#       type: Jenkins
+#       configuration:
+#         jenkinsJobName: jfrog_multibranch_freestyle
+#         jenkinsBranchName: jenkin1
+#         integrations:
+#           - name: jenkins
+#         inputResources:
+#           - name: my_jenkins_pb  
+#         buildParameters:
+# #           run1: 'test1frombash'
+#           runNumber: '${run_number}'
+#           imageName: 'shippabledocker/jreq'
+#           imageTag: 'master'
+# #           ${pipelines_name}: 'mypipelines'
+          
+    - name: jfrog_jenkins_pipelines
+      type: Jenkins
+      configuration:
+#         priority: 2
+        jenkinsJobName: testPipeline
+        integrations:
+          - name: S_B_Jenkins
+#         inputSteps:
+#           - name: var_bash_step 
+#         inputResources:
+#           - name: my_jenkins_pb
+          
+#     - name: jfrog_jenkins_pipelinestest
+#       type: Jenkins
+#       configuration:
+# #         priority: 1
+#         jenkinsJobName: var_pipelines_item
+#         integrations:
+#           - name: S_B_Jenkins
+#         inputSteps:
+#           - name: var_bash_step 
+    
+#     - name: jfrog_jenkins_noJobInJenkins
+#       type: Jenkins
+#       configuration:
+#         jenkinsJobName: test
+#         integrations:
+#           - name: jenkins
+#         inputSteps:
+#           - name: jfrog_jenkins_freestyle 
+
+#     - name: jfrog_jenkins_output     
+#       type: Jenkins
+#       configuration:
+#         jenkinsJobName: var_output_job    # Jenkins job/pipeline name
+# #           jenkinsBranchName: master # optional. For jenkins multibranch
+# #         priority: 10000
+# #         timeoutSeconds: 1
+#         buildParameters:
+#           run1: 'test1frombash'
+#           run2: '${run_number}'
+#           stepName: '${step_name}'
+#           ${pipelines_name}: 'mypipelines'
+#         integrations:
+#           - name: jenkins   # required Jenkins integration
+# #         inputSteps:
+# #           - name: jfrog_jenkins_freestyle           # optional
+#         inputResources:
+#           - name: sample_script_repo        # optional
+#         outputResources:
+#           - name: my_jenkins_pb  # optional
+
+#     - name: var_bash_jenkins_output
+#       type: Bash
+#       configuration:
+# #         inputSteps:
+# #           - name: jfrog_jenkins_freestyle
+#         inputResources:
+#           - name: my_jenkins_pb
+#       execution:
+#         onExecute:
+#           - printenv
