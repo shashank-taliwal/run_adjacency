@@ -12,8 +12,6 @@ pipelines:
       - name: P_WF_step1WOCC
         type: Bash
         configuration:
-          inputresources:
-            - name: gitrepo_simple_main
           outputResources:
             - name: propertyBagWOCC
         execution:
