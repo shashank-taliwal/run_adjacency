@@ -17,7 +17,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - sleep 10
+            - sleep 30
             - write_output propertyBagWOCC test=$run_number
 
   - name: waitOnChildComplete_childPipeline
@@ -33,7 +33,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - sleep 10
+            - sleep 30
       - name: P_WF_step3WOCC
         type: Bash
         configuration:
