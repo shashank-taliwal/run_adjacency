@@ -25,6 +25,7 @@ pipelines:
         execution:
           onExecute:
             - write_output WONParentComplete_resource test=${run_number}
+            - sleep 30s
             - tdcdadad
 
   - name: A_waitOnParentComplete_childPipeline
