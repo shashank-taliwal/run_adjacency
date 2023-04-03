@@ -1,0 +1,32 @@
+
+pipelines:
+  - name: SameAffinity2ApprovalGatesPipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          MY_MESSAGE: '"Hello World!"'
+    steps:
+      - name: step1ag1ap1
+        type: Bash
+        configuration:
+          affinityGroup: nodegp1
+          requiresApproval:
+            approvers:
+              - member
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"      
+      - name: step2ag1ap2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: stepCombA
+          affinityGroup: nodegp1
+          requiresApproval:
+            approvers:
+              - member
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
