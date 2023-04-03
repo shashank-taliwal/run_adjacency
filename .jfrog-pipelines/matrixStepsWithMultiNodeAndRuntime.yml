@@ -1,5 +1,5 @@
 resources:
-  - name: triggerMatrixRuntime
+  - name: triggerMatrixRuntimetest
     type: PropertyBag
     configuration:
       key: value
@@ -8,7 +8,7 @@ pipelines:
   - name: lightweightmatrix
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
@@ -52,7 +52,7 @@ pipelines:
   - name: Matrix_NodePool_Pipeline_Rutime
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
@@ -87,7 +87,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
         execution:
           onExecute:
             - echo Im executing
@@ -106,7 +106,7 @@ pipelines:
         configuration:
           multiNode: true
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           runtime:
             type: host
         stepletMultipliers:
@@ -128,7 +128,7 @@ pipelines:
         type: Matrix
         configuration:
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           multiNode: true
           runtime:
             type: image
@@ -157,7 +157,7 @@ pipelines:
         type: Matrix
         configuration:
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           multiNode: true
           runtime:
             type: image
@@ -185,7 +185,7 @@ pipelines:
         type: Matrix
         configuration:
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           multiNode: true
         stepletMultipliers:
           runtimes:
@@ -208,7 +208,7 @@ pipelines:
         type: Matrix
         configuration:
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           multiNode: true
         stepletMultipliers:
           runtimes:
@@ -237,7 +237,7 @@ pipelines:
         type: Matrix
         configuration:
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           multiNode: true
         stepletMultipliers:
           runtimes:
@@ -265,7 +265,7 @@ pipelines:
         type: Matrix
         configuration:
           inputResources:
-            - name: triggerMatrixRuntime
+            - name: triggerMatrixRuntimetest
           multiNode: true
           runtime:
             type: image
@@ -297,7 +297,7 @@ pipelines:
   - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutime
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
@@ -348,7 +348,7 @@ pipelines:
   - name: Matrix_Multi_Node_Pipeline_Rutime_Step_Runtime
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
@@ -387,7 +387,7 @@ pipelines:
   - name: Matrix_NodePool_Pipeline_Rutime_Step_Runtime_Steplet_runtime
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
@@ -433,7 +433,7 @@ pipelines:
   - name: Matrix_Pipeline_Rutime
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
@@ -460,7 +460,7 @@ pipelines:
   - name: Matrix_Pipeline_Rutime_Step_Runtime
     configuration:
       inputResources:
-        - name: triggerMatrixRuntime
+        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
