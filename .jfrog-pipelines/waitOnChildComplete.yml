@@ -15,12 +15,12 @@ pipelines:
           inputresources:
             - name: gitrepo_simple_main
           outputResources:
-            - name: pb_branchSnapshot_version
+            - name: propertyBagWOCC
         execution:
           onExecute:
             - echo "executing step..."
             - sleep 10
-            - write_output pb_branchSnapshot_version test=$run_number
+            - write_output propertyBagWOCC test=$run_number
 
   - name: P_WF_deployWOCC
     configuration:
@@ -31,7 +31,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: pb_branchSnapshot_version
+            - name: propertyBagWOCC
         execution:
           onExecute:
             - echo "executing step..."
@@ -40,7 +40,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: pb_branchSnapshot_version
+            - name: P_WF_step2WOCC
         execution:
           onExecute:
             - echo "executing step..."
