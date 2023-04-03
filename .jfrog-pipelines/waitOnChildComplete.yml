@@ -1,0 +1,47 @@
+resources:
+  - name: propertyBagWOCC
+    type: PropertyBag
+    configuration:
+      test: test
+
+pipelines:
+
+  - name: P_WF_pipelinesWOCC
+    
+    steps:
+      - name: P_WF_step1WOCC
+        type: Bash
+        configuration:
+          inputresources:
+            - name: gitrepo_simple_main
+          outputResources:
+            - name: pb_branchSnapshot_version
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - sleep 10
+            - write_output pb_branchSnapshot_version test=$run_number
+
+  - name: P_WF_deployWOCC
+    configuration:
+      dependencyMode:
+        waitOnChildComplete: true
+    steps:
+      - name: P_WF_step2WOCC
+        type: Bash
+        configuration:
+          inputResources:
+            - name: pb_branchSnapshot_version
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - sleep 10
+      - name: P_WF_step3WOCC
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: pb_branchSnapshot_version
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - sleep 10
