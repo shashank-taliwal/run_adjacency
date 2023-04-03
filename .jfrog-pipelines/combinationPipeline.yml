@@ -1,6 +1,7 @@
 pipelines:
   - name: combinationWorkflowPipeline
     configuration:
+      chronological: true
       environmentVariables:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
@@ -14,8 +15,11 @@ pipelines:
       - name: stepCombB
         type: Bash
         configuration:
+          dependencyMode:
+            waitOnChildComplete: true
           inputSteps:
             - name: stepCombA
+          affinityGroup: nodeBC
         execution:
           onExecute:
             - echo $MY_MESSAGE
@@ -23,6 +27,7 @@ pipelines:
       - name: stepCombC
         type: Bash
         configuration:
+          affinityGroup: nodeBC
           inputSteps:
             - name: stepCombB
         execution:
@@ -32,6 +37,9 @@ pipelines:
       - name: stepCombD
         type: Bash
         configuration:
+          dependencyMode:
+            waitOnParentComplete: true
+          affinityGroup: nodeDE
           inputSteps:
             - name: stepCombB
         execution:
@@ -41,6 +49,7 @@ pipelines:
       - name: stepCombE
         type: Bash
         configuration:
+          affinityGroup: nodeDE
           inputSteps:
             - name: stepCombD
         execution:
@@ -50,15 +59,20 @@ pipelines:
       - name: stepCombF
         type: Bash
         configuration:
+          affinityGroup: nodeFG
           inputSteps:
             - name: stepCombD
         execution:
           onExecute:
             - echo $MY_MESSAGE
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
-      - name: stepCombG
+      - name: stepCombGApprovalGate
         type: Bash
         configuration:
+          requiresApproval:
+            approvers:
+              - member
+          affinityGroup: nodeFG
           inputSteps:
             - name: stepCombF
         execution:
@@ -69,7 +83,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: stepCombG
+            - name: stepCombGApprovalGate
         execution:
           onExecute:
             - echo $MY_MESSAGE
@@ -78,7 +92,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: stepCombG
+            - name: stepCombGApprovalGate
         execution:
           onExecute:
             - echo $MY_MESSAGE
@@ -86,6 +100,8 @@ pipelines:
       - name: stepCombJ
         type: Bash
         configuration:
+          dependencyMode:
+            waitOnParentSuccess: true
           inputSteps:
             - name: stepCombH
             - name: stepCombI
