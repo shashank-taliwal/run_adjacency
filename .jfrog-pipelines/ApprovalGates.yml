@@ -9,8 +9,6 @@ resources:
 pipelines:
   - name: ApprovalGatesPipeline
     configuration:
-      inputResources:
-        - name: gitRepoOrgTestAutomation
       environmentVariables:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
@@ -18,6 +16,8 @@ pipelines:
       - name: step1ap1
         type: Bash
         configuration:
+          inputResources:
+            - name: gitRepoOrgTestAutomation
           requiresApproval:
             approvers:
               - member
@@ -28,6 +28,8 @@ pipelines:
       - name: step2ap2
         type: Bash
         configuration:
+          inputResources:
+            - name: gitRepoOrgTestAutomation
           requiresApproval:
             approvers:
               - member
