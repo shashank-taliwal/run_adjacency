@@ -50,6 +50,7 @@ pipelines:
           requiresApproval:
             approvers:
               - member
+              - admin
         execution:
           onExecute:
             - echo $MY_MESSAGE
@@ -62,6 +63,7 @@ pipelines:
           requiresApproval:
             approvers:
               - member
+              - admin
         execution:
           onExecute:
             - echo $MY_MESSAGE
