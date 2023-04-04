@@ -21,7 +21,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: stepCombA
+            - name: step1ag1ap1
           affinityGroup: nodegp1
           requiresApproval:
             approvers:
