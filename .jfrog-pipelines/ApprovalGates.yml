@@ -1,7 +1,16 @@
 
+resources:
+  - name: gitRepoOrgTestAutomation
+    type: GitRepo
+    configuration:
+      gitProvider: varsha_github
+      path: Varsha-Arun/Org_test_Automation
+      
 pipelines:
   - name: ApprovalGatesPipeline
     configuration:
+      inputResources:
+        - name: gitRepoOrgTestAutomation
       environmentVariables:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
@@ -19,8 +28,36 @@ pipelines:
       - name: step2ap2
         type: Bash
         configuration:
+          requiresApproval:
+            approvers:
+              - member
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"
+
+pipelines:
+  - name: ApprovalGatesPipeline2
+    configuration:
+      environmentVariables:
+        readOnly:
+          MY_MESSAGE: '"Hello World!"'
+    steps:
+      - name: step3ap1
+        type: Bash
+        configuration:
+          requiresApproval:
+            approvers:
+              - member
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"      
+      - name: step4ap2
+        type: Bash
+        configuration:
           inputSteps:
-            - name: step1ag1ap1
+            - name: step3ap1
           requiresApproval:
             approvers:
               - member
