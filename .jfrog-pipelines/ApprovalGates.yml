@@ -1,13 +1,12 @@
 
 pipelines:
-  - name: SameAffinity2ApprovalGatesPipeline
+  - name: ApprovalGatesPipeline
     configuration:
-      affinityGroup: nodegp1
       environmentVariables:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
     steps:
-      - name: step1ag1ap1
+      - name: step1ap1
         type: Bash
         configuration:
           requiresApproval:
@@ -17,7 +16,7 @@ pipelines:
           onExecute:
             - echo $MY_MESSAGE
             - echo "Running $pipeline_name | $step_name on node ID $step_node_id"      
-      - name: step2ag1ap2
+      - name: step2ap2
         type: Bash
         configuration:
           inputSteps:
