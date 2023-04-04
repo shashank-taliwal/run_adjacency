@@ -2,6 +2,7 @@
 pipelines:
   - name: SameAffinity2ApprovalGatesPipeline
     configuration:
+      affinityGroup: nodegp1
       environmentVariables:
         readOnly:
           MY_MESSAGE: '"Hello World!"'
@@ -9,7 +10,6 @@ pipelines:
       - name: step1ag1ap1
         type: Bash
         configuration:
-          affinityGroup: nodegp1
           requiresApproval:
             approvers:
               - member
@@ -22,7 +22,6 @@ pipelines:
         configuration:
           inputSteps:
             - name: step1ag1ap1
-          affinityGroup: nodegp1
           requiresApproval:
             approvers:
               - member
