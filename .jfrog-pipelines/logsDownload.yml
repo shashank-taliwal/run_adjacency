@@ -129,5 +129,5 @@ pipelines:
             - echo $current_runid
             - add_pipeline_variables prev_runid=$run_id
             - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} JFROG_PIPELINES_RUN_STATE_DEBUG=true
-            - write_output resource_A_stepArtifact_propertyBag_v1 commitSha=$commitSha runID=$current_runid
+            - write_output A_stepArtifact_propertyBag_v1 commitSha=$commitSha runID=$current_runid
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
