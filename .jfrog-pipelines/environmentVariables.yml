@@ -7,6 +7,7 @@ pipelines:
           TEST_ENV: "pipelines"
           JUST_FES: "options"
           LOL_FOO: "test"
+          test-pipe: "test909090"
     steps:
       - name: pipelineReadOnlyStepEV
         type: Bash
@@ -23,6 +24,7 @@ pipelines:
             - echo $key1
             - echo $key2
             - echo $key3
+            - echo $test-pipe
             
 
   - name: environment_variable_pipeline
