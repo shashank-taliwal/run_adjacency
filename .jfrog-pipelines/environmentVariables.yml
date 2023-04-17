@@ -79,6 +79,8 @@ pipelines:
             key2: "value2"
             key3: "value3"
             ENV_TO_OVERRIDE: "inStepOverRiden"
+            testSpecialChar: "test spaces $ test"
+            testhyphen: "test-core"
         execution:
           onExecute:
             - echo $TEST_ENV
@@ -88,6 +90,8 @@ pipelines:
             - echo $key1
             - echo $key2
             - echo $key3
+            - echo $testSpecialChar
+            - echo $testhyphen
             
       - name: environment_variable_step2
         type: Bash
