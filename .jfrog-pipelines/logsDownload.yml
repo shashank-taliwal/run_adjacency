@@ -68,7 +68,7 @@ pipelines:
           onExecute:
             - cd $res_A_Pipeinfo_gitRepo_v1_resourcePath
             - add_run_files tests/core/sampleExecutionFile/calc.py my_files 
-            - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
+            - add_run_variables testRunVariable=ok
             - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
             - pip install --upgrade pip
             - hash -d pip
@@ -78,6 +78,7 @@ pipelines:
             - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
             - restore_run_files my_files tests/core/sampleExecutionFile/calc.py
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
+            - printenv
             
       - name: s_stepArtifacts_001_v1
         type: Bash
@@ -93,7 +94,7 @@ pipelines:
             - add_run_variables current_runid=$run_id
             - add_run_variables commitSha=$res_jatin_gitrepo2_commitSha
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
-            
+            - printenv
       - name: s_stepArtifacts_002_v1
         type: Matrix
         stepMode: Bash
@@ -115,6 +116,7 @@ pipelines:
             - echo "I am executing matrix steplet \${steplet_id}"
             - echo "Envs animal= $animal , mineral = $mineral , vegetable = $vegetable"
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
+            - printenv
       - name: s_stepArtifacts_003_v1
         type: Bash
         configuration:
@@ -131,3 +133,4 @@ pipelines:
             - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} JFROG_PIPELINES_RUN_STATE_DEBUG=true
             - write_output A_stepArtifact_propertyBag_v1 commitSha=$commitSha runID=$current_runid
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
+            - printenv
