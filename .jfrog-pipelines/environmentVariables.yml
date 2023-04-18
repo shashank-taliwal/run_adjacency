@@ -7,7 +7,8 @@ pipelines:
           TEST_ENV: "pipelines"
           JUST_FES: "options"
           LOL_FOO: "test"
-          test-pipe: "test909090"
+          test_pipe: "test 909090"
+          testNumber: 32424244
     steps:
       - name: pipelineReadOnlyStepEV
         type: Bash
@@ -16,6 +17,10 @@ pipelines:
             key1: "value1"
             key2: "value2"
             key3: "value3"
+            test_step: "test space"
+            test_special_char: "test$#@!"
+            specialCharTest: "^%$#%&&*"
+            test_hyphen: "ok-done-env-var-step"
         execution:
           onExecute:
             - echo $TEST_ENV
@@ -24,8 +29,11 @@ pipelines:
             - echo $key1
             - echo $key2
             - echo $key3
-            - echo $test-pipe
-            
+            - echo $test_pipe
+            - echo $testNumber
+            - echo $test_special_char
+            - echo $specialCharTest
+            - echo $test_hyphen
 
   - name: environment_variable_pipeline
     configuration:
