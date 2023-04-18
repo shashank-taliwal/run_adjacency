@@ -20,7 +20,7 @@ pipelines:
             test_step: "test space"
             test_special_char: "test$#@!"
             specialCharTest: "^%$#%&&*"
-            test_hyphen: "ok-done-env-var-step"
+            test_hyphen: "ok-done-env-var-\step"
         execution:
           onExecute:
             - echo $TEST_ENV
