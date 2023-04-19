@@ -56,9 +56,11 @@ pipelines:
             - if ["$step_2_var" !== "step2"] 
               then 
                 echo "variable does not match expected value"
+              fi
             - if ["$step_4_var" !== "step4"] 
               then 
-                echo "variable does not match expected value" 
+                echo "variable does not match expected value"
+              fi
   
       - name: S_WF_033_006bas
         type: Bash
