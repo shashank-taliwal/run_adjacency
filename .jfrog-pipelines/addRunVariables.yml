@@ -1,3 +1,9 @@
+resources:
+  - name: runVariableResource
+    type: PropertyBag
+    configuration:
+      testRunVariable: test
+
 pipelines:
   
   - name: S_WF_033runVariable
@@ -181,12 +187,15 @@ pipelines:
       - name: step5arv
         type: Bash
         configuration:
+          outputResources:
+            - name: runVariableResource
           inputSteps:
             - name: step4arv
           affinityGroup: testarv
         execution:
           onExecute:
             - echo "Step 5 is running"
+            - 
             - echo "testStep4 - ${testStep4}"
             - echo "testStep2onStart - ${testStep2onStart}"
             - if ["$testStep4" !== "col3"] 
@@ -197,13 +206,30 @@ pipelines:
               then 
                 echo "variable does not match expected value"
               fi
+            - write_output runVariableResource "testRunVariable=updated"
   
       - name: step6arv
         type: Bash
         configuration:
-          inputSteps:
-            - name: step5arv
-          affinityGroup: testarv
+          inputResources:
+            - name: runVariableResource
+          affinityGroup: testarv1
         execution:
           onExecute:
             - echo "Step 6 is running"
+            - echo "testStep4 - ${testStep4}"
+            - echo "testStep2onStart - ${testStep2onStart}"
+            - if ["$testStep4" !== "col3"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$testStep2onStart" !== "col2"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - echo $res_runVariableResource_testRunVariable
+            - if ["$res_runVariableResource_testRunVariable" !== "updated"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+              
