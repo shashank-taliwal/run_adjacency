@@ -1,6 +1,6 @@
 pipelines:
   
-  - name: S_WF_033bash
+  - name: S_WF_033runVariable
     steps:
   
       - name: S_WF_033_001bash
@@ -16,9 +16,12 @@ pipelines:
             - name: S_WF_033_001bash
         execution:
           onStart:
-            - add_run_variables step_2_var="step2"
+            - add_run_variables step_2_var="onStart"
           onExecute:
             - echo "Step 2 is running"
+            - add_run_variables step_2_varOnExecute="onExecute"
+          onComplete:
+            - add_run_variables step_2_varOnComplete="onComplete"
   
       - name: S_WF_033_003bash
         type: Bash
@@ -49,15 +52,42 @@ pipelines:
             - name: S_WF_033_004bash
           affinityGroup: some_ag
         execution:
+          onStart:
+            - if ["$step_2_var" !== "onStart"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_4_var" !== "step4"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnExecute" !== "onExecute"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnComplete" !== "onComplete"] 
+              then 
+                echo "variable does not match expected value"
+              fi
           onExecute:
             - echo "Step 5 is running"
             - echo "step_2_var - ${step_2_var}"
             - echo "step_4_var - ${step_4_var}"
+            - echo step_2_varOnExecute=$step_2_varOnExecute
+            - echo step_2_varOnComplete=$step_2_varOnComplete
             - if ["$step_2_var" !== "step2"] 
               then 
                 echo "variable does not match expected value"
               fi
             - if ["$step_4_var" !== "step4"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnExecute" !== "onExecute"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnComplete" !== "onComplete"] 
               then 
                 echo "variable does not match expected value"
               fi
@@ -68,6 +98,112 @@ pipelines:
           inputSteps:
             - name: S_WF_033_005bas
           affinityGroup: some_ag
+        execution:
+          onExecute:
+            - echo "Step 6 is running"
+            - if ["$step_2_var" !== "step2"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_4_var" !== "step4"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnExecute" !== "onExecute"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnComplete" !== "onComplete"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+          onComplete:
+            - echo "Step 6 is running"
+            - if ["$step_2_var" !== "step2"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_4_var" !== "step4"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnExecute" !== "onExecute"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$step_2_varOnComplete" !== "onComplete"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+
+
+pipelines:
+  
+  - name: runVariablePipeline
+    steps:
+  
+      - name: step1arv
+        type: Bash
+        execution:
+          onExecute:
+            - echo "Step 1 is running"
+  
+      - name: step2arv
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step1arv
+        execution:
+          onStart:
+            - add_run_variables testStep2onStart="col2"
+          onExecute:
+            - echo "Step 2 is running"
+  
+      - name: step3arv
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step1arv
+        execution:
+          onExecute:
+            - echo "Step 3 is running"
+  
+      - name: step4arv
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step3arv
+          affinityGroup: testarv
+        execution:
+          onExecute:
+            - add_run_variables testStep4="col3"
+            
+      - name: step5arv
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step4arv
+          affinityGroup: testarv
+        execution:
+          onExecute:
+            - echo "Step 5 is running"
+            - echo "testStep4 - ${testStep4}"
+            - echo "testStep2onStart - ${testStep2onStart}"
+            - if ["$testStep4" !== "col3"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+            - if ["$testStep2onStart" !== "col2"] 
+              then 
+                echo "variable does not match expected value"
+              fi
+  
+      - name: step6arv
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step5arv
+          affinityGroup: testarv
         execution:
           onExecute:
             - echo "Step 6 is running"
