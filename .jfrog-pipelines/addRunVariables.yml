@@ -41,7 +41,7 @@ pipelines:
           onExecute:
             - echo "Step 4 is running"
   
-      - name: S_WF_033_005bash
+      - name: S_WF_033_005bas
         type: Bash
         configuration:
           inputSteps:
@@ -56,11 +56,11 @@ pipelines:
             - if ["$step_2_var" !== "step2"] then echo "variable does not match expected value"
             - if ["$step_4_var" !== "step4"] then echo "variable does not match expected value" 
   
-      - name: S_WF_033_006bash
+      - name: S_WF_033_006bas
         type: Bash
         configuration:
           inputSteps:
-            - name: S_WF_033_005bash
+            - name: S_WF_033_005bas
           affinityGroup: some_ag
         execution:
           onExecute:
