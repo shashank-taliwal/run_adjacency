@@ -53,8 +53,12 @@ pipelines:
             - echo "Step 5 is running"
             - echo "step_2_var - ${step_2_var}"
             - echo "step_4_var - ${step_4_var}"
-            - if ["$step_2_var" !== "step2"] then echo "variable does not match expected value"
-            - if ["$step_4_var" !== "step4"] then echo "variable does not match expected value" 
+            - if ["$step_2_var" !== "step2"] 
+              then 
+                echo "variable does not match expected value"
+            - if ["$step_4_var" !== "step4"] 
+              then 
+                echo "variable does not match expected value" 
   
       - name: S_WF_033_006bas
         type: Bash
