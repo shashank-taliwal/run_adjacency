@@ -192,7 +192,6 @@ pipelines:
         execution:
           onExecute:
             - echo "Step 5 is running"
-            - 
             - echo "testStep4 - ${testStep4}"
             - echo "testStep2onStart - ${testStep2onStart}"
             - if ["$testStep4" !== "col3"] 
