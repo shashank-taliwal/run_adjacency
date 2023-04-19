@@ -42,7 +42,7 @@ pipelines:
             - echo "Step 4 is running"
   
       - name: S_WF_033_005bash
-        type: PowerShell
+        type: Bash
         configuration:
           inputSteps:
             - name: S_WF_033_002bash
@@ -57,7 +57,7 @@ pipelines:
             - if ["$step_4_var" !== "step4"] then echo "variable does not match expected value" 
   
       - name: S_WF_033_006bash
-        type: PowerShell
+        type: Bash
         configuration:
           inputSteps:
             - name: S_WF_033_005bash
