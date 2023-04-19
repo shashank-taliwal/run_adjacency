@@ -142,9 +142,6 @@ pipelines:
                 echo "variable does not match expected value"
               fi
 
-
-pipelines:
-  
   - name: runVariablePipeline
     steps:
   
