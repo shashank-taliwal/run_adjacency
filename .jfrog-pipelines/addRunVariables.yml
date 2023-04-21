@@ -59,20 +59,20 @@ pipelines:
           affinityGroup: some_ag
         execution:
           onStart:
-            - if [[ "$step_2_var" !== "onStart" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_4_var" !== "step4" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnExecute" !== "onExecute" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnComplete" !== "onComplete" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_var" != "onStart" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_4_var" != "step4" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnComplete" != "onComplete" ]]; then echo "variable does not match expected value"; fi
           onExecute:
             - echo "Step 5 is running"
             - echo "step_2_var - ${step_2_var}"
             - echo "step_4_var - ${step_4_var}"
             - echo step_2_varOnExecute=$step_2_varOnExecute
             - echo step_2_varOnComplete=$step_2_varOnComplete
-            - if [[ "$step_2_var" !== "onStart" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_4_var" !== "step4" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnExecute" !== "onExecute" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnComplete" !== "onComplete" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_var" != "onStart" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_4_var" != "step4" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnComplete" != "onComplete" ]]; then echo "variable does not match expected value"; fi
   
       - name: S_WF_033_006bas
         type: Bash
@@ -83,16 +83,16 @@ pipelines:
         execution:
           onExecute:
             - echo "Step 6 is running"
-            - if [[ "$step_2_var" !== "onStart" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_4_var" !== "step4" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnExecute" !== "onExecute" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnComplete" !== "onComplete" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_var" != "onStart" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_4_var" != "step4" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnComplete" != "onComplete" ]]; then echo "variable does not match expected value"; fi
           onComplete:
             - echo "Step 6 is running"
-            - if [[ "$step_2_var" !== "onStart" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_4_var" !== "step4" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnExecute" !== "onExecute" ]]; then echo "variable does not match expected value"; fi
-            - if [[ "$step_2_varOnComplete" !== "onComplete" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_var" != "onStart" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_4_var" != "step4" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$step_2_varOnComplete" != "onComplete" ]]; then echo "variable does not match expected value"; fi
 
   - name: runVariablePipeline
     steps:
