@@ -146,14 +146,8 @@ pipelines:
             - echo "Step 5 is running"
             - echo "testStep4 - ${testStep4}"
             - echo "testStep2onStart - ${testStep2onStart}"
-            - if ["$testStep4" !== "col3"] 
-              then 
-                echo "variable does not match expected value"
-              fi
-            - if ["$testStep2onStart" !== "col2"] 
-              then 
-                echo "variable does not match expected value"
-              fi
+            - if [[ "$testStep4" != "col3" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$testStep2onStart" != "col2" ]]; then echo "variable does not match expected value"; fi
             - write_output runVariableResource "testRunVariable=updated"
   
       - name: step6arv
@@ -167,17 +161,7 @@ pipelines:
             - echo "Step 6 is running"
             - echo "testStep4 - ${testStep4}"
             - echo "testStep2onStart - ${testStep2onStart}"
-            - if ["$testStep4" !== "col3"] 
-              then 
-                echo "variable does not match expected value"
-              fi
-            - if ["$testStep2onStart" !== "col2"] 
-              then 
-                echo "variable does not match expected value"
-              fi
+            - if [[ "$testStep4" != "col3" ]]; then echo "variable does not match expected value"; fi
+            - if [[ "$testStep2onStart" != "col2" ]]; then echo "variable does not match expected value"; fi
             - echo $res_runVariableResource_testRunVariable
-            - if ["$res_runVariableResource_testRunVariable" !== "updated"] 
-              then 
-                echo "variable does not match expected value"
-              fi
-              
+            - if [[ "$res_runVariableResource_testRunVariable" != "updated" ]]; then echo "variable does not match expected value"; fi  
