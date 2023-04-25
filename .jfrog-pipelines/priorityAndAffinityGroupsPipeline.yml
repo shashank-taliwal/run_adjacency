@@ -18,6 +18,7 @@ pipelines:
         execution:
           onExecute:
             - echo "step 2 is running"
+            - sleep 20s
 
       - name: pag_step_002
         type: Bash
@@ -29,6 +30,7 @@ pipelines:
         execution:
           onExecute:
             - echo "step 3 is running"
+            - sleep 20s
 
       - name: pag_step_003
         type: Bash
@@ -40,6 +42,7 @@ pipelines:
         execution:
           onExecute:
             - echo "step 4 is running"
+            - sleep 20s
 
       - name: pag_step_006
         type: Bash
@@ -53,6 +56,7 @@ pipelines:
         execution:
           onExecute:
             - echo "step 5 is running"
+            - sleep 20s
 
       - name: pag_step_005
         type: Bash
@@ -66,6 +70,7 @@ pipelines:
         execution:
           onExecute:
             - echo "step 6 is running"
+            - sleep 20s
 
       - name: pag_step_007
         type: Bash
@@ -78,3 +83,4 @@ pipelines:
         execution:
           onExecute:
             - echo "step 7 is running"
+            - sleep 20s
