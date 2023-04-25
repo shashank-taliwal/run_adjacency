@@ -13,7 +13,7 @@ pipelines:
         configuration:
           inputSteps:
             - name: pag_step_001
-          affinityGroup: ag_group1
+#           affinityGroup: ag_group1
           priority: 4
         execution:
           onExecute:
@@ -25,7 +25,7 @@ pipelines:
         configuration:
           inputSteps:
             - name: pag_step_001
-          affinityGroup: ag_group1
+#           affinityGroup: ag_group1
           priority: 1
         execution:
           onExecute:
@@ -37,7 +37,7 @@ pipelines:
         configuration:
           inputSteps:
             - name: pag_step_001
-          affinityGroup: ag_group1
+#           affinityGroup: ag_group1
           priority: 3
         execution:
           onExecute:
@@ -51,7 +51,7 @@ pipelines:
             - name: pag_step_002
             - name: pag_step_003
             - name: pag_step_004
-          affinityGroup: ag_group1
+#           affinityGroup: ag_group1
           priority: 2
         execution:
           onExecute:
@@ -65,7 +65,7 @@ pipelines:
             - name: pag_step_002
             - name: pag_step_003
             - name: pag_step_004
-          affinityGroup: ag_group1
+#           affinityGroup: ag_group1
           priority: 1
         execution:
           onExecute:
@@ -78,7 +78,7 @@ pipelines:
           inputSteps:
             - name: pag_step_005
             - name: pag_step_006
-          affinityGroup: ag_group1
+#           affinityGroup: ag_group1
           priority: 2
         execution:
           onExecute:
