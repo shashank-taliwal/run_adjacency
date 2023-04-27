@@ -1,8 +1,5 @@
 resources:
-  - name: cronToTriggerEvery5min
-    type: CronTrigger
-    configuration:
-      interval: '*/5 * * * *'
+
   - name: res_quia_1t
     type: PropertyBag
     configuration:
@@ -331,7 +328,6 @@ pipelines:
             key42: "value42"
             key43: "value43"
           inputResources:
-            - name: cronToTriggerEvery5min
             - name: res_et_51t
             - name: res_rem_52t
             - name: res_neque_53t
