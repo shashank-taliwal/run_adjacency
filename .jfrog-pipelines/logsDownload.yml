@@ -134,3 +134,36 @@ pipelines:
             - write_output A_stepArtifact_propertyBag_v1 commitSha=$commitSha runID=$current_runid
             - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
             - printenv
+
+
+  - name: steplet_tests_Pipeline
+    steps:
+
+      - name: stepletTests
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputResources:
+            - name: A_Pipeinfo_gitRepo_v1
+        stepletMultipliers:
+          environmentVariables:
+            - animal:    dog
+            - animal:    goat
+              mineral:   iron
+              vegetable: broccoli
+            - animal:    lizard
+              mineral:   lead
+            - keytest1: valuetest1
+              keytest2: valuetest2
+              keytest3: valuetest3
+              keytest4: valuetest4
+        execution:
+          onExecute:
+            - cd $res_A_Pipeinfo_gitRepo_v1_resourcePath
+            - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
+            - pip install --upgrade pip
+            - hash -d pip
+            - pip install pytest
+            - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
+            - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
+            - printenv
