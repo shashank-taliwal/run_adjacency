@@ -7,8 +7,16 @@ pipelines:
           JUST_FES: "options"
           LOL_FOO: "test"
     steps:
-      - name: successStep
+      - name: successStep1
         type: Bash
+        execution:
+          onExecute:
+            - printenv
+      - name: successStep2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: successStep1
         execution:
           onExecute:
             - printenv
@@ -16,10 +24,18 @@ pipelines:
   - name: timeoutPipeline
     
     steps:
+      - name: timeOutStep1
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            
       - name: timeOutStep
         type: Bash
         configuration:
           timeoutSeconds: 10
+          inputSteps:
+            - name: timeOutStep1
         execution:
           onExecute:
             - printenv
@@ -35,6 +51,12 @@ pipelines:
               
   - name: failurePipeline
     steps:
+      - name: failureStep1
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            
       - name: failureStep
         type: Bash
         execution:
