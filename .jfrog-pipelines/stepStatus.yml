@@ -16,13 +16,13 @@ pipelines:
   - name: timeoutPipeline
     configuration:
       timeoutSeconds: 10
-     steps:
-       - name: timeOutStep
-         type: Bash
-         execution:
-           onExecute:
-             - printenv
-             - sleep 10m
+    steps:
+      - name: timeOutStep
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - sleep 10m
   
   - name: errorPipeline
     configuration:
