@@ -29,15 +29,15 @@ pipelines:
       nodePool: errorTest
     steps:
       - name: errorStep
-          type: Bash
-          execution:
-            onExecute:
-              - printenv
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
               
   - name: failurePipeline
     steps:
       - name: failureStep
-          type: Bash
-          execution:
-            onExecute:
-              - printenv332@!@#@#!#!#!#!#!
+        type: Bash
+        execution:
+          onExecute:
+            - printenv332@!@#@#!#!#!#!#!
