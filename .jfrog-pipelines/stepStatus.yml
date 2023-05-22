@@ -24,15 +24,13 @@ pipelines:
             - printenv
             - sleep 10m
   
-  - name: errorPipeline
-    configuration:
-      nodePool: errorTest
-    steps:
-      - name: errorStep
-        type: Bash
-        execution:
-          onExecute:
-            - printenv
+#   - name: errorPipeline
+#     steps:
+#       - name: errorStep
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - printenv
               
   - name: failurePipeline
     steps:
