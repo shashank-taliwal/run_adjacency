@@ -14,11 +14,12 @@ pipelines:
             - printenv
 
   - name: timeoutPipeline
-    configuration:
-      timeoutSeconds: 10
+    
     steps:
       - name: timeOutStep
         type: Bash
+        configuration:
+          timeoutSeconds: 10
         execution:
           onExecute:
             - printenv
