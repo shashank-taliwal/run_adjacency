@@ -1,0 +1,43 @@
+pipelines:
+  - name: successPipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          TEST_ENV: "pipelines"
+          JUST_FES: "options"
+          LOL_FOO: "test"
+    steps:
+      - name: successStep
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+
+ - name: timeoutPipeline
+   configuration:
+     timeoutSeconds: 10
+    steps:
+      - name: timeOutStep
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - sleep 10m
+  
+  - name: errorPipeline
+    configuration:
+      nodePool: errorTest
+    steps:
+      - name: errorStep
+          type: Bash
+          execution:
+            onExecute:
+              - printenv
+              
+  - name: failurePipeline
+    steps:
+      - name: failureStep
+          type: Bash
+          execution:
+            onExecute:
+              - printenv332@!@#@#!#!#!#!#!
