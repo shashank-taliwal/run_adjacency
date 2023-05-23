@@ -59,6 +59,9 @@ pipelines:
             
       - name: failureStep
         type: Bash
+        configuration:
+          inputSteps:
+            - name: failureStep1
         execution:
           onExecute:
             - printenv332@!@#@#!#!#!#!#!
