@@ -27,6 +27,7 @@ pipelines:
         execution:
           onExecute:
             - echo "step 2 is running"
+            - if [ $pag_step_004 -ne 'yes' ] then return 0 fi
             - printenv
 
       - name: pag_step_002
