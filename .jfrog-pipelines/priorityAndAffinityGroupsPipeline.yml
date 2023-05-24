@@ -28,6 +28,7 @@ pipelines:
           onExecute:
             - echo "step 2 is running"
             - if [ $pag_step_004 -ne 'yes' ] then return 0 fi
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"   
             - printenv
 
       - name: pag_step_002
