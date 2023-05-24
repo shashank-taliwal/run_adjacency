@@ -58,7 +58,7 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            pag_step_003: "yes"
+            pag_step_006: "yes"
           inputSteps:
             - name: pag_step_002
             - name: pag_step_003
