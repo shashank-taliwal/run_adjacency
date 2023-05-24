@@ -1,10 +1,10 @@
 
 resources:
-  - name: gitRepoOrgTestAutomation
+  - name: gitRepoSimple
     type: GitRepo
     configuration:
       gitProvider: varsha_github
-      path: Varsha-Arun/Org_test_Automation
+      path: Varsha-Arun/simple
       
 pipelines:
   - name: ApprovalGatesPipeline
@@ -17,7 +17,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: gitRepoOrgTestAutomation
+            - name: gitRepoSimple
           requiresApproval:
             approvers:
               - member
@@ -29,7 +29,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: gitRepoOrgTestAutomation
+            - name: gitRepoSimple
           requiresApproval:
             approvers:
               - member
