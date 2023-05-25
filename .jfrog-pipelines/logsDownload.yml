@@ -3,7 +3,7 @@ resources:
   - name: A_Pipeinfo_gitRepo_v1
     type: GitRepo
     configuration:
-      path: Varsha-Arun/Org_test_Automation
+      path: Varsha-Arun/simple
       branches:
         include: master
       gitProvider: varsha_github
