@@ -35,7 +35,7 @@ pipelines:
           onComplete:
             - echo 'i am oncomplete'
  
-  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutimetest
+  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutimetest_affinitygroup
     configuration:
       runtime:
         type: image
@@ -72,6 +72,53 @@ pipelines:
                   language: node
                   versions:
                     - '16'
+          environmentVariables:
+            - name: test
+            - test: hello
+          nodePools:
+            - win_2019
+            - u18dynamic
+            - testu18
+        execution:
+          onExecute:
+            - echo Im executing
+            - echo $step_node_name
+          onSuccess:
+            - echo 'i am onsuccess'
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
+      
+      - name: matrix_2test
+        type: Matrix
+        configuration:
+          inputSteps:
+            - name: matrix_1test
+          affinityGroup: one
+          multiNode: true
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node
+                versions:
+                  - '15'
+        stepletMultipliers:
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - '13'
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - '16'
+                    - '18'
           environmentVariables:
             - name: test
             - test: hello
