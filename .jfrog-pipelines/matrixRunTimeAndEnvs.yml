@@ -34,6 +34,62 @@ pipelines:
             - echo 'i am onfailure'
           onComplete:
             - echo 'i am oncomplete'
+ 
+  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutimetest
+    configuration:
+      inputResources:
+        - name: triggerMatrixRuntimetest
+      runtime:
+        type: image
+        image:
+          auto:
+            language: node
+            versions:
+              - '15'
+    steps:
+      - name: matrix_1test
+        type: Matrix
+        configuration:
+          affinityGroup: one
+          multiNode: true
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node
+                versions:
+                  - '16'
+        stepletMultipliers:
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - '11'
+                    - '13'
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - '15'
+          environmentVariables:
+            - name: test
+            - test: hello
+          nodePools:
+            - win_2019
+            - u18dynamic
+            - testu18
+        execution:
+          onExecute:
+            - echo Im executing
+          onSuccess:
+            - echo 'i am onsuccess'
+          onFailure:
+            - echo 'i am onfailure'
+          onComplete:
+            - echo 'i am oncomplete'
             
   - name: simpleMultiEnvsMatrix
     steps:
