@@ -35,7 +35,7 @@ pipelines:
           onComplete:
             - echo 'i am oncomplete'
  
-  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutimetest_affinitygroup
+  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutime_affinitygroup
     configuration:
       runtime:
         type: image
