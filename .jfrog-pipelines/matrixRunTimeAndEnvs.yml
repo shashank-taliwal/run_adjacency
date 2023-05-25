@@ -37,8 +37,6 @@ pipelines:
  
   - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutimetest
     configuration:
-      inputResources:
-        - name: triggerMatrixRuntimetest
       runtime:
         type: image
         image:
