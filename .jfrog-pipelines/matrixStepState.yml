@@ -1,0 +1,39 @@
+pipelines:
+  - name: test_matrix
+    steps:
+      - name: preMatrixTest
+        type: PreMatrix
+        execution:
+          onExecute:
+            - mkdir -p preState
+            - echo "working" >> preState/working.txt
+            
+      - name: matrixStep
+        type: Matrix
+        configuration:
+          inputSteps:
+            - name: preMatrixTest
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+        execution:
+          onExecute:
+            - ls -latr .
+            - ls -latr preMatrixTest/preState
+            - mkdir -p matrixFiles
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
+           
+           
+      - name: postMatrixTest
+        type: PostMatrix
+        configuration:
+          inputSteps:
+            - name: matrixStep
+        execution:
+          onExecute:
+            - ls -latr
+            - ls -latr matrixStep
+            - ls -latr matrixStep/matrixFiles
