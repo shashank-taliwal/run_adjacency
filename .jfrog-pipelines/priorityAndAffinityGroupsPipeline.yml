@@ -42,6 +42,7 @@ pipelines:
             - echo "step 3 is running"
             - printenv
             - if [ "$pag_step_002" != "yes" ]; then return 1; fi
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"   
 
       - name: pag_step_003
         type: Bash
@@ -57,6 +58,7 @@ pipelines:
             - echo "step 4 is running"
             - printenv
             - if [ "$pag_step_003" != "yes" ]; then return 1; fi
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"   
 
       - name: pag_step_006
         type: Bash
@@ -74,6 +76,7 @@ pipelines:
             - echo "step 5 is running"
             - printenv
             - if [ "$pag_step_006" != "yes" ]; then return 1; fi
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"   
 
       - name: pag_step_005
         type: Bash
@@ -91,6 +94,7 @@ pipelines:
             - echo "step 6 is running"
             - printenv
             - if [ "$pag_step_005" != "yes" ]; then return 1; fi
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"   
 
       - name: pag_step_007
         type: Bash
@@ -107,3 +111,4 @@ pipelines:
             - echo "step 7 is running"
             - printenv
             - if [ "$pag_step_007" != "yes" ]; then return 1; fi
+            - echo "Running $pipeline_name | $step_name on node ID $step_node_id"   
