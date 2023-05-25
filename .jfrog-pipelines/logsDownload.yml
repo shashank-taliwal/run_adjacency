@@ -67,6 +67,7 @@ pipelines:
         execution:
           onExecute:
             - cd $res_A_Pipeinfo_gitRepo_v1test_resourcePath
+            - ls $res_A_Pipeinfo_gitRepo_v1test_resourcePath
             - add_run_files tests/core/sampleExecutionFile/calc.py my_files 
             - add_run_variables testRunVariable=ok
             - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
