@@ -36,7 +36,7 @@ pipelines:
             - echo $key1
             - echo $key2
             - echo $key3
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: twoCol_step1
         type: Bash
@@ -50,7 +50,7 @@ pipelines:
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                        
       - name: twoCol_step2
         type: Bash
@@ -67,7 +67,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO   
             - write_output res_output test=$commitSha runID=$current_runid
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: twoCol_step3
         type: Bash
@@ -81,7 +81,7 @@ pipelines:
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                         
       - name: twoCol_step4
         type: Bash
@@ -95,7 +95,7 @@ pipelines:
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                                     
       - name: twoCol_step5
         type: Bash
@@ -109,8 +109,8 @@ pipelines:
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
-            - echo $node_id
-                                         
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+            
       - name: threeCol_step1
         type: Bash
         configuration:
@@ -124,7 +124,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: threeCol_step2
         type: Bash
@@ -139,7 +139,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                     
       - name: threeCol_step3
         type: Bash
@@ -154,7 +154,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO 
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                                 
       - name: fourCol_step1
         type: Bash
@@ -168,7 +168,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: fiveCol_step1
         type: Bash
@@ -181,7 +181,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                         
       - name: sixCol_step1
         type: Bash
@@ -194,7 +194,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                              
       - name: sixCol_step2
         type: Bash
@@ -205,7 +205,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
       
       - name: sixCol_step3
         type: Bash
@@ -216,7 +216,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: sixCol_step4
         type: Bash
@@ -227,7 +227,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
           
       - name: sixCol_step5
         type: Bash
@@ -238,7 +238,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: sevenCol_step1
         type: Bash
@@ -251,7 +251,7 @@ pipelines:
         execution:
           onExecute:
             - printenv 
-            - echo $node_id
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
               
             
             
