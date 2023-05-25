@@ -23,6 +23,13 @@ pipelines:
       - name: oneCol_step1
         type: Bash
         configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node
+                versions:
+                  - '15'
           environmentVariables:
             key1: "value1"
             key2: "value2"
@@ -41,6 +48,13 @@ pipelines:
       - name: twoCol_step1
         type: Bash
         configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - '11'
           affinityGroup: ag_group1
           inputSteps:
             - name: oneCol_step1
@@ -55,6 +69,13 @@ pipelines:
       - name: twoCol_step2
         type: Bash
         configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - '13'
           inputSteps:
             - name: oneCol_step1
           outputResources:
