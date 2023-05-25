@@ -27,6 +27,7 @@ pipelines:
         execution:
           onExecute:
             - echo Im executing
+            - echo $step_node_name
           onSuccess:
             - echo 'i am onsuccess'
           onFailure:
@@ -55,6 +56,7 @@ pipelines:
         execution:
           onExecute:
             - echo Im executing
+            - echo $step_node_name
           onSuccess:
             - echo 'i am onsuccess'
             - write_output triggerMatrixRuntime trigger=$run_id
@@ -81,6 +83,7 @@ pipelines:
         execution:
           onExecute:
             - echo Im executing
+            - echo $step_node_name
           onSuccess:
             - echo 'i am onsuccess'
           onFailure:
@@ -107,6 +110,7 @@ pipelines:
         execution:
           onExecute:
             - echo Im executing
+            - echo $step_node_name
           onSuccess:
             - echo 'i am onsuccess'
           onFailure:
@@ -135,6 +139,7 @@ pipelines:
         execution:
           onExecute:
             - echo Im executing
+            - echo $step_node_name
           onSuccess:
             - echo 'i am onsuccess'
           onFailure:
