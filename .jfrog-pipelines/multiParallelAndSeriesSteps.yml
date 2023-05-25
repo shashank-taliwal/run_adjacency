@@ -29,7 +29,7 @@ pipelines:
               auto:
                 language: node
                 versions:
-                  - '15'
+                  - '16'
           environmentVariables:
             key1: "value1"
             key2: "value2"
