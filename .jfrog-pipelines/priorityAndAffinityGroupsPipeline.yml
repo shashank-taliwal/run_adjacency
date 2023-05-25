@@ -17,7 +17,6 @@ pipelines:
             key2: "value2"
             key3: "value3"
             test_step: "test space"
-            test_special_char: "test$#@!"
           inputSteps:
             - name: pag_step_001
           affinityGroup: ag_group1
