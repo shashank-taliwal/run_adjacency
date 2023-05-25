@@ -88,7 +88,6 @@ pipelines:
         configuration:
           inputSteps:
             - name: oneCol_step1
-          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
@@ -102,7 +101,6 @@ pipelines:
         configuration:
           inputSteps:
             - name: oneCol_step1
-          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
