@@ -56,7 +56,7 @@ pipelines:
               auto:
                 language: node
                 versions:
-                  - '16'
+                  - '15'
         stepletMultipliers:
           runtimes:
             - type: image
@@ -71,7 +71,7 @@ pipelines:
                 auto:
                   language: node
                   versions:
-                    - '15'
+                    - '16'
           environmentVariables:
             - name: test
             - test: hello
