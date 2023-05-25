@@ -49,7 +49,6 @@ pipelines:
         type: Matrix
         configuration:
           affinityGroup: one
-          multiNode: true
           runtime:
             type: image
             image:
@@ -96,7 +95,6 @@ pipelines:
           inputSteps:
             - name: matrix_1test
           affinityGroup: one
-          multiNode: true
           runtime:
             type: image
             image:
