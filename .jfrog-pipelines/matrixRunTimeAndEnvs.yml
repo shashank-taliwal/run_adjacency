@@ -82,6 +82,7 @@ pipelines:
         execution:
           onExecute:
             - echo Im executing
+            - echo $step_node_name
           onSuccess:
             - echo 'i am onsuccess'
           onFailure:
