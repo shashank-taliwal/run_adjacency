@@ -144,7 +144,6 @@ pipelines:
         configuration:
           inputResources:
             - name: res_output
-          affinityGroup: ag_group3
         execution:
           onExecute:
             - printenv
@@ -162,7 +161,7 @@ pipelines:
           inputSteps:
             - name: threeCol_step1
             - name: threeCol_step2
-          affinityGroup: ag_group3
+          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
