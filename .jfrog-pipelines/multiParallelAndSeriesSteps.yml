@@ -27,6 +27,7 @@ pipelines:
             key1: "value1"
             key2: "value2"
             key3: "value3"
+          affinityGroup: ag_group1
         execution:
           onExecute:
             - echo $TEST_ENV
@@ -35,10 +36,12 @@ pipelines:
             - echo $key1
             - echo $key2
             - echo $key3
+            - echo $node_id
             
       - name: twoCol_step1
         type: Bash
         configuration:
+          affinityGroup: ag_group1
           inputSteps:
             - name: oneCol_step1
         execution:
@@ -47,6 +50,7 @@ pipelines:
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
+            - echo $node_id
                        
       - name: twoCol_step2
         type: Bash
@@ -55,6 +59,7 @@ pipelines:
             - name: oneCol_step1
           outputResources:
             - name: res_output
+          affinityGroup: ag_group1
         execution:
           onExecute:
             - printenv
@@ -62,48 +67,56 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO   
             - write_output res_output test=$commitSha runID=$current_runid
+            - echo $node_id
             
       - name: twoCol_step3
         type: Bash
         configuration:
           inputSteps:
             - name: oneCol_step1
+          affinityGroup: ag_group1
         execution:
           onExecute:
             - printenv
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
+            - echo $node_id
                         
       - name: twoCol_step4
         type: Bash
         configuration:
           inputSteps:
             - name: oneCol_step1
+          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
+            - echo $node_id
                                     
       - name: twoCol_step5
         type: Bash
         configuration:
           inputSteps:
             - name: oneCol_step1
+          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
             - echo $TEST_ENV
             - echo $JUST_FES
             - echo $LOL_FOO
+            - echo $node_id
                                          
       - name: threeCol_step1
         type: Bash
         configuration:
           inputResources:
             - name: res_output
+          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
@@ -111,12 +124,14 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - sleep 30s
+            - echo $node_id
             
       - name: threeCol_step2
         type: Bash
         configuration:
           inputResources:
             - name: res_output
+          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv
@@ -124,12 +139,14 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - sleep 30s
+            - echo $node_id
                     
       - name: threeCol_step3
         type: Bash
         configuration:
           inputResources:
             - name: res_output
+          affinityGroup: ag_group3
         execution:
           onExecute:
             - printenv
@@ -137,6 +154,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO 
             - sleep 30s
+            - echo $node_id
                                 
       - name: fourCol_step1
         type: Bash
@@ -146,9 +164,11 @@ pipelines:
           inputSteps:
             - name: threeCol_step1
             - name: threeCol_step2
+          affinityGroup: ag_group3
         execution:
           onExecute:
             - printenv
+            - echo $node_id
             
       - name: fiveCol_step1
         type: Bash
@@ -157,9 +177,11 @@ pipelines:
             - name: connect_too_many_steps
           inputSteps:
             - name: fourCol_step1
+          affinityGroup: ag_group3
         execution:
           onExecute:
             - printenv
+            - echo $node_id
                         
       - name: sixCol_step1
         type: Bash
@@ -168,9 +190,11 @@ pipelines:
             - name: connect_too_many_steps
           inputSteps:
             - name: fiveCol_step1
+          affinityGroup: ag_group3
         execution:
           onExecute:
             - printenv
+            - echo $node_id
                              
       - name: sixCol_step2
         type: Bash
@@ -181,6 +205,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - echo $node_id
       
       - name: sixCol_step3
         type: Bash
@@ -191,6 +216,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - echo $node_id
             
       - name: sixCol_step4
         type: Bash
@@ -201,6 +227,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - echo $node_id
           
       - name: sixCol_step5
         type: Bash
@@ -211,6 +238,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - echo $node_id
             
       - name: sevenCol_step1
         type: Bash
@@ -219,9 +247,11 @@ pipelines:
             - name: connect_too_many_steps
           inputSteps:
             - name: sixCol_step1
+          affinityGroup: ag_group2
         execution:
           onExecute:
             - printenv 
+            - echo $node_id
               
             
             
