@@ -1,0 +1,33 @@
+pipelines:
+
+  - name: pipelineConditionVariable
+    steps:
+      - name: cv1step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - add_run_variables "key=test"
+
+      - name: cv2step
+        type: Bash
+        configuration:
+          condition: 'key == "test2"'
+          inputSteps:
+            - name: cv1step
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - echo $key
+            - sleep 10
+            
+      - name: cv3step
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: cv1step
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - echo $key
+            - sleep 10
