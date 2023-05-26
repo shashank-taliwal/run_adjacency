@@ -234,7 +234,7 @@ pipelines:
             description: "SSH user name in automation"
           SSH_PRIVATE_KEY:
             allowCustom: false
-            default:  "test
+            default:  "test"
             description: "SSH private key value in automation"
           GITHUB_WEBHOOKS_REPOSITORY_FULL_NAME:
             allowCustom: false
