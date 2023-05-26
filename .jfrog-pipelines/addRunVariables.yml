@@ -110,9 +110,6 @@ pipelines:
           inputSteps:
             - name: step1arv
         execution:
-          onStart:
-            - if [[ "$step1" != "onExecuteFirst" ]]; then exit 1; fi
-            - add_run_variables step1="onStartUpdated"
           onExecute:
             - echo "Step 2 is running"
   
@@ -123,6 +120,8 @@ pipelines:
             - name: step1arv
         execution:
           onStart:
+            - if [[ "$step1" != "onExecuteFirst" ]]; then exit 1; fi
+            - add_run_variables step1="onStartUpdated"
             - add_run_variables testStep3onStart="col2"
           onExecute:
             - if [[ "$step1" != "onStartUpdated" ]]; then exit 1; fi
@@ -139,6 +138,10 @@ pipelines:
         execution:
           onExecute:
             - if [[ "$step1" != "onStartUpdated" ]]; then exit 1; fi
+            - echo "Step 3 is running"
+            - echo step1=$step1
+            - step1=updatedInStep
+            - echo step1=$step1
             - add_run_variables testStep4="col3"
             
       - name: step5arv
@@ -151,6 +154,7 @@ pipelines:
           affinityGroup: testarv
         execution:
           onExecute:
+            - if [[ "$step1" != "onStartUpdated" ]]; then exit 1; fi
             - echo "Step 5 is running"
             - echo "testStep4 - ${testStep4}"
             - echo "testStep3onStart - ${testStep3onStart}"
@@ -166,6 +170,7 @@ pipelines:
           affinityGroup: testarv1
         execution:
           onExecute:
+            - if [[ "$step1" != "onStartUpdated" ]]; then exit 1; fi
             - echo "Step 6 is running"
             - echo "testStep4 - ${testStep4}"
             - echo "testStep3onStart - ${testStep3onStart}"
