@@ -6,8 +6,7 @@ resources:
       path: Varsha-Arun/simple
       branches:
         include: master
-
-
+        
 pipelines:
   - name: api_testsSample
     configuration:
@@ -332,7 +331,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -390,7 +389,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -450,7 +449,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -511,7 +510,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -573,7 +572,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -635,7 +634,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -697,7 +696,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -759,7 +758,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -821,7 +820,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -883,7 +882,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -945,7 +944,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -1007,7 +1006,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -1071,7 +1070,7 @@ pipelines:
             timeoutSeconds: 21600
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: setup_prematrix
               status:
@@ -1134,7 +1133,7 @@ pipelines:
             timeoutSeconds: 7200
             SKIP_GLOBAL_TEARDOWN: "true"
             SKIP_SETUP: "true"
-          nodePool: pipelines_testing
+          
           inputSteps:
             - name: test_set_1
               status:
@@ -1255,7 +1254,7 @@ pipelines:
             FIRSTPROJECTKEY: "first"
             SECONDPROJECTNAME: "secondProject"
             SECONDPROJECTKEY: "second"
-          nodePool: pipelines_testing
+          
           runtime:
             type: host
           inputSteps:
@@ -1319,7 +1318,7 @@ pipelines:
             FIRSTPROJECTKEY: "first"
             SECONDPROJECTNAME: "secondProject"
             SECONDPROJECTKEY: "second"
-          nodePool: pipelines_testing
+          
           runtime:
             type: host
           inputSteps:
@@ -1381,7 +1380,7 @@ pipelines:
             FIRSTPROJECTKEY: "first"
             SECONDPROJECTNAME: "secondProject"
             SECONDPROJECTKEY: "second"
-          nodePool: pipelines_testing
+          
           runtime:
             type: host
           inputSteps:
@@ -1467,7 +1466,7 @@ pipelines:
             FIRSTPROJECTKEY: "first"
             SECONDPROJECTNAME: "secondProject"
             SECONDPROJECTKEY: "second"
-          nodePool: pipelines_testing
+          
           runtime:
             type: host
           inputSteps:
