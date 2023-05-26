@@ -1,5 +1,5 @@
 resources:
-  - name: simple_github
+  - name: simple_gitrepo
     type: GitRepo
     configuration:
       gitProvider: varsha_github
