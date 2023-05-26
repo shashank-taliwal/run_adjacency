@@ -25,7 +25,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: cv1step
+            - name: cv2step
         execution:
           onExecute:
             - echo "executing step..."
