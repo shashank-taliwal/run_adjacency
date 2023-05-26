@@ -24,7 +24,7 @@ pipelines:
             - ls -latr .
             - ls -latr preMatrixTest/preState
             - mkdir -p matrixFiles
-            - echo "working" >> tmp/matrixFiles/${steplet_id}/working.txt
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
            
            
       - name: postMatrixTest
