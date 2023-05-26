@@ -23,11 +23,19 @@ pipelines:
         execution:
           onStart:
             - add_run_variables step_2_var="onStart"
+            - mkdir -p preState
+            - echo "working" >> preState/working.txt
+            - add_run_files preState/working.txt myfilesOnstart
           onExecute:
             - echo "Step 2 is running"
             - add_run_variables step_2_varOnExecute="onExecute"
+            - mkdir -p preState
+            - echo "working" >> preState/working1.txt
+            - add_run_files preState/working1.txt myfilesOnExecute
           onComplete:
             - add_run_variables step_2_varOnComplete="onComplete"
+            - echo "working" >> preState/working2.txt
+            - add_run_files preState/working2.txt myfilesOnComplete
   
       - name: S_WF_033_003bash
         type: Bash
@@ -73,6 +81,7 @@ pipelines:
             - if [[ "$step_4_var" != "step4" ]]; then exit 1; fi
             - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then exit 1; fi
             - if [[ "$step_2_varOnComplete" != "onComplete" ]]; then exit 1; fi
+            
   
       - name: S_WF_033_006bas
         type: Bash
@@ -83,10 +92,9 @@ pipelines:
         execution:
           onExecute:
             - echo "Step 6 is running"
-            - restore_run variable step_2_var
-            - restore_run_variable step_4_var
-            - restore_run_variable step_2_varOnExecute
-            - restore_run_variable step_2_varOnComplete
+            - restore_run_files myfilesOnstart preState/working.txt
+            - restore_run_files myfilesOnExecute preState/working1.txt
+            - restore_run_files myfilesOnComplete preState/working2.txt
             - if [[ "$step_2_var" != "onStart" ]]; then exit 1; fi
             - if [[ "$step_4_var" != "step4" ]]; then exit 1; fi
             - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then exit 1; fi
