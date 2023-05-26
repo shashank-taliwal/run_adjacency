@@ -1551,13 +1551,8 @@ pipelines:
       - name: teardown_postmatrix
         type: PostMatrix
         configuration:
-          integrations:
-            - name: jfdev_agent
-            - name: dockerDotJfrog
           inputResources:
             - name: simple_gitrepo
-              trigger: false
-            - name: triggerLightWeightAutomation
               trigger: false
           inputSteps:
             - name: test_defaultProjectAsPrimaryProject
