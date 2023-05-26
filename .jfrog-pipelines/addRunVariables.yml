@@ -83,6 +83,10 @@ pipelines:
         execution:
           onExecute:
             - echo "Step 6 is running"
+            - restore_run variable step_2_var
+            - restore_run_variable step_4_var
+            - restore_run_variable step_2_varOnExecute
+            - restore_run_variable step_2_varOnComplete
             - if [[ "$step_2_var" != "onStart" ]]; then exit 1; fi
             - if [[ "$step_4_var" != "step4" ]]; then exit 1; fi
             - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then exit 1; fi
