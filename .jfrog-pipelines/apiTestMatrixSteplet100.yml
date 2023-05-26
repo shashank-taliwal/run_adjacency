@@ -7,12 +7,6 @@ resources:
       branches:
         include: master
 
-  - name: testPropertyBag
-    type: PropertyBag
-    configuration:
-      key1: value1
-      key2: value2
-        
 pipelines:
   - name: api_testsSample
     configuration:
