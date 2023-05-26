@@ -23,7 +23,7 @@ pipelines:
           onExecute:
             - ls -latr .
             - ls -latr preMatrixTest/preState
-            - mkdir -p matrixFiles
+            - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
            
            
