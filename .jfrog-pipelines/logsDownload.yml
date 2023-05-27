@@ -133,7 +133,7 @@ pipelines:
 #             - update_run_description 'testRunDescription'
             - echo $current_runid
             - add_pipeline_variables prev_runid=$run_id
-            - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} JFROG_PIPELINES_RUN_STATE_DEBUG=true
+            - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} 
             - write_output A_stepArtifact_propertyBag_v1 commitSha=$commitSha runID=$current_runid
             - printenv
 
