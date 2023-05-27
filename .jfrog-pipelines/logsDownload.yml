@@ -98,7 +98,6 @@ pipelines:
           onComplete:
             - add_run_variables current_runid=$run_id
             - add_run_variables commitSha=$res_jatin_gitrepo2_commitSha
-            - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
             - printenv
       - name: s_stepArtifacts_002_v1
         type: Matrix
@@ -120,7 +119,6 @@ pipelines:
           onExecute:
             - echo "I am executing matrix steplet \${steplet_id}"
             - echo "Envs animal= $animal , mineral = $mineral , vegetable = $vegetable"
-            - add_run_variables JFROG_PIPELINES_RUN_STATE_DEBUG=true
             - printenv
       - name: s_stepArtifacts_003_v1
         type: Bash
