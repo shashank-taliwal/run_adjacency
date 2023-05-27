@@ -120,7 +120,7 @@ pipelines:
             allowCustom: true
           AWS_PROJECT_INTEGRATION_SECRETACCESSKEY:
             description: "Default AWS ecret access-key"
-            default: tets"
+            default: tets
             values:
               - "test"
               - "test"
