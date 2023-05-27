@@ -36,7 +36,7 @@ pipelines:
           TEST_ENV: "pipelines"
           JUST_FES: "options"
           LOL_FOO: "test"
-          JFROG_PIPELINES_RUN_STATE_DEBUG: true
+          JFROG_PIPELINES_RUN_STATE_DEBUG: "true"
     preRun:
       execution:
         onExecute:
