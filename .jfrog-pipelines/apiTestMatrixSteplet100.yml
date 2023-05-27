@@ -19,7 +19,7 @@ pipelines:
           LOG_LEVEL: "info"
           JFROG_ARTIFACTORY_USER:
             allowCustom: true
-            default: "${int_test_automation_token_JFROG_ARTIFACTORY_USER_lightWeight}"
+            default: "test"
             description: "Username of the instance against which you want to trigger smoke test suite"
           JFROG_ADMIN_ARTIFACTORY_PASSWORD:
             allowCustom: true
