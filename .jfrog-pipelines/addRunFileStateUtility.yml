@@ -92,9 +92,9 @@ pipelines:
         execution:
           onExecute:
             - echo "Step 6 is running"
-            - restore_run_files myfilesOnstart preState/working.txt
-            - restore_run_files myfilesOnExecute preState/working1.txt
-            - restore_run_files myfilesOnComplete preState/working2.txt
+            - restore_run_files myfilesOnState preStateTest1
+            - restore_run_files myfilesOnExecute preState2
+            - restore_run_files myfilesOnComplete preState3
             - if [[ "$step_2_var" != "onStart" ]]; then exit 1; fi
             - if [[ "$step_4_var" != "step4" ]]; then exit 1; fi
             - if [[ "$step_2_varOnExecute" != "onExecute" ]]; then exit 1; fi
