@@ -298,30 +298,6 @@ pipelines:
           onStart:
             - echo $KUBERNETES_PROJECT_INTEGRATION_KUBECONFIG_PATH
             - echo "Uploading SSH key"
-            - |
-              curl -u admin:$PASSWORD -H "Accept: application/json" \
-                -H "Content-Type: application/json" -X POST "${JPD_URL}/artifactory/api/security/keys/trusted" \
-                --data-binary '{"alias":"test","public_key":"-----BEGIN PGP PUBLIC KEY BLOCK-----\n\n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\n4Hi7A7VSe3gk2LM=\n=40XY\n-----END PGP PUBLIC KEY BLOCK-----"}'
-            - cp -r $res_simple_gitRepo_resourcePath/automation/tests .
-            - pushd tests
-            - ls -la
-            - export REPOSITORY_FULL_NAME=$gitUser"/Org_test_Automation"
-            - export WEBHOOKS_REPOSITORY_FULL_NAME=$gitUser"/Org_test_Automation_Webhooks"
-            - export REPOSITORY_BRANCH="master"
-            - export ORG_TEST_AUTOMATION_DIRECTORY="./Org_test_Automation"
-            - export ORG_TEST_AUTOMATION_BASH_DIRECTORY="./Org_test_Automation_bash"
-            - export ORG_TEST_AUTOMATION_POWERSHELL_DIRECTORY="./Org_test_Automation_PowerShell"
-            - export ORG_TEST_AUTOMATION_PRIVATE_DIRECTORY="./Org_test_Automation_Private"
-            - export ORG_TEST_AUTOMATION_MULTIBRANCH_DIRECTORY="./org_test_automation_MultiBranch"
-            - export TEMPLATE_BINARY_PATH="./automation_templateFS/pipelines-template-0.0.0-m000"
-            - mkdir -p /tmp/npm_cache
-            - restore_pipeline_files npm_cache /tmp/npm_cache/
-            - add_pipeline_files /tmp/npm_cache npm_cache
-            
-            - add_run_variables JPD_URL="$JPD_URL"
-            - add_run_variables JFROG_JOIN_KEY="$JFROG_JOIN_KEY"
-            - popd
-            - rm -rf $res_simple_gitRepo_resourcePath
 
 
       - name: a1
