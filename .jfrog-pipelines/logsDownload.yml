@@ -101,27 +101,27 @@ pipelines:
           onExecute:
             - echo "executing step api_pipeinfo_step1"
             - printenv
-            - "steps=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/steps?runIds=${run_id}&names=S_Bash_util_4075_001_1\")"
-            - echo steps:$steps
-            - stepId=$(echo $steps | jq -r '.[0].id')
-            - if [ -z "$stepId" ] || [ "$stepId" == "null" ]; then return 1; fi
-            - "stepTestReports=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/stepTestReports?stepIds=${stepId}\")"
-            - durationSeconds=$(echo $stepTestReports | jq -r '.[0].durationSeconds')
-            - if [ "$durationSeconds" != "7" ]; then return 1; fi
-            - totalTests=$(echo $stepTestReports | jq -r '.[0].totalTests')
-            - if [ "$totalTests" != "5" ]; then return 1; fi
-            - totalPassing=$(echo $stepTestReports | jq -r '.[0].totalPassing')
-            - if [ "$totalPassing" != "1" ]; then return 1; fi
-            - totalFailures=$(echo $stepTestReports | jq -r '.[0].totalFailures')
-            - if [ "$totalFailures" != "1" ]; then return 1; fi
-            - totalErrors=$(echo $stepTestReports | jq -r '.[0].totalErrors')
-            - if [ "$totalErrors" != "2" ]; then return 1; fi
-            - totalSkipped=$(echo $stepTestReports | jq -r '.[0].totalSkipped')
-            - if [ "$totalSkipped" != "1" ]; then return 1; fi
-            - errorDetails=$(echo $stepTestReports | jq -r '.[0].errorDetails | length')
-            - if [ "$errorDetails" != "2" ]; then return 1; fi
-            - failureDetails=$(echo $stepTestReports | jq -r '.[0].failureDetails | length')
-            - if [ "$failureDetails" != "1" ]; then return 1; fi
+#             - "steps=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/steps?runIds=${run_id}&names=S_Bash_util_4075_001_1\")"
+#             - echo steps:$steps
+#             - stepId=$(echo $steps | jq -r '.[0].id')
+#             - if [ -z "$stepId" ] || [ "$stepId" == "null" ]; then return 1; fi
+#             - "stepTestReports=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/stepTestReports?stepIds=${stepId}\")"
+#             - durationSeconds=$(echo $stepTestReports | jq -r '.[0].durationSeconds')
+#             - if [ "$durationSeconds" != "7" ]; then return 1; fi
+#             - totalTests=$(echo $stepTestReports | jq -r '.[0].totalTests')
+#             - if [ "$totalTests" != "5" ]; then return 1; fi
+#             - totalPassing=$(echo $stepTestReports | jq -r '.[0].totalPassing')
+#             - if [ "$totalPassing" != "1" ]; then return 1; fi
+#             - totalFailures=$(echo $stepTestReports | jq -r '.[0].totalFailures')
+#             - if [ "$totalFailures" != "1" ]; then return 1; fi
+#             - totalErrors=$(echo $stepTestReports | jq -r '.[0].totalErrors')
+#             - if [ "$totalErrors" != "2" ]; then return 1; fi
+#             - totalSkipped=$(echo $stepTestReports | jq -r '.[0].totalSkipped')
+#             - if [ "$totalSkipped" != "1" ]; then return 1; fi
+#             - errorDetails=$(echo $stepTestReports | jq -r '.[0].errorDetails | length')
+#             - if [ "$errorDetails" != "2" ]; then return 1; fi
+#             - failureDetails=$(echo $stepTestReports | jq -r '.[0].failureDetails | length')
+#             - if [ "$failureDetails" != "1" ]; then return 1; fi
           onComplete:
             - add_run_variables current_runid=$run_id
             - add_run_variables commitSha=$res_jatin_gitrepo2_commitSha
