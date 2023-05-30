@@ -40,6 +40,15 @@ pipelines:
             - ls -latr
             - ls -latr matrixStep
             - ls -latr matrixStep/matrixFiles/$matrixStepletId
-            - cat matrixStep/matrixFiles/$matrixStepletId/working.txt
-            - echo ${steplet_id}
-            - if [ -f "$File" ]; then  echo "$File exist"  else  echo "$File does not exist"  fi  
+            - txt=$( ls -l ./matrixStep/matrixFiles/${steplet_id} | sed -n '2p' )
+            - matrixStep=$( echo $txt | awk -F " " '{print $NF}' )
+            - echo $matrixStep
+#             - |
+#               [[ "$matrixStep" == "working.txt" ]]
+            
+            - tem=$( ls -l ./matrixStep/preMatrixTest/preState | sed -n '2p' )
+            - echo $tem
+            - x=$( echo $tem | awk -F " " '{print $NF}' )
+            - echo $x
+#             - |
+#               [[ "$x" == "working.txt" ]]
