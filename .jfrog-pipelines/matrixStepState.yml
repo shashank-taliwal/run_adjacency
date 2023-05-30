@@ -8,7 +8,6 @@ pipelines:
             - mkdir -p preState
             - echo "working" >> preState/working.txt
             - echo ${steplet_id}
-            - add_run_variables preMatrixStepletId ${steplet_id}
             
       - name: matrixStep
         type: Matrix
@@ -28,7 +27,6 @@ pipelines:
             - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
             - echo ${steplet_id}
-            - add_run_files matrixFilesTest matrixFiles/${steplet_id}/working.txt
            
       - name: postMatrixTest
         type: PostMatrix
@@ -39,16 +37,4 @@ pipelines:
           onExecute:
             - ls -latr
             - ls -latr matrixStep
-            - ls -latr matrixStep/matrixFiles/$matrixStepletId
-            - txt=$( ls -l ./matrixStep/matrixFiles | sed -n '2p' )
-            - matrixStep=$( echo $txt | awk -F " " '{print $NF}' )
-            - echo $matrixStep
-#             - |
-#               [[ "$matrixStep" == "working.txt" ]]
-            
-            - tem=$( ls -l ./matrixStep/preMatrixTest/preState | sed -n '2p' )
-            - echo $tem
-            - x=$( echo $tem | awk -F " " '{print $NF}' )
-            - echo $x
-#             - |
-#               [[ "$x" == "working.txt" ]]
+            - ls -latr matrixStep/matrixFiles
