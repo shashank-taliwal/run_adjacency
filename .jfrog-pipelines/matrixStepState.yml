@@ -8,7 +8,7 @@ pipelines:
             - mkdir -p preState
             - echo "working" >> preState/working.txt
             - echo ${steplet_id}
-            - add_run_variable preMatrixStepletId ${steplet_id}
+            - add_run_variables preMatrixStepletId ${steplet_id}
             
       - name: matrixStep
         type: Matrix
@@ -28,7 +28,7 @@ pipelines:
             - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
             - echo ${steplet_id}
-            - add_run_variable matrixStepletId ${steplet_id}
+            - add_run_variables matrixStepletId ${steplet_id}
            
       - name: postMatrixTest
         type: PostMatrix
