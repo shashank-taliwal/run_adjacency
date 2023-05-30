@@ -7,6 +7,8 @@ pipelines:
           onExecute:
             - mkdir -p preState
             - echo "working" >> preState/working.txt
+            - echo ${steplet_id}
+            - add_run_variable preMatrixStepletId ${steplet_id}
             
       - name: matrixStep
         type: Matrix
@@ -25,7 +27,8 @@ pipelines:
             - ls -latr preMatrixTest/preState
             - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
-           
+            - echo ${steplet_id}
+            - add_run_variable matrixStepletId ${steplet_id}
            
       - name: postMatrixTest
         type: PostMatrix
@@ -36,4 +39,7 @@ pipelines:
           onExecute:
             - ls -latr
             - ls -latr matrixStep
-            - ls -latr matrixStep/matrixFiles
+            - ls -latr matrixStep/matrixFiles/$matrixStepletId
+            - cat matrixStep/matrixFiles/$matrixStepletId/working.txt
+            - echo ${steplet_id}
+            - if [ -f "$File" ]; then  echo "$File exist"  else  echo "$File does not exist"  fi  
