@@ -40,7 +40,7 @@ pipelines:
             - ls -latr
             - ls -latr matrixStep
             - ls -latr matrixStep/matrixFiles/$matrixStepletId
-            - txt=$( ls -l ./matrixStep/matrixFiles/${steplet_id} | sed -n '2p' )
+            - txt=$( ls -l ./matrixStep/matrixFiles | sed -n '2p' )
             - matrixStep=$( echo $txt | awk -F " " '{print $NF}' )
             - echo $matrixStep
 #             - |
