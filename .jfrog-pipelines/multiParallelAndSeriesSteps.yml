@@ -1,18 +1,23 @@
 resources:
-  - name: connect_too_many_steps
+  - name: connect_too_many_steps_test
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
       
-  - name: res_output
+  - name: res_output_test
+    type: PropertyBag
+    configuration:
+      test: ''
+  
+  - name: res_output_step
     type: PropertyBag
     configuration:
       test: ''
       
 pipelines:
 
-  - name: multiParallelAndSeriesStepsPipeline
+  - name: DifferentAffinityGroupInSamePipelineMultiParallelAndSimpleSteps
     configuration:
       environmentVariables:
         readOnly: 
@@ -20,7 +25,7 @@ pipelines:
           JUST_FES: "options"
           LOL_FOO: "test"
     steps:
-      - name: oneCol_step1
+      - name: oneCol_step1_ag1
         type: Bash
         configuration:
           runtime:
@@ -37,15 +42,16 @@ pipelines:
           affinityGroup: ag_group1
         execution:
           onExecute:
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
-            - echo $key1
-            - echo $key2
-            - echo $key3
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $key1 != "value1" ]; then echo "key1-$key1 is from step section"; return 1; fi
+            - if [ $key2 != "value2" ]; then echo "key2-$key2 is from step section"; return 1; fi
+            - if [ $key3 != "value3" ]; then echo "key3-$key3 is from step section"; return 1; fi
+            - add_run_variables agroup1=$step_node_name
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
-      - name: twoCol_step1
+      - name: twoCol_step1_ag1
         type: Bash
         configuration:
           runtime:
@@ -57,16 +63,17 @@ pipelines:
                   - '11'
           affinityGroup: ag_group1
           inputSteps:
-            - name: oneCol_step1
+            - name: oneCol_step1_ag1
         execution:
           onExecute:
             - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup1 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                        
-      - name: twoCol_step2
+      - name: twoCol_step2_ag1
         type: Bash
         configuration:
           runtime:
@@ -77,198 +84,274 @@ pipelines:
                 versions:
                   - '13'
           inputSteps:
-            - name: oneCol_step1
+            - name: oneCol_step1_ag1
           outputResources:
-            - name: res_output
+            - name: res_output_test
           affinityGroup: ag_group1
         execution:
           onExecute:
             - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO   
-            - write_output res_output test=$commitSha runID=$current_runid
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi 
+            - if [ $agroup1 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
+            - write_output res_output_test test=$commitSha runID=$current_runid
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
-      - name: twoCol_step3
+      - name: twoCol_step3_ag1
         type: Bash
         configuration:
           inputSteps:
-            - name: oneCol_step1
+            - name: oneCol_step1_ag1
           affinityGroup: ag_group1
         execution:
           onExecute:
             - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup1 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                         
-      - name: twoCol_step4
+      - name: twoCol_step4_noAG
         type: Bash
         configuration:
           inputSteps:
-            - name: oneCol_step1
+            - name: oneCol_step1_ag1
         execution:
           onExecute:
             - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup1 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                                     
-      - name: twoCol_step5
+      - name: twoCol_step5_noAG
         type: Bash
         configuration:
+          environmentVariables:
+            envOverride: "valueToBeOverridenInNextStepEnv"
+            noOverride: "stepVariable"
+            stepOverride: "valueToBeOverridenInNextStepNotInEnv"
           inputSteps:
-            - name: oneCol_step1
+            - name: oneCol_step1_ag1
+          outputSteps:
+            - name: res_output_step
         execution:
           onExecute:
             - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-            
-      - name: threeCol_step1
-        type: Bash
-        configuration:
-          inputResources:
-            - name: res_output
-          affinityGroup: ag_group2
-        execution:
-          onExecute:
-            - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
-            - sleep 30s
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-            
-      - name: threeCol_step2
-        type: Bash
-        configuration:
-          inputResources:
-            - name: res_output
-          affinityGroup: ag_group2
-        execution:
-          onExecute:
-            - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO
-            - sleep 30s
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-                    
-      - name: threeCol_step3
-        type: Bash
-        configuration:
-          inputResources:
-            - name: res_output
-        execution:
-          onExecute:
-            - printenv
-            - echo $TEST_ENV
-            - echo $JUST_FES
-            - echo $LOL_FOO 
-            - sleep 30s
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-                                
-      - name: fourCol_step1
-        type: Bash
-        configuration:
-          inputResources:
-            - name: connect_too_many_steps
-          inputSteps:
-            - name: threeCol_step1
-            - name: threeCol_step2
-          affinityGroup: ag_group2
-        execution:
-          onExecute:
-            - printenv
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-            
-      - name: fiveCol_step1
-        type: Bash
-        configuration:
-          inputResources:
-            - name: connect_too_many_steps
-          inputSteps:
-            - name: fourCol_step1
-          affinityGroup: ag_group3
-        execution:
-          onExecute:
-            - printenv
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-                        
-      - name: sixCol_step1
-        type: Bash
-        configuration:
-          inputResources:
-            - name: connect_too_many_steps
-          inputSteps:
-            - name: fiveCol_step1
-          affinityGroup: ag_group3
-        execution:
-          onExecute:
-            - printenv
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-                             
-      - name: sixCol_step2
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: fiveCol_step1
-        execution:
-          onExecute:
-            - printenv
-            - sleep 30s
+            - write_output res_output_step test=$commitSha runID=$current_runid
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $envOverride != "valueToBeOverridenInNextStepEnv" ]; then echo "envOverride-$envOverride is from step section"; return 1; fi
+            - if [ $stepOverride != "valueToBeOverridenInNextStepNotInEnv" ]; then echo "stepOverride-$stepOverride is from step section"; return 1; fi
+            - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
       
-      - name: sixCol_step3
+      - name: joker_between_twoAndThreeCol_noAG
         type: Bash
         configuration:
+          environmentVariables:
+            envOverride: "valueoverridenInEnvSection"
           inputSteps:
-            - name: fiveCol_step1
+            - name: twoCol_step5_noAG
+          outputResources:
+            - name: res_output_step
         execution:
           onExecute:
+            - if [ $stepOverride != "valueToBeOverridenInNextStepNotInEnv" ]; then echo "stepOverride-$stepOverride is from step section"; return 1; fi
+            - stepOverride="valueoverridenInStepExecutionSection"
             - printenv
-            - sleep 30s
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $envOverride != "valueoverridenInEnvSection" ]; then echo "envOverride-$envOverride is not overriden from step env section"; return 1; fi
+            - if [ $stepOverride != "valueoverridenInStepExecutionSection" ]; then echo "stepOverride-$stepOverride is not overriden from step section"; return 1; fi
+            - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
-      - name: sixCol_step4
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: fiveCol_step1
-        execution:
-          onExecute:
-            - printenv
-            - sleep 30s
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-          
-      - name: sixCol_step5
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: fiveCol_step1
-        execution:
-          onExecute:
-            - printenv
-            - sleep 30s
-            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
-            
-      - name: sevenCol_step1
+      - name: threeCol_step1_ag2
         type: Bash
         configuration:
           inputResources:
-            - name: connect_too_many_steps
+            - name: res_output_test
+          affinityGroup: ag_group2
+          priority: 1
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - add_run_variables agroup2=$step_node_name
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+            
+      - name: threeCol_step2_ag2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res_output_test
+          affinityGroup: ag_group2
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup2 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+                    
+      - name: threeCol_step3_noAG
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res_output_test
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+       
+      - name: threeCol_step4_noAG
+        type: Bash
+        configuration:
           inputSteps:
-            - name: sixCol_step1
+            - name: joker_between_twoAndThreeCol_noAG
+          inputResources:
+            - name: res_output_step
+        execution:
+          onExecute:
+            - printenv
+            - if [ $res_res_output_step_runID != "$current_runid" ]; then echo "res_res_output_step_runID-$res_res_output_step_runID is from output resource"; return 1; fi
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $envOverride != "valueoverridenInEnvSection" ]; then echo "envOverride-$envOverride is not overriden from step env section"; return 1; fi
+            - if [ $stepOverride != "valueoverridenInStepExecutionSection" ]; then echo "stepOverride-$stepOverride is not overriden from step section"; return 1; fi
+            - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+                                
+      - name: fourCol_step1_ag2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: connect_too_many_steps_test
+          inputSteps:
+            - name: threeCol_step1_ag2
+            - name: threeCol_step2_ag2
+          affinityGroup: ag_group2
+        execution:
+          onExecute:
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup2 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+            
+      - name: fiveCol_step1_ag3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: connect_too_many_steps_test
+          inputSteps:
+            - name: fourCol_step1_ag2
+          affinityGroup: ag_group3
+        execution:
+          onExecute:
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - add_run_variables agroup3=$step_node_name
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+                        
+      - name: sixCol_step1_ag3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: connect_too_many_steps_test
+          inputSteps:
+            - name: fiveCol_step1_ag3
+          affinityGroup: ag_group3
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup3 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+                             
+      - name: sixCol_step2_noAG
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: fiveCol_step1_ag3
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+      
+      - name: sixCol_step3_noAG
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: fiveCol_step1_ag3
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+            
+      - name: sixCol_step4_noAG
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: fiveCol_step1_ag3
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+          
+      - name: sixCol_step5_noAG
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: fiveCol_step1_ag3
+        execution:
+          onExecute:
+            - printenv
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
+            
+      - name: sevenCol_step1_ag3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: connect_too_many_steps_test
+          inputSteps:
+            - name: sixCol_step1_ag3
           affinityGroup: ag_group3
         execution:
           onExecute:
             - printenv 
+            - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
+            - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
+            - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
+            - if [ $agroup3 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
               
             
