@@ -218,6 +218,8 @@ pipelines:
         type: Bash
         configuration:
           affinityGroup: ag_group4
+          inputResources:
+            - name: res_output_step
           inputSteps:
             - name: joker_between_twoAndThreeCol_noAG
         execution:
