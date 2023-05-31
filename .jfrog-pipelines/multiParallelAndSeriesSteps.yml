@@ -149,9 +149,10 @@ pipelines:
             - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
       
-      - name: joker_between_twoAndThreeCol_noAG
+      - name: joker_between_twoAndThreeCol_ag4
         type: Bash
         configuration:
+          affinityGroup: ag_group4
           environmentVariables:
             envOverride: "valueoverridenInEnvSection"
           inputSteps:
@@ -215,9 +216,10 @@ pipelines:
             - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
        
-      - name: threeCol_step4_noAG
+      - name: threeCol_step4_ag4
         type: Bash
         configuration:
+          affinityGroup: ag_group4
           inputSteps:
             - name: joker_between_twoAndThreeCol_noAG
         execution:
