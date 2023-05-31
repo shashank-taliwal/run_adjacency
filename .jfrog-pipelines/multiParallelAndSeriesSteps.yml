@@ -136,7 +136,7 @@ pipelines:
             stepOverride: "valueToBeOverridenInNextStepNotInEnv"
           inputSteps:
             - name: oneCol_step1_ag1
-          outputSteps:
+          outputResources:
             - name: res_output_step
         execution:
           onExecute:
