@@ -221,7 +221,7 @@ pipelines:
           inputResources:
             - name: res_output_step
           inputSteps:
-            - name: joker_between_twoAndThreeCol_noAG
+            - name: joker_between_twoAndThreeCol_ag4
         execution:
           onExecute:
             - printenv
