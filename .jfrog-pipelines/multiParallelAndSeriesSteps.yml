@@ -155,8 +155,6 @@ pipelines:
           affinityGroup: ag_group4
           environmentVariables:
             envOverride: "valueoverridenInEnvSection"
-          inputSteps:
-            - name: twoCol_step5_noAG
           inputResources:
             - name: res_output_step
         execution:
