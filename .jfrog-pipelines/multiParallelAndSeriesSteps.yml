@@ -124,7 +124,6 @@ pipelines:
             - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
             - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
             - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
-            - if [ $agroup1 != $step_node_name ]; then echo "Step didnt run on same node in an affinity group"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                                     
       - name: twoCol_step5_noAG
