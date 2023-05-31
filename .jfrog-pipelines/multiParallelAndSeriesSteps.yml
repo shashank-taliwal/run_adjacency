@@ -14,7 +14,11 @@ resources:
     type: PropertyBag
     configuration:
       test: ''
-      
+  
+  - name: res_output_step2
+    type: PropertyBag
+    configuration:
+      test: ''
 pipelines:
 
   - name: DifferentAffinityGroupInSamePipelineMultiParallelAndSimpleSteps
@@ -155,6 +159,8 @@ pipelines:
           affinityGroup: ag_group4
           environmentVariables:
             envOverride: "valueoverridenInEnvSection"
+          outputResources:
+            - name: res_output_step2
           inputResources:
             - name: res_output_step
         execution:
@@ -162,6 +168,7 @@ pipelines:
             - if [ $stepOverride != "valueToBeOverridenInNextStepNotInEnv" ]; then echo "stepOverride-$stepOverride is from step section"; return 1; fi
             - stepOverride="valueoverridenInStepExecutionSection"
             - printenv
+            - write_output res_output_step2 test=$commitSha runID=$current_runid
             - if [ $TEST_ENV != "pipelines" ]; then echo "TEST_ENV-$TEST_ENV is from pipeline section readonly"; return 1; fi
             - if [ $JUST_FES != "options" ]; then echo "JUST_FES-$JUST_FES is from pipeline section readonly"; return 1; fi
             - if [ $LOL_FOO != "test" ]; then echo "LOL_FOO-$LOL_FOO is from pipeline section readonly"; return 1; fi
@@ -220,6 +227,7 @@ pipelines:
           affinityGroup: ag_group4
           inputResources:
             - name: res_output_step
+            - name: res_output_step2
           inputSteps:
             - name: joker_between_twoAndThreeCol_ag4
         execution:
