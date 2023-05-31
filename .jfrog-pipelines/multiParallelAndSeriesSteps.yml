@@ -151,6 +151,9 @@ pipelines:
             - if [ $envOverride != "valueToBeOverridenInNextStepEnv" ]; then echo "envOverride-$envOverride is from step section"; return 1; fi
             - if [ $stepOverride != "valueToBeOverridenInNextStepNotInEnv" ]; then echo "stepOverride-$stepOverride is from step section"; return 1; fi
             - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
+            - add_run_variables runEnvOverride="runValueToBeOverridenInNextStepEnv"
+            - add_run_variables runStepOverride="runValueToBeOverridenInNextStepNotInEnv"
+            - add_run_variables runNoOverride="runStepVariable"
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
       
       - name: joker_between_twoAndThreeCol_ag4
@@ -175,6 +178,10 @@ pipelines:
             - if [ $envOverride != "valueoverridenInEnvSection" ]; then echo "envOverride-$envOverride is not overriden from step env section"; return 1; fi
             - if [ $stepOverride != "valueoverridenInStepExecutionSection" ]; then echo "stepOverride-$stepOverride is not overriden from step section"; return 1; fi
             - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
+            - runStepOverride="runValueoverridenInStepExecutionSection"
+            - if [ $runEnvOverride != "runValueToBeOverridenInNextStepEnv" ]; then echo "runEnvOverride-$runEnvOverride is not overriden from step env section"; return 1; fi
+            - if [ $runStepOverride != "runValueoverridenInStepExecutionSection" ]; then echo "runStepOverride-$runStepOverride is not overriden from step section"; return 1; fi
+            - if [ $runNoOverride != "runStepVariable" ]; then echo "runNoOverride-$runNoOverride is from step section"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
             
       - name: threeCol_step1_ag2
@@ -228,8 +235,6 @@ pipelines:
           inputResources:
             - name: res_output_step
             - name: res_output_step2
-          inputSteps:
-            - name: joker_between_twoAndThreeCol_ag4
         execution:
           onExecute:
             - printenv
@@ -240,6 +245,9 @@ pipelines:
             - if [ $envOverride != "valueoverridenInEnvSection" ]; then echo "envOverride-$envOverride is not overriden from step env section"; return 1; fi
             - if [ $stepOverride != "valueoverridenInStepExecutionSection" ]; then echo "stepOverride-$stepOverride is not overriden from step section"; return 1; fi
             - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
+            - if [ $runEnvOverride != "runValueToBeOverridenInNextStepEnv" ]; then echo "runEnvOverride-$runEnvOverride is not overriden from step env section"; return 1; fi
+            - if [ $runStepOverride != "runValueoverridenInStepExecutionSection" ]; then echo "runStepOverride-$runStepOverride is not overriden from step section"; return 1; fi
+            - if [ $runNoOverride != "runStepVariable" ]; then echo "runNoOverride-$runNoOverride is from step section"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                                 
       - name: fourCol_step1_ag2
