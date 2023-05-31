@@ -156,8 +156,6 @@ pipelines:
             envOverride: "valueoverridenInEnvSection"
           inputSteps:
             - name: twoCol_step5_noAG
-          outputResources:
-            - name: res_output_step
         execution:
           onExecute:
             - if [ $stepOverride != "valueToBeOverridenInNextStepNotInEnv" ]; then echo "stepOverride-$stepOverride is from step section"; return 1; fi
