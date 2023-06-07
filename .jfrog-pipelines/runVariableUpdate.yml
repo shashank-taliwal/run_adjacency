@@ -35,4 +35,4 @@ pipelines:
             - name: S_WF_6379_002_3
         execution:
           onExecute:
-            - if [ "$step" != "two" ]; then exit 1; fi
+            - if [ "$step" != "two" ]; then echo $step; exit 1; fi
