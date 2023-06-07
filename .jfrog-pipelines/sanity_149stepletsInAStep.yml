@@ -1,9 +1,5 @@
 pipelines:
-  - name: sanity_149stepletsInAStepTest
-    postRun:
-      execution:
-        onExecute:
-          - echo "Executing Post Run"
+  - name: s149stepletsInAStepTest
     configuration:
       environmentVariables:
         readOnly:
@@ -260,7 +256,7 @@ pipelines:
             SECONDPROJECTNAME: "secondProject"
             SECONDPROJECTKEY: "second"
         execution:
-          onStart:
+          onExecute:
             - echo $KUBERNETES_PROJECT_INTEGRATION_KUBECONFIG_PATH
             - mkdir -p preState
             - echo "working" >> preState/working.txt
