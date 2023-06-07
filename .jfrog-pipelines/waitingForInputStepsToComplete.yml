@@ -1,0 +1,24 @@
+pipelines:
+  - name: PIPE_8194_03
+    steps:
+      - name: PIPE_8194_03_A
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+  - name: PIPE_8194_03_B
+    type: Bash
+    configuration:
+      inputSteps:
+        - name: PIPE_8194_03_A
+    execution:
+      onExecute:
+        - printenv
+  - name: PIPE_8194_03_C
+    type: Bash
+    configuration:
+      inputSteps:
+        - name: PIPE_8194_03_B
+    execution:
+      onExecute:
+        - printenv
