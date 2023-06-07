@@ -10,8 +10,6 @@ pipelines:
       - name: S_WF_6379_002_2
         type: Bash
         configuration:
-          affinityGroup: ag1
-          priority: 500
           inputSteps:
             - name: S_WF_6379_002_1
         execution:
@@ -21,7 +19,7 @@ pipelines:
       - name: S_WF_6379_002_3
         type: Bash
         configuration:
-          affinityGroup: ag1
+          priority: 500
           inputSteps:
             - name: S_WF_6379_002_1
         execution:
