@@ -4,6 +4,10 @@ resources:
     configuration:
       test: test
 
+  - name: WONParentSucess_resource2
+    type: PropertyBag
+    configuration:
+      test: test
   - name: dependencyModeRepoSimpleMain
     type: GitRepo
     configuration:
@@ -49,10 +53,10 @@ pipelines:
           inputResources:
             - name: dependencyModeRepoSimpleMain
           outputResources:
-            - name: WONParentSucess_resource
+            - name: WONParentSucess_resource2
         execution:
           onExecute:
-            - write_output WONParentSucess_resource test=${run_number}
+            - write_output WONParentSucess_resource2 test=${run_number}
             - testsssDADA
 
   - name: B_waitOnParentSuccess_childPipeline_failCase
@@ -64,7 +68,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: WONParentSucess_resource
+            - name: WONParentSucess_resource2
         execution:
           onExecute:
-            - echo ${res_WONParentSucess_resource_test}
+            - echo ${res_WONParentSucess_resource2_test}
