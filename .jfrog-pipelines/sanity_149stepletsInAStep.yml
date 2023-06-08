@@ -428,8 +428,8 @@ pipelines:
         execution:
           onExecute:
             - echo "Executing matrix step on ${steplet_id}"
-            - ls -latr .
-            - ls -latr preMatrixTest/preState
+#             - ls -latr .
+#             - ls -latr preMatrixTest/preState
             - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
 
@@ -447,4 +447,4 @@ pipelines:
             - echo hello
             - ls -latr
             - ls -latr matrixStep
-            - ls -latr matrixStep/matrixFiles
+#             - ls -latr matrixStep/matrixFiles
