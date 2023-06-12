@@ -246,7 +246,7 @@ pipelines:
             - if [ $stepOverride != "valueoverridenInStepExecutionSection" ]; then echo "stepOverride-$stepOverride is not overriden from step section"; return 1; fi
             - if [ $noOverride != "stepVariable" ]; then echo "noOverride-$noOverride is from step section"; return 1; fi
             - if [ $runEnvOverride != "runValueToBeOverridenInNextStepEnv" ]; then echo "runEnvOverride-$runEnvOverride is not overriden from step env section"; return 1; fi
-            - if [ $runStepOverride != "runValueoverridenInStepExecutionSection" ]; then echo "runStepOverride-$runStepOverride is not overriden from step section"; return 1; fi
+            - if [ $runStepOverride != "runValueToBeOverridenInNextStepNotInEnv" ]; then echo "runStepOverride-$runStepOverride is not overriding from previous step level env but it should still hold original value"; return 1; fi
             - if [ $runNoOverride != "runStepVariable" ]; then echo "runNoOverride-$runNoOverride is from step section"; return 1; fi
             - echo stepNodeId=$step_node_id stepNodeName=$step_node_name
                                 
