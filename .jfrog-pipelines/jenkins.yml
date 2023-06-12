@@ -61,7 +61,7 @@ pipelines:
 #         priority: 2
         jenkinsJobName: sandbox/job/pipeline-test-repo21
         integrations:
-          - name: jenkins_entplus_ci
+          - name: jenkins_nitind_ci
 #         inputSteps:
 #           - name: var_bash_step 
 #         inputResources:
