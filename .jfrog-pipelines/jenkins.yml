@@ -59,9 +59,9 @@ pipelines:
       type: Jenkins
       configuration:
 #         priority: 2
-        jenkinsJobName: testvarsha
+        jenkinsJobName: sandbox/job/pipeline-test-repo21
         integrations:
-          - name: S_B_Jenkins
+          - name: jenkins_entplus_ci
 #         inputSteps:
 #           - name: var_bash_step 
 #         inputResources:
