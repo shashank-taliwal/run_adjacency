@@ -1,5 +1,8 @@
 pipelines:
   - name: test_matrix
+    configuration:
+      integrations:
+        - name: s_artifactory
     steps:
       - name: preMatrixTest
         type: PreMatrix
@@ -8,12 +11,15 @@ pipelines:
             - mkdir -p preState
             - echo "working" >> preState/working.txt
             - echo ${steplet_id}
+          
             
       - name: matrixStep
         type: Matrix
         configuration:
           inputSteps:
             - name: preMatrixTest
+          integrations:
+            - name: s_artifactory
         stepletMultipliers:
           environmentVariables:
             - name: test
@@ -27,6 +33,9 @@ pipelines:
             - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
             - echo ${steplet_id}
+            - testgjyuuqgqwj
+          onFailure:
+            - echo ${int_s_artifactory_user}
            
       - name: postMatrixTest
         type: PostMatrix
