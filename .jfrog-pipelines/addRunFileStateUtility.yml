@@ -14,6 +14,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Step 1 is running"
+            - add_run_variables step_1_var="onStart"
   
       - name: S_WF_033_002bash
         type: Bash
@@ -36,15 +37,53 @@ pipelines:
             - add_run_variables step_2_varOnComplete="onComplete"
             - echo "working" >> preState/working2.txt
             - add_run_files preState/working2.txt myfilesOnComplete
-  
+
+      - name: S_WF_033_002matrix
+        type: Matrix
+        configuration:
+          inputSteps:
+            - name: S_WF_033_001bash
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+              type3: step3
+        execution:
+          onStart:
+            - add_run_variables step_2_var_matrix="onStart"
+            - mkdir -p matrix1onState
+            - echo "working" >> matrix1onState/working.txt
+            - add_run_files matrix1onState/working.txt myfilesOnstartMatrix_${steplet_id}
+          onExecute:
+            - echo "Step 2 is running"
+            - add_run_variables step_2_varOnExecute_matrix="onExecute"
+            - mkdir -p matrix1onExecute
+            - echo "working" >> matrix1onExecute/working1.txt
+            - add_run_files matrix1onExecute/working1.txt myfilesOnExecuteMatrix_${steplet_id}
+          onComplete:
+            - add_run_variables step_2_varOnComplete_matrix="onComplete"
+            - echo "working" >> matrix1onComplete/working2.txt
+            - add_run_files matrix1onComplete/working2.txt myfilesOnCompleteMatrix_${steplet_id}
+            
       - name: S_WF_033_003bash
         type: Bash
         configuration:
           inputSteps:
             - name: S_WF_033_001bash
+            - name: S_WF_033_002matrix
         execution:
           onExecute:
             - echo "Step 3 is running"
+            - echo $step_2_var_matrix
+            - echo $step_2_varOnExecute_matrix
+            - echo $step_2_varOnComplete_matrix
+            - echo $step_1_var
+            - ls -latr matrix1onState
+            - ls -latr matrix1onExecute
+            - ls -latr matrix1onComplete
+            
   
       - name: S_WF_033_004bash
         type: Bash
