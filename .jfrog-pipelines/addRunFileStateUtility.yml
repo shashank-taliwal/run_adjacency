@@ -80,9 +80,9 @@ pipelines:
             - echo $step_2_varOnExecute_matrix
             - echo $step_2_varOnComplete_matrix
             - echo $step_1_var
-            - ls -latr matrix1onState
-            - ls -latr matrix1onExecute
-            - ls -latr matrix1onComplete
+            - ls -latr S_WF_033_002matrix/matrix1onState
+            - ls -latr S_WF_033_002matrix/matrix1onExecute
+            - ls -latr S_WF_033_002matrix/matrix1onComplete
             
   
       - name: S_WF_033_004bash
