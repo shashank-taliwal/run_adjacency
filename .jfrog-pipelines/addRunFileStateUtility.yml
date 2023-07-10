@@ -7,7 +7,6 @@ resources:
 pipelines:
   
   - name: S_WF_033runVariable
-    configuration:
     steps:
   
       - name: S_WF_033_001bash
