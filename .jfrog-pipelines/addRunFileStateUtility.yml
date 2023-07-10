@@ -41,10 +41,14 @@ pipelines:
       - name: S_WF_033_002matrix
         type: Matrix
         configuration:
+          multiNode: true
           inputSteps:
             - name: S_WF_033_001bash
         stepletMultipliers:
           environmentVariables:
+            - one: val1
+            - two: val2
+            - three: val3
             - name: test
               name2: test2
             - type: step
