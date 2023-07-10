@@ -52,12 +52,12 @@ pipelines:
               type3: step3
         execution:
           onStart:
-            - add_run_variables step_2_var_matrix_${stepletId}="onStart"
+            - add_run_variables step_2_var_matrix_${steplet_id}="onStart"
           onExecute:
             - echo "Step 2 is running"
-            - add_run_variables step_2_varOnExecute_matrix_${stepletId}="onExecute"
+            - add_run_variables step_2_varOnExecute_matrix_${steplet_id}="onExecute"
           onComplete:
-            - add_run_variables step_2_varOnComplete_matrix_${stepletId}="onComplete"
+            - add_run_variables step_2_varOnComplete_matrix_${steplet_id}="onComplete"
             
       - name: S_WF_033_003bash
         type: Bash
