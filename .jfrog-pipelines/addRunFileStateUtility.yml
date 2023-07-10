@@ -52,20 +52,12 @@ pipelines:
               type3: step3
         execution:
           onStart:
-            - add_run_variables step_2_var_matrix="onStart"
-            - mkdir -p matrix1onState
-            - echo "working" >> matrix1onState/working.txt
-            - add_run_files matrix1onState/working.txt myfilesOnstartMatrix_${steplet_id}
+            - add_run_variables step_2_var_matrix_${stepletId}="onStart"
           onExecute:
             - echo "Step 2 is running"
-            - add_run_variables step_2_varOnExecute_matrix="onExecute"
-            - mkdir -p matrix1onExecute
-            - echo "working" >> matrix1onExecute/working1.txt
-            - add_run_files matrix1onExecute/working1.txt myfilesOnExecuteMatrix_${steplet_id}
+            - add_run_variables step_2_varOnExecute_matrix_${stepletId}="onExecute"
           onComplete:
-            - add_run_variables step_2_varOnComplete_matrix="onComplete"
-            - echo "working" >> matrix1onComplete/working2.txt
-            - add_run_files matrix1onComplete/working2.txt myfilesOnCompleteMatrix_${steplet_id}
+            - add_run_variables step_2_varOnComplete_matrix_${stepletId}="onComplete"
             
       - name: S_WF_033_003bash
         type: Bash
@@ -77,11 +69,6 @@ pipelines:
           onExecute:
             - add_run_variables step_3_varOnExecute_bash="onComplete"
             - echo "Step 3 is running"
-            - echo $step_2_var_matrix
-            - echo $step_2_varOnExecute_matrix
-            - echo $step_2_varOnComplete_matrix
-            - echo $step_1_var
-            # - ls -latr S_WF_033_002matrix
             
       - name: S_WF_033_004bash2
         type: Bash
