@@ -81,7 +81,7 @@ pipelines:
             - echo $step_2_varOnExecute_matrix
             - echo $step_2_varOnComplete_matrix
             - echo $step_1_var
-            - ls -latr S_WF_033_002matrix
+            # - ls -latr S_WF_033_002matrix
             
       - name: S_WF_033_004bash2
         type: Bash
