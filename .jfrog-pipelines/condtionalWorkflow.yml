@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: varsha_github
-      path: jfbetapipeorg/Org_test_Automation
+      path: Varsha-Arun/simple
       
 pipelines:
   - name: Pipeline_S_Bash_Generic_5858_0010
