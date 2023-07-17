@@ -6,7 +6,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - curl -H "Authorization:Bearer \$builder_api_token" -H "Content-type:application/json" \$pipelines_api_url/projectIntegrations/14 -o int.json
+            - curl -H "Authorization:Bearer \$builder_api_token" -H "Content-type:application/json" \${pipelines_api_url}/projectIntegrations/14 -o int.json
             - intToken=\$(cat int.json | jq -r '.formJSONValues | .[] | select(.label=="token") | .value')
             - if [[ "$intToken" != "********" ]]; then exit 1; fi
                      
