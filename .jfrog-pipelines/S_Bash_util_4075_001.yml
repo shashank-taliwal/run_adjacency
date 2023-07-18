@@ -20,6 +20,7 @@ pipelines:
             - stepId=$(echo $steps | jq -r '.[0].id')
             - if [ -z "$stepId" ] || [ "$stepId" == "null" ]; then return 1; fi
             - "stepTestReports=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/stepTestReports?stepIds=${stepId}\")"
+            - echo $stepTestReports
             - durationSeconds=$(echo $stepTestReports | jq -r '.[0].durationSeconds')
             - if [ "$durationSeconds" != "7" ]; then return 1; fi
             - totalTests=$(echo $stepTestReports | jq -r '.[0].totalTests')
@@ -33,6 +34,7 @@ pipelines:
             - totalSkipped=$(echo $stepTestReports | jq -r '.[0].totalSkipped')
             - if [ "$totalSkipped" != "1" ]; then return 1; fi
             - errorDetails=$(echo $stepTestReports | jq -r '.[0].errorDetails | length')
+            - echo $errorDetails
             - if [ "$errorDetails" != "2" ]; then return 1; fi
             - failureDetails=$(echo $stepTestReports | jq -r '.[0].failureDetails | length')
             - if [ "$failureDetails" != "1" ]; then return 1; fi
