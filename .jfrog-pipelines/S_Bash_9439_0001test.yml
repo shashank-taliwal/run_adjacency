@@ -12,8 +12,8 @@ pipelines:
             - echo $(cat int.json)
             - echo $(cat int.json | jq -r '.formJSONValues')
             - echo $(cat int.json | jq -r '.formJSONValues | .[]')
-            - echo $(cat int.json | jq -r '.formJSONValues | .[] | select(.label=="password")')
-            - intToken=$(cat int.json | jq -r '.formJSONValues | .[] | select(.label=="password") | .value')
+            - echo $(cat int.json | jq -r '.formJSONValues | .[] | select(.label=="token")')
+            - intToken=$(cat int.json | jq -r '.formJSONValues | .[] | select(.label=="token") | .value')
             - echo $intToken
             - if [[ "$intToken" != "********" ]]; then exit 1; fi
                      
