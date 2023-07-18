@@ -15,7 +15,7 @@ pipelines:
           inputSteps:
             - name: Step_S_Bash_Generic_5858_0009_1
               status:
-                - unstable
+                - timeout
         execution:
           onExecute:
             - echo "executing Step_S_Bash_Generic_5858_0009_2"
