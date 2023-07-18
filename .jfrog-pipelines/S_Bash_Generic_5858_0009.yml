@@ -1,0 +1,21 @@
+
+pipelines:
+  - name: Pipeline_S_Bash_Generic_5858_0009
+    steps:
+      - name: Step_S_Bash_Generic_5858_0009_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "executing Step_S_Bash_Generic_5858_0009_1"
+            - sleep 60
+
+      - name: Step_S_Bash_Generic_5858_0009_2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: Step_S_Bash_Generic_5858_0009_1
+              status:
+                - unstable
+        execution:
+          onExecute:
+            - echo "executing Step_S_Bash_Generic_5858_0009_2"
