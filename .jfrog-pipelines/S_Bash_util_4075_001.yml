@@ -1,0 +1,38 @@
+pipelines:
+  - name: S_Bash_util_4075_001
+    steps:
+      - name: S_Bash_util_4075_001_1
+        type: Bash
+        execution:
+          onExecute:
+            - mkdir -p testResults
+            - "echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?><testsuite name=\"myTestSuite\" tests=\"5\" errors=\"2\" failures=\"1\" skip=\"1\"><testcase classname=\"test.One\" name=\"test\" time=\"1\"></testcase><testcase classname=\"test.Two\" name=\"test\" time=\"2\"><error message=\"test.Error\" type=\"ErrorType\">myError</error></testcase><testcase classname=\"test.Three\" name=\"test\" time=\"0\"><skipped/></testcase><testcase classname=\"test.Four\" name=\"test\" time=\"3\"><failure type=\"exceptions.AssertionError\" message=\"True is not false\">My failure message</failure></testcase><testcase classname=\"test.Five\" name=\"test\" time=\"1\"><error message=\"test.Error\" type=\"ErrorType\">mySecondError</error></testcase></testsuite>' > testResults/total.xml"
+            - save_tests testResults
+
+      - name: S_Bash_util_4075_001_2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: S_Bash_util_4075_001_1
+        execution:
+          onExecute:
+            - "steps=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/steps?runIds=${run_id}&names=S_Bash_util_4075_001_1\")"
+            - stepId=$(echo $steps | jq -r '.[0].id')
+            - if [ -z "$stepId" ] || [ "$stepId" == "null" ]; then return 1; fi
+            - "stepTestReports=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/stepTestReports?stepIds=${stepId}\")"
+            - durationSeconds=$(echo $stepTestReports | jq -r '.[0].durationSeconds')
+            - if [ "$durationSeconds" != "7" ]; then return 1; fi
+            - totalTests=$(echo $stepTestReports | jq -r '.[0].totalTests')
+            - if [ "$totalTests" != "5" ]; then return 1; fi
+            - totalPassing=$(echo $stepTestReports | jq -r '.[0].totalPassing')
+            - if [ "$totalPassing" != "1" ]; then return 1; fi
+            - totalFailures=$(echo $stepTestReports | jq -r '.[0].totalFailures')
+            - if [ "$totalFailures" != "1" ]; then return 1; fi
+            - totalErrors=$(echo $stepTestReports | jq -r '.[0].totalErrors')
+            - if [ "$totalErrors" != "2" ]; then return 1; fi
+            - totalSkipped=$(echo $stepTestReports | jq -r '.[0].totalSkipped')
+            - if [ "$totalSkipped" != "1" ]; then return 1; fi
+            - errorDetails=$(echo $stepTestReports | jq -r '.[0].errorDetails | length')
+            - if [ "$errorDetails" != "2" ]; then return 1; fi
+            - failureDetails=$(echo $stepTestReports | jq -r '.[0].failureDetails | length')
+            - if [ "$failureDetails" != "1" ]; then return 1; fi
