@@ -4,6 +4,8 @@ pipelines:
     steps:
       - name: Step_S_Bash_Generic_5858_0009_1
         type: Bash
+        configuration:
+          timeoutSeconds: 40
         execution:
           onExecute:
             - echo "executing Step_S_Bash_Generic_5858_0009_1"
