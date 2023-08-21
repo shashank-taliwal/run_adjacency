@@ -11,12 +11,13 @@ pipelines:
       - name: Step_S_Bash_Generic_5858_0010_1
         type: Bash
         configuration:
+          timeoutSeconds: 10
           inputResources:
             - name: S_Bash_Generic_5858_0010
         execution:
           onExecute:
             - echo "executing Step_S_Bash_Generic_5858_0010_1"
-            - sleep 60
+            - sleep 10m
 
       - name: Step_S_Bash_Generic_5858_0010_2
         type: Bash
