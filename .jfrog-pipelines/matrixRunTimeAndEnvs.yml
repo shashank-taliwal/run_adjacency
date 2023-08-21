@@ -12,8 +12,7 @@ pipelines:
       - name: matrixStepWithRuntimeInPipelineAndNodePoolsInSteplet
         type: Matrix
         configuration:
-          # multiNode: true
-          affinityGroup: one
+          multiNode: true
         stepletMultipliers:
           environmentVariables:
             - name: test
@@ -35,7 +34,7 @@ pipelines:
           onComplete:
             - echo 'i am oncomplete'
  
-  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutime_affinitygroup
+  - name: Matrix_Pipeline_Rutime_Step_Runtime_Steplet_Rutime_multiNode
     configuration:
       runtime:
         type: image
@@ -48,8 +47,7 @@ pipelines:
       - name: matrix_1test
         type: Matrix
         configuration:
-          # multiNode: true
-          affinityGroup: one
+          multiNode: true
           runtime:
             type: image
             image:
@@ -93,10 +91,9 @@ pipelines:
       - name: matrix_2test
         type: Matrix
         configuration:
-          # multiNode: true
+          multiNode: true
           inputSteps:
             - name: matrix_1test
-          affinityGroup: one
           runtime:
             type: image
             image:
