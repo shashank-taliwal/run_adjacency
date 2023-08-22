@@ -9,7 +9,7 @@ pipelines:
             type: host
         execution:
           onExecute:
-            - ls /etc/docker
+            - ls "/etc/docker"
             - if [ ! -f "/etc/docker/daemon.json" ]; then echo "could not find docker config file" && exit 1 ; fi
             - cat /etc/docker/daemon.json
             - jq -e '."insecure-registries"[]|select(. == "0.0.0.0")' /etc/docker/daemon.json >/dev/null || (echo "could not find insecure registry in docker config" && exit 1)
