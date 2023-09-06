@@ -28,6 +28,7 @@ pipelines:
             - mkdir -p matrixFiles/${steplet_id}
             - echo "working" >> matrixFiles/${steplet_id}/working.txt
             - echo ${steplet_id}
+            - echo ${step_node_name}
            
       - name: postMatrixTest
         type: PostMatrix
