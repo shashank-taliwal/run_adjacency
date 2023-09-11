@@ -1,2823 +1,2823 @@
-# resources:
+resources:
 
-#   - name: res_quia_1t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_praesentium_2t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_ratione_3t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_quia_4t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_cumque_5t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_voluptatem_6t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_consequatur_7t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_hic_8t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_in_9t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_nihil_10t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_tempora_11t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_ut_12t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_nostrum_13t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_ab_14t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_quas_15t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_tempora_16t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_ipsam_17t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_18t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_harum_19t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_20t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_necessitatibus_21t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_nemo_22t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_commodi_23t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_soluta_24t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_non_25t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_optio_26t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_non_27t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_doloribus_28t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_doloribus_29t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_vel_30t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_architecto_31t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_maxime_32t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_voluptatem_33t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_omnis_34t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_35t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_dolores_36t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_dolorum_37t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_ut_38t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_officiis_39t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_ducimus_40t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_impedit_41t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_asperiores_42t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_odit_43t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_44t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_quaerat_45t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_46t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_rem_47t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_neque_48t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_molestias_49t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_magni_50t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_51t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_rem_52t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_neque_53t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_molestias_54t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_magni_55t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_et_56t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_rem_57t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_neque_58t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_molestias_59t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
-#   - name: res_magni_60t
-#     type: PropertyBag
-#     configuration:
-#       key1: value1
-#       key2: value2
+  - name: res_quia_1t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_praesentium_2t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_ratione_3t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_quia_4t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_cumque_5t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_voluptatem_6t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_consequatur_7t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_hic_8t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_in_9t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_nihil_10t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_tempora_11t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_ut_12t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_nostrum_13t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_ab_14t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_quas_15t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_tempora_16t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_ipsam_17t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_18t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_harum_19t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_20t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_necessitatibus_21t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_nemo_22t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_commodi_23t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_soluta_24t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_non_25t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_optio_26t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_non_27t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_doloribus_28t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_doloribus_29t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_vel_30t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_architecto_31t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_maxime_32t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_voluptatem_33t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_omnis_34t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_35t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_dolores_36t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_dolorum_37t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_ut_38t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_officiis_39t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_ducimus_40t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_impedit_41t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_asperiores_42t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_odit_43t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_44t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_quaerat_45t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_46t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_rem_47t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_neque_48t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_molestias_49t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_magni_50t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_51t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_rem_52t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_neque_53t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_molestias_54t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_magni_55t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_et_56t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_rem_57t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_neque_58t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_molestias_59t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: res_magni_60t
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
             
-# pipelines:
-#   - name: complexPipeline1
-#     postRun:
-#       execution:
-#         onExecute:
-#           - echo "Executing Post Run"
-#     configuration:
-#       nodePool: runAdj
-#       environmentVariables:
-#         readOnly:
-#           TEST_ENV: "pipelines"
-#           JUST_FES: "options"
-#           LOL_FOO: "test"
-#     steps:
-#       - name: step_updatet
-#         type: Bash
-#         configuration:
-#           environmentVariables:
-#             key1: "value11"
-#             key2: "value12"
-#             key3: "value13"
-#             key21: "value21"
-#             key22: "value22"
-#             key23: "value23"
-#             key31: "value31"
-#             key32: "value32"
-#             key33: "value33"
-#             key41: "value41"
-#             key42: "value42"
-#             key43: "value43"
-#           inputResources:
-#             - name: res_et_51t
-#             - name: res_rem_52t
-#             - name: res_neque_53t
-#             - name: res_molestias_54t
-#             - name: res_magni_55t
-#             - name: res_et_56t
-#             - name: res_rem_57t
-#             - name: res_neque_58t
-#             - name: res_molestias_59t
-#             - name: res_magni_60t
-#         execution:
-#           onExecute:
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
+pipelines:
+  - name: complexPipeline1
+    postRun:
+      execution:
+        onExecute:
+          - echo "Executing Post Run"
+    configuration:
+      nodePool: runAdj
+      environmentVariables:
+        readOnly:
+          TEST_ENV: "pipelines"
+          JUST_FES: "options"
+          LOL_FOO: "test"
+    steps:
+      - name: step_updatet
+        type: Bash
+        configuration:
+          environmentVariables:
+            key1: "value11"
+            key2: "value12"
+            key3: "value13"
+            key21: "value21"
+            key22: "value22"
+            key23: "value23"
+            key31: "value31"
+            key32: "value32"
+            key33: "value33"
+            key41: "value41"
+            key42: "value42"
+            key43: "value43"
+          inputResources:
+            - name: res_et_51t
+            - name: res_rem_52t
+            - name: res_neque_53t
+            - name: res_molestias_54t
+            - name: res_magni_55t
+            - name: res_et_56t
+            - name: res_rem_57t
+            - name: res_neque_58t
+            - name: res_molestias_59t
+            - name: res_magni_60t
+        execution:
+          onExecute:
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
         
             
-#       - name: step_saepe_1t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_voluptatem_33t "date1=$date"
-#             - write_output res_voluptatem_6t "date1=$date"
-#             - write_output res_tempora_16t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_updatet
-#           outputResources:
-#             - name: res_voluptatem_33t
-#             - name: res_voluptatem_6t
-#             - name: res_tempora_16t
-#       - name: step_exercitationem_2t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_neque_48t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#           outputResources:
-#             - name: res_neque_48t
-#       - name: step_sint_3t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_praesentium_2t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_2t
-#           inputResources:
-#             - name: res_neque_48t
-#             - name: res_voluptatem_33t
-#             - name: res_voluptatem_6t
-#           outputResources:
-#             - name: res_praesentium_2t
-#       - name: step_delectus_4t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_in_9t "date1=$date"
-#             - write_output res_non_25t "date1=$date"
-#             - write_output res_et_35t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_2t
-#             - name: step_sint_3t
-#             - name: step_saepe_1t
-#           inputResources:
-#             - name: res_praesentium_2t
-#             - name: res_tempora_16t
-#           outputResources:
-#             - name: res_in_9t
-#             - name: res_non_25t
-#             - name: res_et_35t
-#       - name: step_perspiciatis_5t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_necessitatibus_21t "date1=$date"
-#             - write_output res_nihil_10t "date1=$date"
-#             - write_output res_ratione_3t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_2t
-#             - name: step_delectus_4t
-#           inputResources:
-#             - name: res_voluptatem_6t
-#             - name: res_in_9t
-#           outputResources:
-#             - name: res_necessitatibus_21t
-#             - name: res_nihil_10t
-#             - name: res_ratione_3t
-#       - name: step_sunt_6t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_commodi_23t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#             - name: step_sint_3t
-#             - name: step_delectus_4t
-#             - name: step_exercitationem_2t
-#           inputResources:
-#             - name: res_ratione_3t
-#             - name: res_voluptatem_6t
-#           outputResources:
-#             - name: res_commodi_23t
-#       - name: step_iure_7t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_asperiores_42t "date1=$date"
-#             - write_output res_impedit_41t "date1=$date"
-#             - write_output res_odit_43t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_sunt_6t
-#             - name: step_exercitationem_2t
-#             - name: step_saepe_1t
-#             - name: step_perspiciatis_5t
-#             - name: step_delectus_4t
-#           inputResources:
-#             - name: res_non_25t
-#             - name: res_necessitatibus_21t
-#             - name: res_commodi_23t
-#             - name: res_neque_48t
-#           outputResources:
-#             - name: res_asperiores_42t
-#             - name: res_impedit_41t
-#             - name: res_odit_43t
-#       - name: step_delectus_8t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_hic_8t "date1=$date"
-#             - write_output res_quia_1t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_iure_7t
-#           inputResources:
-#             - name: res_neque_48t
-#             - name: res_nihil_10t
-#             - name: res_impedit_41t
-#             - name: res_praesentium_2t
-#             - name: res_et_35t
-#           outputResources:
-#             - name: res_hic_8t
-#             - name: res_quia_1t
-#       - name: step_odio_9t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_ut_38t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#           inputResources:
-#             - name: res_necessitatibus_21t
-#             - name: res_in_9t
-#             - name: res_et_35t
-#             - name: res_neque_48t
-#           outputResources:
-#             - name: res_ut_38t
-#       - name: step_itaque_10t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_consequatur_7t "date1=$date"
-#             - write_output res_dolorum_37t "date1=$date"
-#             - write_output res_quas_15t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_sunt_6t
-#             - name: step_odio_9t
-#             - name: step_exercitationem_2t
-#             - name: step_delectus_4t
-#           inputResources:
-#             - name: res_necessitatibus_21t
-#             - name: res_impedit_41t
-#             - name: res_hic_8t
-#             - name: res_et_35t
-#           outputResources:
-#             - name: res_consequatur_7t
-#             - name: res_dolorum_37t
-#             - name: res_quas_15t
-#       - name: step_ut_11t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_doloribus_28t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_iure_7t
-#             - name: step_exercitationem_2t
-#             - name: step_saepe_1t
-#             - name: step_delectus_4t
-#           inputResources:
-#             - name: res_quia_1t
-#           outputResources:
-#             - name: res_doloribus_28t
-#       - name: step_eius_12t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_molestias_49t "date1=$date"
-#             - write_output res_ducimus_40t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_itaque_10t
-#           inputResources:
-#             - name: res_consequatur_7t
-#             - name: res_hic_8t
-#             - name: res_et_35t
-#           outputResources:
-#             - name: res_molestias_49t
-#             - name: res_ducimus_40t
-#       - name: step_id_13t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_architecto_31t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_odio_9t
-#             - name: step_perspiciatis_5t
-#           inputResources:
-#             - name: res_voluptatem_6t
-#             - name: res_in_9t
-#             - name: res_asperiores_42t
-#             - name: res_tempora_16t
-#           outputResources:
-#             - name: res_architecto_31t
-#       - name: step_recusandae_14t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_odio_9t
-#             - name: step_perspiciatis_5t
-#             - name: step_sint_3t
-#             - name: step_ut_11t
-#             - name: step_id_13t
-#           inputResources:
-#             - name: res_doloribus_28t
-#             - name: res_odit_43t
-#             - name: res_nihil_10t
-#             - name: res_consequatur_7t
-#             - name: res_voluptatem_6t
-#       - name: step_nihil_15t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_soluta_24t "date1=$date"
-#             - write_output res_tempora_11t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_recusandae_14t
-#             - name: step_sunt_6t
-#           inputResources:
-#             - name: res_molestias_49t
-#             - name: res_necessitatibus_21t
-#             - name: res_in_9t
-#             - name: res_non_25t
-#             - name: res_ut_38t
-#           outputResources:
-#             - name: res_soluta_24t
-#             - name: res_tempora_11t
-#       - name: step_itaque_16t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_officiis_39t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_delectus_4t
-#             - name: step_perspiciatis_5t
-#             - name: step_recusandae_14t
-#             - name: step_exercitationem_2t
-#           inputResources:
-#             - name: res_necessitatibus_21t
-#             - name: res_consequatur_7t
-#           outputResources:
-#             - name: res_officiis_39t
-#       - name: step_illum_17t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_2t
-#             - name: step_itaque_16t
-#             - name: step_eius_12t
-#           inputResources:
-#             - name: res_neque_48t
-#             - name: res_architecto_31t
-#             - name: res_ducimus_40t
-#       - name: step_ut_18t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_quaerat_45t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_2t
-#             - name: step_eius_12t
-#           outputResources:
-#             - name: res_quaerat_45t
-#       - name: step_esse_19t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_vel_30t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_sunt_6t
-#             - name: step_exercitationem_2t
-#             - name: step_sint_3t
-#             - name: step_delectus_4t
-#             - name: step_recusandae_14t
-#           inputResources:
-#             - name: res_neque_48t
-#             - name: res_doloribus_28t
-#           outputResources:
-#             - name: res_vel_30t
-#       - name: step_ut_20t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_optio_26t "date1=$date"
-#             - write_output res_ipsam_17t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_ut_11t
-#           inputResources:
-#             - name: res_quaerat_45t
-#             - name: res_soluta_24t
-#             - name: res_asperiores_42t
-#             - name: res_commodi_23t
-#           outputResources:
-#             - name: res_optio_26t
-#             - name: res_ipsam_17t
-#       - name: step_ex_21t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_sunt_6t
-#             - name: step_id_13t
-#           inputResources:
-#             - name: res_necessitatibus_21t
-#             - name: res_non_25t
-#             - name: res_impedit_41t
-#       - name: step_quae_22t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_ut_12t "date1=$date"
-#             - write_output res_nemo_22t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_itaque_16t
-#           inputResources:
-#             - name: res_voluptatem_6t
-#             - name: res_architecto_31t
-#             - name: res_ratione_3t
-#           outputResources:
-#             - name: res_ut_12t
-#             - name: res_nemo_22t
-#       - name: step_reprehenderit_23t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_cumque_5t "date1=$date"
-#             - write_output res_rem_47t "date1=$date"
-#             - write_output res_omnis_34t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_odio_9t
-#           inputResources:
-#             - name: res_in_9t
-#           outputResources:
-#             - name: res_cumque_5t
-#             - name: res_rem_47t
-#             - name: res_omnis_34t
-#       - name: step_cumque_24t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_et_18t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_delectus_4t
-#             - name: step_id_13t
-#           inputResources:
-#             - name: res_soluta_24t
-#           outputResources:
-#             - name: res_et_18t
-#       - name: step_in_25t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#             - name: step_iure_7t
-#             - name: step_itaque_10t
-#           inputResources:
-#             - name: res_officiis_39t
-#             - name: res_necessitatibus_21t
-#             - name: res_odit_43t
-#       - name: step_error_26t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_cumque_24t
-#           inputResources:
-#             - name: res_omnis_34t
-#             - name: res_asperiores_42t
-#             - name: res_ducimus_40t
-#             - name: res_vel_30t
-#             - name: res_ipsam_17t
-#       - name: step_doloribus_27t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_et_46t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_ut_20t
-#             - name: step_saepe_1t
-#             - name: step_itaque_10t
-#             - name: step_ex_21t
-#           inputResources:
-#             - name: res_consequatur_7t
-#             - name: res_in_9t
-#             - name: res_vel_30t
-#             - name: res_neque_48t
-#           outputResources:
-#             - name: res_et_46t
-#       - name: step_rerum_28t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_quia_4t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_nihil_15t
-#             - name: step_ex_21t
-#             - name: step_ut_20t
-#           inputResources:
-#             - name: res_in_9t
-#           outputResources:
-#             - name: res_quia_4t
-#       - name: step_iste_29t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_nihil_15t
-#             - name: step_reprehenderit_23t
-#             - name: step_exercitationem_2t
-#             - name: step_id_13t
-#             - name: step_itaque_16t
-#           inputResources:
-#             - name: res_ut_12t
-#             - name: res_tempora_11t
-#       - name: step_velit_30t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_et_20t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_doloribus_27t
-#             - name: step_error_26t
-#           inputResources:
-#             - name: res_asperiores_42t
-#             - name: res_rem_47t
-#           outputResources:
-#             - name: res_et_20t
-#       - name: step_quis_31t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_dolores_36t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_itaque_10t
-#             - name: step_in_25t
-#             - name: step_ut_11t
-#             - name: step_quae_22t
-#             - name: step_ex_21t
-#           inputResources:
-#             - name: res_ut_12t
-#             - name: res_rem_47t
-#           outputResources:
-#             - name: res_dolores_36t
-#       - name: step_et_32t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_delectus_8t
-#           inputResources:
-#             - name: res_et_18t
-#             - name: res_ducimus_40t
-#             - name: res_architecto_31t
-#       - name: step_ea_33t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_illum_17t
-#             - name: step_reprehenderit_23t
-#           inputResources:
-#             - name: res_cumque_5t
-#       - name: step_corporis_34t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_perspiciatis_5t
-#             - name: step_rerum_28t
-#             - name: step_cumque_24t
-#             - name: step_id_13t
-#             - name: step_illum_17t
-#           inputResources:
-#             - name: res_molestias_49t
-#             - name: res_nihil_10t
-#             - name: res_cumque_5t
-#             - name: res_impedit_41t
-#             - name: res_quaerat_45t
-#       - name: step_quo_35t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_itaque_16t
-#             - name: step_illum_17t
-#             - name: step_cumque_24t
-#           inputResources:
-#             - name: res_cumque_5t
-#             - name: res_nihil_10t
-#             - name: res_quaerat_45t
-#             - name: res_nemo_22t
-#       - name: step_quod_36t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_doloribus_29t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quae_22t
-#             - name: step_eius_12t
-#             - name: step_error_26t
-#             - name: step_iure_7t
-#             - name: step_et_32t
-#           inputResources:
-#             - name: res_optio_26t
-#             - name: res_non_25t
-#           outputResources:
-#             - name: res_doloribus_29t
-#       - name: step_exercitationem_37t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_nostrum_13t "date1=$date"
-#             - write_output res_ab_14t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_corporis_34t
-#             - name: step_eius_12t
-#             - name: step_sunt_6t
-#           inputResources:
-#             - name: res_doloribus_29t
-#             - name: res_nihil_10t
-#             - name: res_ipsam_17t
-#             - name: res_optio_26t
-#           outputResources:
-#             - name: res_nostrum_13t
-#             - name: res_ab_14t
-#       - name: step_consequuntur_38t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_harum_19t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_in_25t
-#             - name: step_ex_21t
-#           inputResources:
-#             - name: res_et_46t
-#             - name: res_et_20t
-#           outputResources:
-#             - name: res_harum_19t
-#       - name: step_asperiores_39t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_velit_30t
-#             - name: step_itaque_16t
-#             - name: step_id_13t
-#             - name: step_illum_17t
-#             - name: step_cumque_24t
-#           inputResources:
-#             - name: res_officiis_39t
-#             - name: res_impedit_41t
-#             - name: res_nemo_22t
-#             - name: res_doloribus_28t
-#             - name: res_dolores_36t
-#       - name: step_autem_40t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_2t
-#             - name: step_saepe_1t
-#           inputResources:
-#             - name: res_architecto_31t
-#             - name: res_neque_48t
-#       - name: step_est_41t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_non_27t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quis_31t
-#           inputResources:
-#             - name: res_quaerat_45t
-#             - name: res_et_20t
-#           outputResources:
-#             - name: res_non_27t
-#       - name: step_tempore_42t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_exercitationem_37t
-#             - name: step_error_26t
-#             - name: step_delectus_4t
-#             - name: step_ut_18t
-#           inputResources:
-#             - name: res_asperiores_42t
-#       - name: step_sed_43t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quod_36t
-#             - name: step_corporis_34t
-#             - name: step_illum_17t
-#             - name: step_saepe_1t
-#           inputResources:
-#             - name: res_vel_30t
-#             - name: res_necessitatibus_21t
-#       - name: step_quasi_44t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_rerum_28t
-#             - name: step_velit_30t
-#             - name: step_exercitationem_2t
-#           inputResources:
-#             - name: res_ratione_3t
-#             - name: res_doloribus_29t
-#             - name: res_ut_12t
-#             - name: res_asperiores_42t
-#       - name: step_voluptates_45t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#           inputResources:
-#             - name: res_quas_15t
-#             - name: res_et_35t
-#       - name: step_commodi_46t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_iste_29t
-#             - name: step_ut_18t
-#             - name: step_asperiores_39t
-#             - name: step_doloribus_27t
-#           inputResources:
-#             - name: res_ipsam_17t
-#             - name: res_quaerat_45t
-#             - name: res_in_9t
-#       - name: step_esse_47t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_itaque_16t
-#             - name: step_error_26t
-#             - name: step_corporis_34t
-#             - name: step_cumque_24t
-#             - name: step_ea_33t
-#           inputResources:
-#             - name: res_ducimus_40t
-#             - name: res_omnis_34t
-#             - name: res_commodi_23t
-#       - name: step_molestias_48t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_voluptates_45t
-#             - name: step_in_25t
-#             - name: step_ut_20t
-#             - name: step_quasi_44t
-#             - name: step_autem_40t
-#           inputResources:
-#             - name: res_vel_30t
-#             - name: res_dolores_36t
-#             - name: res_nihil_10t
-#             - name: res_officiis_39t
-#       - name: step_voluptates_49t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_et_44t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_ut_20t
-#             - name: step_sunt_6t
-#           inputResources:
-#             - name: res_doloribus_29t
-#             - name: res_ut_12t
-#             - name: res_optio_26t
-#             - name: res_non_27t
-#           outputResources:
-#             - name: res_et_44t
-#       - name: step_architecto_50t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_delectus_4t
-#             - name: step_asperiores_39t
-#             - name: step_ea_33t
-#             - name: step_consequuntur_38t
-#             - name: step_itaque_16t
-#           inputResources:
-#             - name: res_necessitatibus_21t
-#             - name: res_omnis_34t
-#             - name: res_praesentium_2t
-#       - name: step_illum_51t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#           inputResources:
-#             - name: res_cumque_5t
-#       - name: step_quia_52t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_doloribus_27t
-#             - name: step_quasi_44t
-#             - name: step_iure_7t
-#             - name: step_et_32t
-#           inputResources:
-#             - name: res_non_27t
-#             - name: res_doloribus_28t
-#             - name: res_molestias_49t
-#             - name: res_in_9t
-#             - name: res_quia_1t
-#       - name: step_saepe_53t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_id_13t
-#           inputResources:
-#             - name: res_nemo_22t
-#       - name: step_sint_54t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quasi_44t
-#             - name: step_autem_40t
-#             - name: step_delectus_4t
-#             - name: step_exercitationem_2t
-#           inputResources:
-#             - name: res_in_9t
-#             - name: res_tempora_16t
-#             - name: res_doloribus_29t
-#             - name: res_impedit_41t
-#             - name: res_dolores_36t
-#       - name: step_maxime_55t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_tempore_42t
-#             - name: step_illum_17t
-#             - name: step_molestias_48t
-#             - name: step_exercitationem_37t
-#           inputResources:
-#             - name: res_quia_1t
-#             - name: res_soluta_24t
-#             - name: res_molestias_49t
-#             - name: res_quia_4t
-#       - name: step_blanditiis_56t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_perspiciatis_5t
-#             - name: step_tempore_42t
-#             - name: step_recusandae_14t
-#             - name: step_quasi_44t
-#             - name: step_ea_33t
-#           inputResources:
-#             - name: res_in_9t
-#             - name: res_dolores_36t
-#             - name: res_optio_26t
-#             - name: res_architecto_31t
-#             - name: res_ducimus_40t
-#       - name: step_beatae_57t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_perspiciatis_5t
-#             - name: step_reprehenderit_23t
-#             - name: step_sed_43t
-#           inputResources:
-#             - name: res_quaerat_45t
-#             - name: res_architecto_31t
-#       - name: step_rerum_58t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_cumque_24t
-#             - name: step_sunt_6t
-#             - name: step_saepe_53t
-#           inputResources:
-#             - name: res_doloribus_29t
-#             - name: res_doloribus_28t
-#             - name: res_et_44t
-#             - name: res_ut_12t
-#       - name: step_id_59t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_id_13t
-#             - name: step_sint_3t
-#             - name: step_autem_40t
-#           inputResources:
-#             - name: res_harum_19t
-#             - name: res_officiis_39t
-#             - name: res_cumque_5t
-#             - name: res_molestias_49t
-#       - name: step_doloribus_60t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quo_35t
-#             - name: step_ex_21t
-#             - name: step_esse_47t
-#             - name: step_iure_7t
-#           inputResources:
-#             - name: res_quas_15t
-#             - name: res_ducimus_40t
-#             - name: res_harum_19t
-#       - name: step_et_61t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_ut_18t
-#             - name: step_rerum_28t
-#             - name: step_recusandae_14t
-#             - name: step_corporis_34t
-#           inputResources:
-#             - name: res_tempora_16t
-#             - name: res_ab_14t
-#             - name: res_odit_43t
-#             - name: res_tempora_11t
-#             - name: res_vel_30t
-#       - name: step_deleniti_62t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quod_36t
-#           inputResources:
-#             - name: res_et_35t
-#             - name: res_cumque_5t
-#             - name: res_ab_14t
-#             - name: res_odit_43t
-#             - name: res_ut_38t
-#       - name: step_modi_63t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_error_26t
-#             - name: step_quia_52t
-#           inputResources:
-#             - name: res_officiis_39t
-#             - name: res_quia_4t
-#             - name: res_tempora_11t
-#             - name: res_harum_19t
-#       - name: step_fugiat_64t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_maxime_55t
-#             - name: step_eius_12t
-#           inputResources:
-#             - name: res_tempora_16t
-#             - name: res_nihil_10t
-#       - name: step_mollitia_65t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_maxime_55t
-#             - name: step_velit_30t
-#             - name: step_rerum_28t
-#           inputResources:
-#             - name: res_quia_4t
-#             - name: res_officiis_39t
-#             - name: res_nemo_22t
-#       - name: step_porro_66t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_rerum_28t
-#             - name: step_sunt_6t
-#             - name: step_exercitationem_2t
-#             - name: step_quae_22t
-#           inputResources:
-#             - name: res_optio_26t
-#             - name: res_harum_19t
-#       - name: step_quia_67t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_illum_51t
-#           inputResources:
-#             - name: res_et_44t
-#             - name: res_quia_4t
-#             - name: res_dolorum_37t
-#             - name: res_ab_14t
-#             - name: res_asperiores_42t
-#       - name: step_quia_68t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_commodi_46t
-#             - name: step_quia_67t
-#             - name: step_velit_30t
-#             - name: step_id_59t
-#           inputResources:
-#             - name: res_non_27t
-#             - name: res_et_18t
-#             - name: res_voluptatem_6t
-#             - name: res_doloribus_29t
-#             - name: res_cumque_5t
-#       - name: step_sed_69t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_doloribus_27t
-#             - name: step_recusandae_14t
-#             - name: step_quis_31t
-#           inputResources:
-#             - name: res_et_46t
-#             - name: res_in_9t
-#             - name: res_omnis_34t
-#             - name: res_rem_47t
-#             - name: res_non_25t
-#       - name: step_quia_70t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quasi_44t
-#             - name: step_recusandae_14t
-#             - name: step_asperiores_39t
-#             - name: step_architecto_50t
-#           inputResources:
-#             - name: res_et_20t
-#             - name: res_voluptatem_33t
-#       - name: step_maxime_71t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - write_output res_magni_50t "date1=$date"
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_deleniti_62t
-#             - name: step_est_41t
-#             - name: step_blanditiis_56t
-#             - name: step_commodi_46t
-#             - name: step_itaque_10t
-#           inputResources:
-#             - name: res_vel_30t
-#             - name: res_odit_43t
-#           outputResources:
-#             - name: res_magni_50t
-#       - name: step_laudantium_72t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_sint_54t
-#             - name: step_id_13t
-#             - name: step_quia_67t
-#           inputResources:
-#             - name: res_consequatur_7t
-#             - name: res_nemo_22t
-#             - name: res_quia_1t
-#             - name: res_praesentium_2t
-#             - name: res_et_46t
-#       - name: step_impedit_73t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_architecto_50t
-#             - name: step_sed_69t
-#             - name: step_ut_18t
-#           inputResources:
-#             - name: res_quia_4t
-#             - name: res_consequatur_7t
-#       - name: step_quia_74t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_esse_47t
-#             - name: step_quod_36t
-#             - name: step_blanditiis_56t
-#           inputResources:
-#             - name: res_nemo_22t
-#       - name: step_omnis_75t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_saepe_1t
-#             - name: step_doloribus_60t
-#           inputResources:
-#             - name: res_ut_38t
-#       - name: step_omnis_76t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_commodi_46t
-#             - name: step_quia_70t
-#           inputResources:
-#             - name: res_et_18t
-#             - name: res_tempora_11t
-#             - name: res_et_35t
-#       - name: step_facilis_77t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_architecto_50t
-#             - name: step_omnis_75t
-#             - name: step_in_25t
-#           inputResources:
-#             - name: res_et_20t
-#             - name: res_ut_38t
-#             - name: res_dolorum_37t
-#             - name: res_voluptatem_6t
-#             - name: res_et_18t
-#       - name: step_porro_78t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_ea_33t
-#           inputResources:
-#             - name: res_et_44t
-#             - name: res_nemo_22t
-#             - name: res_dolores_36t
-#             - name: res_ut_38t
-#       - name: step_vitae_79t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_mollitia_65t
-#             - name: step_molestias_48t
-#             - name: step_iste_29t
-#             - name: step_id_13t
-#           inputResources:
-#             - name: res_tempora_11t
-#             - name: res_commodi_23t
-#             - name: res_nihil_10t
-#             - name: res_ipsam_17t
-#             - name: res_officiis_39t
-#       - name: step_qui_80t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_mollitia_65t
-#             - name: step_molestias_48t
-#           inputResources:
-#             - name: res_quas_15t
-#             - name: res_ab_14t
-#             - name: res_praesentium_2t
-#             - name: res_ut_12t
-#             - name: res_tempora_11t
-#       - name: step_omnis_81t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_odio_9t
-#             - name: step_quia_52t
-#           inputResources:
-#             - name: res_tempora_11t
-#             - name: res_vel_30t
-#             - name: res_ipsam_17t
-#             - name: res_asperiores_42t
-#       - name: step_aut_82t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quia_70t
-#             - name: step_velit_30t
-#             - name: step_quis_31t
-#             - name: step_deleniti_62t
-#             - name: step_delectus_4t
-#           inputResources:
-#             - name: res_omnis_34t
-#             - name: res_doloribus_28t
-#             - name: res_officiis_39t
-#       - name: step_aut_83t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_commodi_46t
-#             - name: step_facilis_77t
-#             - name: step_est_41t
-#             - name: step_asperiores_39t
-#           inputResources:
-#             - name: res_architecto_31t
-#             - name: res_voluptatem_6t
-#       - name: step_maxime_84t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_rerum_28t
-#             - name: step_sed_43t
-#           inputResources:
-#             - name: res_commodi_23t
-#             - name: res_soluta_24t
-#             - name: res_hic_8t
-#             - name: res_dolores_36t
-#       - name: step_nulla_85t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_sed_69t
-#           inputResources:
-#             - name: res_quia_4t
-#             - name: res_voluptatem_33t
-#             - name: res_ratione_3t
-#       - name: step_aut_86t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_ex_21t
-#             - name: step_voluptates_45t
-#             - name: step_quia_67t
-#           inputResources:
-#             - name: res_praesentium_2t
-#             - name: res_ut_38t
-#             - name: res_cumque_5t
-#             - name: res_magni_50t
-#       - name: step_deserunt_87t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_modi_63t
-#             - name: step_autem_40t
-#           inputResources:
-#             - name: res_dolores_36t
-#             - name: res_doloribus_28t
-#             - name: res_cumque_5t
-#             - name: res_praesentium_2t
-#       - name: step_blanditiis_88t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_doloribus_60t
-#             - name: step_in_25t
-#             - name: step_velit_30t
-#             - name: step_itaque_10t
-#             - name: step_esse_47t
-#           inputResources:
-#             - name: res_vel_30t
-#             - name: res_et_35t
-#             - name: res_quas_15t
-#             - name: res_neque_48t
-#             - name: res_quaerat_45t
-#       - name: step_ipsam_89t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_aut_82t
-#           inputResources:
-#             - name: res_ducimus_40t
-#             - name: res_tempora_11t
-#             - name: res_ut_38t
-#             - name: res_rem_47t
-#             - name: res_et_20t
-#       - name: step_molestiae_90t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quia_74t
-#             - name: step_maxime_84t
-#             - name: step_aut_86t
-#             - name: step_delectus_4t
-#             - name: step_et_61t
-#           inputResources:
-#             - name: res_et_44t
-#             - name: res_consequatur_7t
-#             - name: res_doloribus_29t
-#       - name: step_labore_91t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_recusandae_14t
-#             - name: step_commodi_46t
-#             - name: step_rerum_28t
-#           inputResources:
-#             - name: res_ab_14t
-#             - name: res_quaerat_45t
-#             - name: res_omnis_34t
-#       - name: step_eum_92t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quasi_44t
-#           inputResources:
-#             - name: res_ipsam_17t
-#             - name: res_in_9t
-#             - name: res_soluta_24t
-#             - name: res_molestias_49t
-#       - name: step_sapiente_93t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quis_31t
-#             - name: step_consequuntur_38t
-#             - name: step_omnis_81t
-#             - name: step_fugiat_64t
-#           inputResources:
-#             - name: res_ducimus_40t
-#             - name: res_quia_1t
-#             - name: res_et_20t
-#       - name: step_unde_94t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_aut_83t
-#           inputResources:
-#             - name: res_non_27t
-#             - name: res_nostrum_13t
-#             - name: res_in_9t
-#             - name: res_nihil_10t
-#             - name: res_et_18t
-#       - name: step_ipsam_95t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_reprehenderit_23t
-#           inputResources:
-#             - name: res_et_46t
-#       - name: step_qui_96t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_recusandae_14t
-#           inputResources:
-#             - name: res_impedit_41t
-#       - name: step_nemo_97t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_labore_91t
-#             - name: step_id_13t
-#           inputResources:
-#             - name: res_omnis_34t
-#             - name: res_quas_15t
-#             - name: res_tempora_11t
-#             - name: res_neque_48t
-#             - name: res_non_25t
-#       - name: step_totam_98t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_quia_67t
-#             - name: step_sed_69t
-#             - name: step_omnis_75t
-#             - name: step_quae_22t
-#           inputResources:
-#             - name: res_ut_38t
-#       - name: step_nihil_99t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_esse_47t
-#             - name: step_recusandae_14t
-#             - name: step_maxime_71t
-#             - name: step_beatae_57t
-#             - name: step_sed_43t
-#           inputResources:
-#             - name: res_et_18t
-#             - name: res_magni_50t
-#             - name: res_rem_47t
-#       - name: step_nesciunt_100t
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - printenv
-#             - 'echo "Executing step on ${stepvar_id}"'
-#             - export date=$(date)
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#             - printenv
-#         configuration:
-#           inputSteps:
-#             - name: step_rerum_28t
-#             - name: step_id_13t
-#             - name: step_sint_3t
-#           inputResources:
-#             - name: res_et_46t
-#             - name: res_commodi_23t
-#             - name: res_hic_8t
-#             - name: res_nihil_10t
-#             - name: res_necessitatibus_21t
+      - name: step_saepe_1t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_voluptatem_33t "date1=$date"
+            - write_output res_voluptatem_6t "date1=$date"
+            - write_output res_tempora_16t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_updatet
+          outputResources:
+            - name: res_voluptatem_33t
+            - name: res_voluptatem_6t
+            - name: res_tempora_16t
+      - name: step_exercitationem_2t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_neque_48t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+          outputResources:
+            - name: res_neque_48t
+      - name: step_sint_3t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_praesentium_2t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_2t
+          inputResources:
+            - name: res_neque_48t
+            - name: res_voluptatem_33t
+            - name: res_voluptatem_6t
+          outputResources:
+            - name: res_praesentium_2t
+      - name: step_delectus_4t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_in_9t "date1=$date"
+            - write_output res_non_25t "date1=$date"
+            - write_output res_et_35t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_2t
+            - name: step_sint_3t
+            - name: step_saepe_1t
+          inputResources:
+            - name: res_praesentium_2t
+            - name: res_tempora_16t
+          outputResources:
+            - name: res_in_9t
+            - name: res_non_25t
+            - name: res_et_35t
+      - name: step_perspiciatis_5t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_necessitatibus_21t "date1=$date"
+            - write_output res_nihil_10t "date1=$date"
+            - write_output res_ratione_3t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_2t
+            - name: step_delectus_4t
+          inputResources:
+            - name: res_voluptatem_6t
+            - name: res_in_9t
+          outputResources:
+            - name: res_necessitatibus_21t
+            - name: res_nihil_10t
+            - name: res_ratione_3t
+      - name: step_sunt_6t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_commodi_23t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+            - name: step_sint_3t
+            - name: step_delectus_4t
+            - name: step_exercitationem_2t
+          inputResources:
+            - name: res_ratione_3t
+            - name: res_voluptatem_6t
+          outputResources:
+            - name: res_commodi_23t
+      - name: step_iure_7t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_asperiores_42t "date1=$date"
+            - write_output res_impedit_41t "date1=$date"
+            - write_output res_odit_43t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_sunt_6t
+            - name: step_exercitationem_2t
+            - name: step_saepe_1t
+            - name: step_perspiciatis_5t
+            - name: step_delectus_4t
+          inputResources:
+            - name: res_non_25t
+            - name: res_necessitatibus_21t
+            - name: res_commodi_23t
+            - name: res_neque_48t
+          outputResources:
+            - name: res_asperiores_42t
+            - name: res_impedit_41t
+            - name: res_odit_43t
+      - name: step_delectus_8t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_hic_8t "date1=$date"
+            - write_output res_quia_1t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_iure_7t
+          inputResources:
+            - name: res_neque_48t
+            - name: res_nihil_10t
+            - name: res_impedit_41t
+            - name: res_praesentium_2t
+            - name: res_et_35t
+          outputResources:
+            - name: res_hic_8t
+            - name: res_quia_1t
+      - name: step_odio_9t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_ut_38t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+          inputResources:
+            - name: res_necessitatibus_21t
+            - name: res_in_9t
+            - name: res_et_35t
+            - name: res_neque_48t
+          outputResources:
+            - name: res_ut_38t
+      - name: step_itaque_10t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_consequatur_7t "date1=$date"
+            - write_output res_dolorum_37t "date1=$date"
+            - write_output res_quas_15t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_sunt_6t
+            - name: step_odio_9t
+            - name: step_exercitationem_2t
+            - name: step_delectus_4t
+          inputResources:
+            - name: res_necessitatibus_21t
+            - name: res_impedit_41t
+            - name: res_hic_8t
+            - name: res_et_35t
+          outputResources:
+            - name: res_consequatur_7t
+            - name: res_dolorum_37t
+            - name: res_quas_15t
+      - name: step_ut_11t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_doloribus_28t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_iure_7t
+            - name: step_exercitationem_2t
+            - name: step_saepe_1t
+            - name: step_delectus_4t
+          inputResources:
+            - name: res_quia_1t
+          outputResources:
+            - name: res_doloribus_28t
+      - name: step_eius_12t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_molestias_49t "date1=$date"
+            - write_output res_ducimus_40t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_itaque_10t
+          inputResources:
+            - name: res_consequatur_7t
+            - name: res_hic_8t
+            - name: res_et_35t
+          outputResources:
+            - name: res_molestias_49t
+            - name: res_ducimus_40t
+      - name: step_id_13t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_architecto_31t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_odio_9t
+            - name: step_perspiciatis_5t
+          inputResources:
+            - name: res_voluptatem_6t
+            - name: res_in_9t
+            - name: res_asperiores_42t
+            - name: res_tempora_16t
+          outputResources:
+            - name: res_architecto_31t
+      - name: step_recusandae_14t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_odio_9t
+            - name: step_perspiciatis_5t
+            - name: step_sint_3t
+            - name: step_ut_11t
+            - name: step_id_13t
+          inputResources:
+            - name: res_doloribus_28t
+            - name: res_odit_43t
+            - name: res_nihil_10t
+            - name: res_consequatur_7t
+            - name: res_voluptatem_6t
+      - name: step_nihil_15t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_soluta_24t "date1=$date"
+            - write_output res_tempora_11t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_recusandae_14t
+            - name: step_sunt_6t
+          inputResources:
+            - name: res_molestias_49t
+            - name: res_necessitatibus_21t
+            - name: res_in_9t
+            - name: res_non_25t
+            - name: res_ut_38t
+          outputResources:
+            - name: res_soluta_24t
+            - name: res_tempora_11t
+      - name: step_itaque_16t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_officiis_39t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_delectus_4t
+            - name: step_perspiciatis_5t
+            - name: step_recusandae_14t
+            - name: step_exercitationem_2t
+          inputResources:
+            - name: res_necessitatibus_21t
+            - name: res_consequatur_7t
+          outputResources:
+            - name: res_officiis_39t
+      - name: step_illum_17t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_2t
+            - name: step_itaque_16t
+            - name: step_eius_12t
+          inputResources:
+            - name: res_neque_48t
+            - name: res_architecto_31t
+            - name: res_ducimus_40t
+      - name: step_ut_18t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_quaerat_45t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_2t
+            - name: step_eius_12t
+          outputResources:
+            - name: res_quaerat_45t
+      - name: step_esse_19t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_vel_30t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_sunt_6t
+            - name: step_exercitationem_2t
+            - name: step_sint_3t
+            - name: step_delectus_4t
+            - name: step_recusandae_14t
+          inputResources:
+            - name: res_neque_48t
+            - name: res_doloribus_28t
+          outputResources:
+            - name: res_vel_30t
+      - name: step_ut_20t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_optio_26t "date1=$date"
+            - write_output res_ipsam_17t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_ut_11t
+          inputResources:
+            - name: res_quaerat_45t
+            - name: res_soluta_24t
+            - name: res_asperiores_42t
+            - name: res_commodi_23t
+          outputResources:
+            - name: res_optio_26t
+            - name: res_ipsam_17t
+      - name: step_ex_21t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_sunt_6t
+            - name: step_id_13t
+          inputResources:
+            - name: res_necessitatibus_21t
+            - name: res_non_25t
+            - name: res_impedit_41t
+      - name: step_quae_22t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_ut_12t "date1=$date"
+            - write_output res_nemo_22t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_itaque_16t
+          inputResources:
+            - name: res_voluptatem_6t
+            - name: res_architecto_31t
+            - name: res_ratione_3t
+          outputResources:
+            - name: res_ut_12t
+            - name: res_nemo_22t
+      - name: step_reprehenderit_23t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_cumque_5t "date1=$date"
+            - write_output res_rem_47t "date1=$date"
+            - write_output res_omnis_34t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_odio_9t
+          inputResources:
+            - name: res_in_9t
+          outputResources:
+            - name: res_cumque_5t
+            - name: res_rem_47t
+            - name: res_omnis_34t
+      - name: step_cumque_24t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_et_18t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_delectus_4t
+            - name: step_id_13t
+          inputResources:
+            - name: res_soluta_24t
+          outputResources:
+            - name: res_et_18t
+      - name: step_in_25t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+            - name: step_iure_7t
+            - name: step_itaque_10t
+          inputResources:
+            - name: res_officiis_39t
+            - name: res_necessitatibus_21t
+            - name: res_odit_43t
+      - name: step_error_26t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_cumque_24t
+          inputResources:
+            - name: res_omnis_34t
+            - name: res_asperiores_42t
+            - name: res_ducimus_40t
+            - name: res_vel_30t
+            - name: res_ipsam_17t
+      - name: step_doloribus_27t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_et_46t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_ut_20t
+            - name: step_saepe_1t
+            - name: step_itaque_10t
+            - name: step_ex_21t
+          inputResources:
+            - name: res_consequatur_7t
+            - name: res_in_9t
+            - name: res_vel_30t
+            - name: res_neque_48t
+          outputResources:
+            - name: res_et_46t
+      - name: step_rerum_28t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_quia_4t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_nihil_15t
+            - name: step_ex_21t
+            - name: step_ut_20t
+          inputResources:
+            - name: res_in_9t
+          outputResources:
+            - name: res_quia_4t
+      - name: step_iste_29t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_nihil_15t
+            - name: step_reprehenderit_23t
+            - name: step_exercitationem_2t
+            - name: step_id_13t
+            - name: step_itaque_16t
+          inputResources:
+            - name: res_ut_12t
+            - name: res_tempora_11t
+      - name: step_velit_30t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_et_20t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_doloribus_27t
+            - name: step_error_26t
+          inputResources:
+            - name: res_asperiores_42t
+            - name: res_rem_47t
+          outputResources:
+            - name: res_et_20t
+      - name: step_quis_31t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_dolores_36t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_itaque_10t
+            - name: step_in_25t
+            - name: step_ut_11t
+            - name: step_quae_22t
+            - name: step_ex_21t
+          inputResources:
+            - name: res_ut_12t
+            - name: res_rem_47t
+          outputResources:
+            - name: res_dolores_36t
+      - name: step_et_32t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_delectus_8t
+          inputResources:
+            - name: res_et_18t
+            - name: res_ducimus_40t
+            - name: res_architecto_31t
+      - name: step_ea_33t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_illum_17t
+            - name: step_reprehenderit_23t
+          inputResources:
+            - name: res_cumque_5t
+      - name: step_corporis_34t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_perspiciatis_5t
+            - name: step_rerum_28t
+            - name: step_cumque_24t
+            - name: step_id_13t
+            - name: step_illum_17t
+          inputResources:
+            - name: res_molestias_49t
+            - name: res_nihil_10t
+            - name: res_cumque_5t
+            - name: res_impedit_41t
+            - name: res_quaerat_45t
+      - name: step_quo_35t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_itaque_16t
+            - name: step_illum_17t
+            - name: step_cumque_24t
+          inputResources:
+            - name: res_cumque_5t
+            - name: res_nihil_10t
+            - name: res_quaerat_45t
+            - name: res_nemo_22t
+      - name: step_quod_36t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_doloribus_29t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quae_22t
+            - name: step_eius_12t
+            - name: step_error_26t
+            - name: step_iure_7t
+            - name: step_et_32t
+          inputResources:
+            - name: res_optio_26t
+            - name: res_non_25t
+          outputResources:
+            - name: res_doloribus_29t
+      - name: step_exercitationem_37t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_nostrum_13t "date1=$date"
+            - write_output res_ab_14t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_corporis_34t
+            - name: step_eius_12t
+            - name: step_sunt_6t
+          inputResources:
+            - name: res_doloribus_29t
+            - name: res_nihil_10t
+            - name: res_ipsam_17t
+            - name: res_optio_26t
+          outputResources:
+            - name: res_nostrum_13t
+            - name: res_ab_14t
+      - name: step_consequuntur_38t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_harum_19t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_in_25t
+            - name: step_ex_21t
+          inputResources:
+            - name: res_et_46t
+            - name: res_et_20t
+          outputResources:
+            - name: res_harum_19t
+      - name: step_asperiores_39t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_velit_30t
+            - name: step_itaque_16t
+            - name: step_id_13t
+            - name: step_illum_17t
+            - name: step_cumque_24t
+          inputResources:
+            - name: res_officiis_39t
+            - name: res_impedit_41t
+            - name: res_nemo_22t
+            - name: res_doloribus_28t
+            - name: res_dolores_36t
+      - name: step_autem_40t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_2t
+            - name: step_saepe_1t
+          inputResources:
+            - name: res_architecto_31t
+            - name: res_neque_48t
+      - name: step_est_41t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_non_27t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quis_31t
+          inputResources:
+            - name: res_quaerat_45t
+            - name: res_et_20t
+          outputResources:
+            - name: res_non_27t
+      - name: step_tempore_42t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_exercitationem_37t
+            - name: step_error_26t
+            - name: step_delectus_4t
+            - name: step_ut_18t
+          inputResources:
+            - name: res_asperiores_42t
+      - name: step_sed_43t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quod_36t
+            - name: step_corporis_34t
+            - name: step_illum_17t
+            - name: step_saepe_1t
+          inputResources:
+            - name: res_vel_30t
+            - name: res_necessitatibus_21t
+      - name: step_quasi_44t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_rerum_28t
+            - name: step_velit_30t
+            - name: step_exercitationem_2t
+          inputResources:
+            - name: res_ratione_3t
+            - name: res_doloribus_29t
+            - name: res_ut_12t
+            - name: res_asperiores_42t
+      - name: step_voluptates_45t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+          inputResources:
+            - name: res_quas_15t
+            - name: res_et_35t
+      - name: step_commodi_46t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_iste_29t
+            - name: step_ut_18t
+            - name: step_asperiores_39t
+            - name: step_doloribus_27t
+          inputResources:
+            - name: res_ipsam_17t
+            - name: res_quaerat_45t
+            - name: res_in_9t
+      - name: step_esse_47t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_itaque_16t
+            - name: step_error_26t
+            - name: step_corporis_34t
+            - name: step_cumque_24t
+            - name: step_ea_33t
+          inputResources:
+            - name: res_ducimus_40t
+            - name: res_omnis_34t
+            - name: res_commodi_23t
+      - name: step_molestias_48t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_voluptates_45t
+            - name: step_in_25t
+            - name: step_ut_20t
+            - name: step_quasi_44t
+            - name: step_autem_40t
+          inputResources:
+            - name: res_vel_30t
+            - name: res_dolores_36t
+            - name: res_nihil_10t
+            - name: res_officiis_39t
+      - name: step_voluptates_49t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_et_44t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_ut_20t
+            - name: step_sunt_6t
+          inputResources:
+            - name: res_doloribus_29t
+            - name: res_ut_12t
+            - name: res_optio_26t
+            - name: res_non_27t
+          outputResources:
+            - name: res_et_44t
+      - name: step_architecto_50t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_delectus_4t
+            - name: step_asperiores_39t
+            - name: step_ea_33t
+            - name: step_consequuntur_38t
+            - name: step_itaque_16t
+          inputResources:
+            - name: res_necessitatibus_21t
+            - name: res_omnis_34t
+            - name: res_praesentium_2t
+      - name: step_illum_51t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+          inputResources:
+            - name: res_cumque_5t
+      - name: step_quia_52t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_doloribus_27t
+            - name: step_quasi_44t
+            - name: step_iure_7t
+            - name: step_et_32t
+          inputResources:
+            - name: res_non_27t
+            - name: res_doloribus_28t
+            - name: res_molestias_49t
+            - name: res_in_9t
+            - name: res_quia_1t
+      - name: step_saepe_53t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_id_13t
+          inputResources:
+            - name: res_nemo_22t
+      - name: step_sint_54t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quasi_44t
+            - name: step_autem_40t
+            - name: step_delectus_4t
+            - name: step_exercitationem_2t
+          inputResources:
+            - name: res_in_9t
+            - name: res_tempora_16t
+            - name: res_doloribus_29t
+            - name: res_impedit_41t
+            - name: res_dolores_36t
+      - name: step_maxime_55t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_tempore_42t
+            - name: step_illum_17t
+            - name: step_molestias_48t
+            - name: step_exercitationem_37t
+          inputResources:
+            - name: res_quia_1t
+            - name: res_soluta_24t
+            - name: res_molestias_49t
+            - name: res_quia_4t
+      - name: step_blanditiis_56t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_perspiciatis_5t
+            - name: step_tempore_42t
+            - name: step_recusandae_14t
+            - name: step_quasi_44t
+            - name: step_ea_33t
+          inputResources:
+            - name: res_in_9t
+            - name: res_dolores_36t
+            - name: res_optio_26t
+            - name: res_architecto_31t
+            - name: res_ducimus_40t
+      - name: step_beatae_57t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_perspiciatis_5t
+            - name: step_reprehenderit_23t
+            - name: step_sed_43t
+          inputResources:
+            - name: res_quaerat_45t
+            - name: res_architecto_31t
+      - name: step_rerum_58t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_cumque_24t
+            - name: step_sunt_6t
+            - name: step_saepe_53t
+          inputResources:
+            - name: res_doloribus_29t
+            - name: res_doloribus_28t
+            - name: res_et_44t
+            - name: res_ut_12t
+      - name: step_id_59t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_id_13t
+            - name: step_sint_3t
+            - name: step_autem_40t
+          inputResources:
+            - name: res_harum_19t
+            - name: res_officiis_39t
+            - name: res_cumque_5t
+            - name: res_molestias_49t
+      - name: step_doloribus_60t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quo_35t
+            - name: step_ex_21t
+            - name: step_esse_47t
+            - name: step_iure_7t
+          inputResources:
+            - name: res_quas_15t
+            - name: res_ducimus_40t
+            - name: res_harum_19t
+      - name: step_et_61t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_ut_18t
+            - name: step_rerum_28t
+            - name: step_recusandae_14t
+            - name: step_corporis_34t
+          inputResources:
+            - name: res_tempora_16t
+            - name: res_ab_14t
+            - name: res_odit_43t
+            - name: res_tempora_11t
+            - name: res_vel_30t
+      - name: step_deleniti_62t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quod_36t
+          inputResources:
+            - name: res_et_35t
+            - name: res_cumque_5t
+            - name: res_ab_14t
+            - name: res_odit_43t
+            - name: res_ut_38t
+      - name: step_modi_63t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_error_26t
+            - name: step_quia_52t
+          inputResources:
+            - name: res_officiis_39t
+            - name: res_quia_4t
+            - name: res_tempora_11t
+            - name: res_harum_19t
+      - name: step_fugiat_64t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_maxime_55t
+            - name: step_eius_12t
+          inputResources:
+            - name: res_tempora_16t
+            - name: res_nihil_10t
+      - name: step_mollitia_65t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_maxime_55t
+            - name: step_velit_30t
+            - name: step_rerum_28t
+          inputResources:
+            - name: res_quia_4t
+            - name: res_officiis_39t
+            - name: res_nemo_22t
+      - name: step_porro_66t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_rerum_28t
+            - name: step_sunt_6t
+            - name: step_exercitationem_2t
+            - name: step_quae_22t
+          inputResources:
+            - name: res_optio_26t
+            - name: res_harum_19t
+      - name: step_quia_67t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_illum_51t
+          inputResources:
+            - name: res_et_44t
+            - name: res_quia_4t
+            - name: res_dolorum_37t
+            - name: res_ab_14t
+            - name: res_asperiores_42t
+      - name: step_quia_68t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_commodi_46t
+            - name: step_quia_67t
+            - name: step_velit_30t
+            - name: step_id_59t
+          inputResources:
+            - name: res_non_27t
+            - name: res_et_18t
+            - name: res_voluptatem_6t
+            - name: res_doloribus_29t
+            - name: res_cumque_5t
+      - name: step_sed_69t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_doloribus_27t
+            - name: step_recusandae_14t
+            - name: step_quis_31t
+          inputResources:
+            - name: res_et_46t
+            - name: res_in_9t
+            - name: res_omnis_34t
+            - name: res_rem_47t
+            - name: res_non_25t
+      - name: step_quia_70t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quasi_44t
+            - name: step_recusandae_14t
+            - name: step_asperiores_39t
+            - name: step_architecto_50t
+          inputResources:
+            - name: res_et_20t
+            - name: res_voluptatem_33t
+      - name: step_maxime_71t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - write_output res_magni_50t "date1=$date"
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_deleniti_62t
+            - name: step_est_41t
+            - name: step_blanditiis_56t
+            - name: step_commodi_46t
+            - name: step_itaque_10t
+          inputResources:
+            - name: res_vel_30t
+            - name: res_odit_43t
+          outputResources:
+            - name: res_magni_50t
+      - name: step_laudantium_72t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_sint_54t
+            - name: step_id_13t
+            - name: step_quia_67t
+          inputResources:
+            - name: res_consequatur_7t
+            - name: res_nemo_22t
+            - name: res_quia_1t
+            - name: res_praesentium_2t
+            - name: res_et_46t
+      - name: step_impedit_73t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_architecto_50t
+            - name: step_sed_69t
+            - name: step_ut_18t
+          inputResources:
+            - name: res_quia_4t
+            - name: res_consequatur_7t
+      - name: step_quia_74t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_esse_47t
+            - name: step_quod_36t
+            - name: step_blanditiis_56t
+          inputResources:
+            - name: res_nemo_22t
+      - name: step_omnis_75t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_saepe_1t
+            - name: step_doloribus_60t
+          inputResources:
+            - name: res_ut_38t
+      - name: step_omnis_76t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_commodi_46t
+            - name: step_quia_70t
+          inputResources:
+            - name: res_et_18t
+            - name: res_tempora_11t
+            - name: res_et_35t
+      - name: step_facilis_77t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_architecto_50t
+            - name: step_omnis_75t
+            - name: step_in_25t
+          inputResources:
+            - name: res_et_20t
+            - name: res_ut_38t
+            - name: res_dolorum_37t
+            - name: res_voluptatem_6t
+            - name: res_et_18t
+      - name: step_porro_78t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_ea_33t
+          inputResources:
+            - name: res_et_44t
+            - name: res_nemo_22t
+            - name: res_dolores_36t
+            - name: res_ut_38t
+      - name: step_vitae_79t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_mollitia_65t
+            - name: step_molestias_48t
+            - name: step_iste_29t
+            - name: step_id_13t
+          inputResources:
+            - name: res_tempora_11t
+            - name: res_commodi_23t
+            - name: res_nihil_10t
+            - name: res_ipsam_17t
+            - name: res_officiis_39t
+      - name: step_qui_80t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_mollitia_65t
+            - name: step_molestias_48t
+          inputResources:
+            - name: res_quas_15t
+            - name: res_ab_14t
+            - name: res_praesentium_2t
+            - name: res_ut_12t
+            - name: res_tempora_11t
+      - name: step_omnis_81t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_odio_9t
+            - name: step_quia_52t
+          inputResources:
+            - name: res_tempora_11t
+            - name: res_vel_30t
+            - name: res_ipsam_17t
+            - name: res_asperiores_42t
+      - name: step_aut_82t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quia_70t
+            - name: step_velit_30t
+            - name: step_quis_31t
+            - name: step_deleniti_62t
+            - name: step_delectus_4t
+          inputResources:
+            - name: res_omnis_34t
+            - name: res_doloribus_28t
+            - name: res_officiis_39t
+      - name: step_aut_83t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_commodi_46t
+            - name: step_facilis_77t
+            - name: step_est_41t
+            - name: step_asperiores_39t
+          inputResources:
+            - name: res_architecto_31t
+            - name: res_voluptatem_6t
+      - name: step_maxime_84t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_rerum_28t
+            - name: step_sed_43t
+          inputResources:
+            - name: res_commodi_23t
+            - name: res_soluta_24t
+            - name: res_hic_8t
+            - name: res_dolores_36t
+      - name: step_nulla_85t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_sed_69t
+          inputResources:
+            - name: res_quia_4t
+            - name: res_voluptatem_33t
+            - name: res_ratione_3t
+      - name: step_aut_86t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_ex_21t
+            - name: step_voluptates_45t
+            - name: step_quia_67t
+          inputResources:
+            - name: res_praesentium_2t
+            - name: res_ut_38t
+            - name: res_cumque_5t
+            - name: res_magni_50t
+      - name: step_deserunt_87t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_modi_63t
+            - name: step_autem_40t
+          inputResources:
+            - name: res_dolores_36t
+            - name: res_doloribus_28t
+            - name: res_cumque_5t
+            - name: res_praesentium_2t
+      - name: step_blanditiis_88t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_doloribus_60t
+            - name: step_in_25t
+            - name: step_velit_30t
+            - name: step_itaque_10t
+            - name: step_esse_47t
+          inputResources:
+            - name: res_vel_30t
+            - name: res_et_35t
+            - name: res_quas_15t
+            - name: res_neque_48t
+            - name: res_quaerat_45t
+      - name: step_ipsam_89t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_aut_82t
+          inputResources:
+            - name: res_ducimus_40t
+            - name: res_tempora_11t
+            - name: res_ut_38t
+            - name: res_rem_47t
+            - name: res_et_20t
+      - name: step_molestiae_90t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quia_74t
+            - name: step_maxime_84t
+            - name: step_aut_86t
+            - name: step_delectus_4t
+            - name: step_et_61t
+          inputResources:
+            - name: res_et_44t
+            - name: res_consequatur_7t
+            - name: res_doloribus_29t
+      - name: step_labore_91t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_recusandae_14t
+            - name: step_commodi_46t
+            - name: step_rerum_28t
+          inputResources:
+            - name: res_ab_14t
+            - name: res_quaerat_45t
+            - name: res_omnis_34t
+      - name: step_eum_92t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quasi_44t
+          inputResources:
+            - name: res_ipsam_17t
+            - name: res_in_9t
+            - name: res_soluta_24t
+            - name: res_molestias_49t
+      - name: step_sapiente_93t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quis_31t
+            - name: step_consequuntur_38t
+            - name: step_omnis_81t
+            - name: step_fugiat_64t
+          inputResources:
+            - name: res_ducimus_40t
+            - name: res_quia_1t
+            - name: res_et_20t
+      - name: step_unde_94t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_aut_83t
+          inputResources:
+            - name: res_non_27t
+            - name: res_nostrum_13t
+            - name: res_in_9t
+            - name: res_nihil_10t
+            - name: res_et_18t
+      - name: step_ipsam_95t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_reprehenderit_23t
+          inputResources:
+            - name: res_et_46t
+      - name: step_qui_96t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_recusandae_14t
+          inputResources:
+            - name: res_impedit_41t
+      - name: step_nemo_97t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_labore_91t
+            - name: step_id_13t
+          inputResources:
+            - name: res_omnis_34t
+            - name: res_quas_15t
+            - name: res_tempora_11t
+            - name: res_neque_48t
+            - name: res_non_25t
+      - name: step_totam_98t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_quia_67t
+            - name: step_sed_69t
+            - name: step_omnis_75t
+            - name: step_quae_22t
+          inputResources:
+            - name: res_ut_38t
+      - name: step_nihil_99t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_esse_47t
+            - name: step_recusandae_14t
+            - name: step_maxime_71t
+            - name: step_beatae_57t
+            - name: step_sed_43t
+          inputResources:
+            - name: res_et_18t
+            - name: res_magni_50t
+            - name: res_rem_47t
+      - name: step_nesciunt_100t
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - 'echo "Executing step on ${stepvar_id}"'
+            - export date=$(date)
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+        configuration:
+          inputSteps:
+            - name: step_rerum_28t
+            - name: step_id_13t
+            - name: step_sint_3t
+          inputResources:
+            - name: res_et_46t
+            - name: res_commodi_23t
+            - name: res_hic_8t
+            - name: res_nihil_10t
+            - name: res_necessitatibus_21t
