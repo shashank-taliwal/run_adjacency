@@ -1,0 +1,25 @@
+pipelines:
+  - name: timeoutPipeline1
+    configuration:
+      timeoutSeconds: 300
+    
+    steps:
+      - name: timeOutStep11
+        type: Bash
+        configuration:
+          timeoutSeconds: 150
+        execution:
+          onExecute:
+            - printenv
+            - sleep 6m
+            
+      - name: timeOutStep12
+        type: Bash
+        configuration:
+          timeoutSeconds: 50
+          inputSteps:
+            - name: timeOutStep11
+        execution:
+          onExecute:
+            - printenv
+            - sleep 10m
