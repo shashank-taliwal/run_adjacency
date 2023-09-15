@@ -13,7 +13,7 @@ pipelines:
         configuration:
           timeoutSeconds: 150
           inputSteps:
-            - name: timeOutStep11
+            - name: firstStep
         execution:
           onExecute:
             - printenv
@@ -23,7 +23,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: timeOutStep11
+            - name: firstStep
         execution:
           onExecute:
             - printenv
