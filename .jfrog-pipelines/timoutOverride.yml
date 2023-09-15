@@ -19,6 +19,17 @@ pipelines:
             - printenv
             - sleep 10m
 
+      - name: timeOutStepMoreThanDefault
+        type: Bash
+        configuration:
+          timeoutSeconds: 4000
+          inputSteps:
+            - name: firstStep
+        execution:
+          onExecute:
+            - printenv
+            - sleep 100m
+            
       - name: timeOutSystemLevel
         type: Bash
         configuration:
