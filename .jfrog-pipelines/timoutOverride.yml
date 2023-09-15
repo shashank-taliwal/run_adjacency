@@ -2,14 +2,11 @@ pipelines:
   - name: timeoutStepLevel
     
     steps:
-      - name: timeOutStep11
+      - name: 1ststep
         type: Bash
-        configuration:
-          timeoutSeconds: 50
         execution:
           onExecute:
             - printenv
-            - sleep 6m
             
       - name: timeOutStep12
         type: Bash
