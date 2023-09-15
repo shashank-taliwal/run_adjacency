@@ -5,7 +5,7 @@ pipelines:
       - name: timeOutStep11
         type: Bash
         configuration:
-          timeoutSeconds: 150
+          timeoutSeconds: 50
         execution:
           onExecute:
             - printenv
@@ -14,7 +14,7 @@ pipelines:
       - name: timeOutStep12
         type: Bash
         configuration:
-          timeoutSeconds: 50
+          timeoutSeconds: 150
           inputSteps:
             - name: timeOutStep11
         execution:
@@ -34,7 +34,7 @@ pipelines:
             
   - name: timeoutNodePoolLevel
     steps:
-      - name: timeOutStep21
+      - name: timeOutStepnodePoolLevel
         type: Bash
         execution:
           onExecute:
