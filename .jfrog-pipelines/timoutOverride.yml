@@ -1,5 +1,5 @@
 pipelines:
-  - name: timeoutPipeline1
+  - name: timeoutPipelineLevel
     configuration:
       timeoutSeconds: 300
     
@@ -23,3 +23,24 @@ pipelines:
           onExecute:
             - printenv
             - sleep 10m
+
+      - name: timeOutStep13
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: timeOutStep11
+        execution:
+          onExecute:
+            - printenv
+            - sleep 10m
+            
+  - name: timeoutNodePoolLevel
+    steps:
+      - name: timeOutStep21
+        type: Bash
+        configuration:
+          timeoutSeconds: 150
+        execution:
+          onExecute:
+            - printenv
+            - sleep 6m
