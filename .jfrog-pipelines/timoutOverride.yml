@@ -2,7 +2,7 @@ pipelines:
   - name: timeoutStepLevel
     
     steps:
-      - name: 1ststep
+      - name: firstStep
         type: Bash
         execution:
           onExecute:
