@@ -29,7 +29,7 @@ pipelines:
             - cat bigger_file.txt
 
           
-  - name: RunHooksPipelineWithLogsAndTests
+  - name: RunHooksPipelineWithLogsAndTests1
     configuration:
       environmentVariables:
         readOnly:
