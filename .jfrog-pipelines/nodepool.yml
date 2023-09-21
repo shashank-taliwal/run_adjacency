@@ -1,0 +1,21 @@
+pipelines:
+  - name: test_nodepool_pipeline
+    configuration:
+      nodePool: runAdj
+    steps:
+      - name: test_nodepool_step1
+        type: Bash
+        execution:
+          onExecute:
+            - printenv
+            - echo "hello"
+            
+      - name: test_nodepool_step2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: test_nodepool_step1
+        execution:
+          onExecute:
+            - printenv
+            - echo "hello"
