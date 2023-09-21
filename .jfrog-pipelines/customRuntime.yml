@@ -14,8 +14,8 @@ pipelines:
         type: image
         image: 
           custom:
-            name: jfpip.jfrog.io/jfrog/pipelines-tools
-            tag: latest
+            name: jfpip.jfrog.io/jfrog/pipelines-api
+            tag: 1.42.2
             registry: aditya_ent
             sourceRepository: dev-releases-docker-local
     steps: #step_r_c definiton
