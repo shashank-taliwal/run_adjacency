@@ -1,6 +1,6 @@
 resources:
 
-  - name: A_Pipeinfo_gitRepo_v1test
+  - name: A_Pipeinfo_gitRepoTest
     type: GitRepo
     configuration:
       path: Varsha-Arun/simple
@@ -8,7 +8,7 @@ resources:
         include: master
       gitProvider: varsha_github
 
-  - name: A_stepArtifact_propertyBag_v1
+  - name: A_stepArtifact_propertyBagTest
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -29,7 +29,7 @@ pipelines:
             - cat bigger_file.txt
 
           
-  - name: RunHooksPipelineWithLogsAndTests1
+  - name: RunHooksPipelineWithLogs
     configuration:
       environmentVariables:
         readOnly:
@@ -55,7 +55,7 @@ pipelines:
           - update_run_description 'test post run desc'
 
     steps:
-      - name: s_stepTestReports_v1
+      - name: s_stepTestReports_v1Test
         type: Bash
         configuration:
           environmentVariables:
@@ -64,14 +64,14 @@ pipelines:
             key3: "value3"
             JFROG_PIPELINES_RUN_STATE_DEBUG: "true"
           inputResources:
-            - name: A_Pipeinfo_gitRepo_v1test
+            - name: A_Pipeinfo_gitRepoTest
         execution:
           onExecute:
             - mkdir -p testResults
             - "echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?><testsuite name=\"myTestSuite\" tests=\"5\" errors=\"2\" failures=\"1\" skip=\"1\"><testcase classname=\"test.One\" name=\"test\" time=\"1\"></testcase><testcase classname=\"test.Two\" name=\"test\" time=\"2\"><error message=\"test.Error\" type=\"ErrorType\">myError</error></testcase><testcase classname=\"test.Three\" name=\"test\" time=\"0\"><skipped/></testcase><testcase classname=\"test.Four\" name=\"test\" time=\"3\"><failure type=\"exceptions.AssertionError\" message=\"True is not false\">My failure message</failure></testcase><testcase classname=\"test.Five\" name=\"test\" time=\"1\"><error message=\"test.Error\" type=\"ErrorType\">mySecondError</error></testcase></testsuite>' > testResults/total.xml"
             - save_tests testResults
-            - cd $res_A_Pipeinfo_gitRepo_v1test_resourcePath
-#             - ls $res_A_Pipeinfo_gitRepo_v1test_resourcePath
+            - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
+#             - ls $res_A_Pipeinfo_gitRepoTest_resourcePath
 #             - ls tests
 #             - ls tests/core
 #             - ls tests/core/sampleExecutionFile
@@ -82,21 +82,21 @@ pipelines:
 #             - pip install --upgrade pip
 #             - hash -d pip
 #             - pip install pytest
-#             - cd $res_A_Pipeinfo_gitRepo_v1test_resourcePath
+#             - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
 #             - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
 #             - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
             - restore_run_files my_files tests/core/sampleExecutionFile/calc.py
             - printenv
             
-      - name: s_stepArtifacts_001_v1
+      - name: s_stepTestReports_v1TestTest
         type: Bash
         configuration:
           inputResources:
-            - name: A_Pipeinfo_gitRepo_v1test
+            - name: A_Pipeinfo_gitRepoTest
           integrations:
             - name: varsha_github
           inputSteps:
-            - name: s_stepTestReports_v1
+            - name: s_stepTestReports_v1Test
         execution:
           onExecute:
             - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
@@ -127,12 +127,12 @@ pipelines:
             - add_run_variables current_runid=$run_id
             - add_run_variables commitSha=$res_jatin_gitrepo2_commitSha
             - printenv
-      - name: s_stepArtifacts_002_v1
+      - name: s_stepArtifacts_002_v1Test
         type: Matrix
         stepMode: Bash
         configuration:
           inputSteps:
-            - name: s_stepArtifacts_001_v1
+            - name: s_stepTestReports_v1TestTest
         stepletMultipliers:
           environmentVariables:
             - animal:    dog
@@ -153,9 +153,9 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: s_stepArtifacts_002_v1
+            - name: s_stepArtifacts_002_v1Test
           outputResources:
-            - name: A_stepArtifact_propertyBag_v1
+            - name: A_stepArtifact_propertyBagTest
         execution:
           onExecute:
 #             - set_run_name 'testRunName'
@@ -164,7 +164,7 @@ pipelines:
             - echo $current_runid
             - add_pipeline_variables prev_runid=$run_id
             - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} 
-            - write_output A_stepArtifact_propertyBag_v1 commitSha=$commitSha runID=$current_runid
+            - write_output A_stepArtifact_propertyBagTest commitSha=$commitSha runID=$current_runid
             - printenv
 
 
@@ -176,7 +176,7 @@ pipelines:
         stepMode: Bash
         configuration:
           inputResources:
-            - name: A_Pipeinfo_gitRepo_v1test
+            - name: A_Pipeinfo_gitRepoTest
         stepletMultipliers:
           environmentVariables:
             - animal:    dog
@@ -191,7 +191,7 @@ pipelines:
               keytest4: valuetest4
         execution:
           onExecute:
-            - cd $res_A_Pipeinfo_gitRepo_v1test_resourcePath
+            - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
             - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
             - pip install --upgrade pip
             - hash -d pip
