@@ -1,5 +1,5 @@
 resources:
-  - name: propertyBag_runtime_c
+  - name: propertyBag_runtime_cTest
     type: PropertyBag
     configuration:
       foo: bar
@@ -24,7 +24,7 @@ pipelines:
         configuration:
           affinityGroup: ag1
           inputResources:
-            - name: propertyBag_runtime_c
+            - name: propertyBag_runtime_cTest
         execution:
           onExecute:
             - printenv
