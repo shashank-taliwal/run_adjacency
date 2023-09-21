@@ -37,6 +37,8 @@ pipelines:
             - echo $key2
             - echo $key3
             - echo $step_node_name
+            - echo "Running " $pipeline_name "|" $step_name > $shared_workspace/myoutput.txt
+            - cat $shared_workspace/myoutput.txt
             
       - name: twoCol_step1ag
         type: Bash
@@ -50,6 +52,8 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - echo $step_node_name
+            - echo "Running " $pipeline_name "|" $step_name > $shared_workspace/twoCol_step1ag.txt
+            - cat $shared_workspace/twoCol_step1ag.txt
                        
       - name: twoCol_step2ag
         type: Bash
@@ -66,6 +70,7 @@ pipelines:
             - echo $LOL_FOO   
             - write_output pb2outputRes test=$commitSha runID=$current_runid
             - echo $step_node_name
+            - cat $shared_workspace/myoutput.txt
             
       - name: twoCol_step3ag
         type: Bash
@@ -79,6 +84,8 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - echo $step_node_name
+            - ls $shared_workspace
+            - cat $shared_workspace/myoutput.txt
                         
       - name: twoCol_step4ag
         type: Bash
@@ -92,6 +99,8 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - echo $step_node_name
+            - ls $shared_workspace
+            - cat $shared_workspace/myoutput.txt
                                     
       - name: twoCol_step5ag
         type: Bash
@@ -105,6 +114,8 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO
             - echo $step_node_name
+            - ls $shared_workspace
+            - cat $shared_workspace/myoutput.txt
             
   - name: affinityGroupPipeline2ag
     configuration:
@@ -123,6 +134,8 @@ pipelines:
             - echo $LOL_FOO
             - sleep 30s
             - echo $step_node_name
+            - ls $shared_workspace
+            - cat $shared_workspace/myoutput.txt
             
       - name: threeCol_step2ag
         type: Bash
@@ -137,6 +150,8 @@ pipelines:
             - echo $LOL_FOO
             - sleep 30s
             - echo $step_node_name
+            - ls $shared_workspace
+            - cat $shared_workspace/myoutput.txt
                     
       - name: threeCol_step3ag
         type: Bash
@@ -150,6 +165,7 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO 
             - sleep 30s
+            - ls $shared_workspace
             - echo $step_node_name
                                 
       - name: fourCol_step1ag
@@ -163,6 +179,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - ls $shared_workspace
             - echo $step_node_name
             
   - name: affinityGroupPipeline4
@@ -176,6 +193,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - ls $shared_workspace
             - echo $step_node_name
             
   - name: affinityGroupPipeline3  
@@ -189,6 +207,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - ls $shared_workspace
             - echo $step_node_name
                              
       - name: sixCol_step2ag
@@ -201,6 +220,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - ls $shared_workspace
             - echo $step_node_name
       
       - name: sixCol_step3ag
@@ -213,6 +233,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - ls $shared_workspace
             - echo $step_node_name
             
       - name: sixCol_step4ag
@@ -225,6 +246,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - ls $shared_workspace
             - echo $step_node_name
           
       - name: sixCol_step5ag
@@ -237,6 +259,7 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
+            - ls $shared_workspace
             - echo $step_node_name
             
       - name: sevenCol_step1ag
@@ -250,4 +273,5 @@ pipelines:
         execution:
           onExecute:
             - printenv 
+            - ls $shared_workspace
             - echo $step_node_name
