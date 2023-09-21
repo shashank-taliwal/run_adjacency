@@ -19,3 +19,16 @@ pipelines:
           onExecute:
             - printenv
             - echo "hello"
+
+  - name: test_nodepool_pipeline2
+    configuration:
+      nodePool: runAdj
+    steps:
+      - name: test_nodepool_step3
+        type: Bash
+        configuration:
+          nodePool: adityan_dynamic
+        execution:
+          onExecute:
+            - printenv
+            - echo "hello"
