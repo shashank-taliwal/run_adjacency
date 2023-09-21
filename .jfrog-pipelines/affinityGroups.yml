@@ -134,8 +134,6 @@ pipelines:
             - echo $LOL_FOO
             - sleep 30s
             - echo $step_node_name
-            - ls $shared_workspace
-            - cat $shared_workspace/myoutput.txt
             
       - name: threeCol_step2ag
         type: Bash
@@ -150,8 +148,6 @@ pipelines:
             - echo $LOL_FOO
             - sleep 30s
             - echo $step_node_name
-            - ls $shared_workspace
-            - cat $shared_workspace/myoutput.txt
                     
       - name: threeCol_step3ag
         type: Bash
@@ -165,8 +161,6 @@ pipelines:
             - echo $JUST_FES
             - echo $LOL_FOO 
             - sleep 30s
-            - ls $shared_workspace
-            - echo $step_node_name
                                 
       - name: fourCol_step1ag
         type: Bash
@@ -179,8 +173,6 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - ls $shared_workspace
-            - echo $step_node_name
             
   - name: affinityGroupPipeline4
     steps:          
@@ -193,8 +185,6 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - ls $shared_workspace
-            - echo $step_node_name
             
   - name: affinityGroupPipeline3  
     steps:
@@ -207,7 +197,6 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - ls $shared_workspace
             - echo $step_node_name
                              
       - name: sixCol_step2ag
@@ -220,7 +209,6 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - ls $shared_workspace
             - echo $step_node_name
       
       - name: sixCol_step3ag
@@ -233,7 +221,6 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - ls $shared_workspace
             - echo $step_node_name
             
       - name: sixCol_step4ag
@@ -246,7 +233,6 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - ls $shared_workspace
             - echo $step_node_name
           
       - name: sixCol_step5ag
@@ -259,7 +245,6 @@ pipelines:
           onExecute:
             - printenv
             - sleep 30s
-            - ls $shared_workspace
             - echo $step_node_name
             
       - name: sevenCol_step1ag
@@ -273,5 +258,4 @@ pipelines:
         execution:
           onExecute:
             - printenv 
-            - ls $shared_workspace
             - echo $step_node_name
