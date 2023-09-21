@@ -36,23 +36,23 @@ pipelines:
           TEST_ENV: "pipelines"
           JUST_FES: "options"
           LOL_FOO: "test"
-    # preRun:
-    #   execution:
-    #     onExecute:
-    #       - printenv
-    #       - echo "Executing Pre Run"
-    #       - echo "new"
-    #       - set_run_name 'pre run name'
-    #       - update_run_description 'pre run desc'
+    preRun:
+      execution:
+        onExecute:
+          - printenv
+          - echo "Executing Pre Run"
+          - echo "new"
+          - set_run_name 'pre run name'
+          - update_run_description 'pre run desc'
             
-    # postRun:
-    #   execution:
-    #     onExecute:
-    #       - printenv
-    #       - echo "Executing Pre Run"
-    #       - echo "new"
-    #       - set_run_name 'post run name'
-    #       - update_run_description 'test post run desc'
+    postRun:
+      execution:
+        onExecute:
+          - printenv
+          - echo "Executing Pre Run"
+          - echo "new"
+          - set_run_name 'post run name'
+          - update_run_description 'test post run desc'
 
     steps:
       - name: s_stepTestReports_v1
