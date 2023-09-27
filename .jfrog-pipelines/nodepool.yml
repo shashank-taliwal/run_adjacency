@@ -27,7 +27,7 @@ pipelines:
       - name: test_nodepool_step3
         type: Bash
         configuration:
-          nodePool: adityan_dynamic
+          nodePool: u18dynamic
         execution:
           onExecute:
             - printenv
