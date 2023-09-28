@@ -28,6 +28,7 @@ pipelines:
             - name: WONParentSucess_resource
         execution:
           onExecute:
+            - sleep 2m
             - write_output WONParentSucess_resource test=${run_number}
 
   - name: A_waitOnParentSuccess_childPipeline
