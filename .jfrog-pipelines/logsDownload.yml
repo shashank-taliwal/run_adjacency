@@ -29,11 +29,17 @@ pipelines:
             - cat big.txt >> bigger_file3.txt
             - cat big.txt >> bigger_file4.txt
             - cat big.txt >> bigger_file5.txt
+            - cat big.txt >> bigger_file6.txt
+            - cat big.txt >> bigger_file7.txt
+            - cat big.txt >> bigger_file8.txt
             - cat bigger_file1.txt
             - cat bigger_file2.txt
             - cat bigger_file3.txt
             - cat bigger_file4.txt
             - cat bigger_file5.txt
+            - cat bigger_file6.txt
+            - cat bigger_file7.txt
+            - cat bigger_file8.txt
           
   - name: RunHooksPipelineWithLogs
     configuration:
