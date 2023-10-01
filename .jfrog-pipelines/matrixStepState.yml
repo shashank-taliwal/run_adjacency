@@ -23,6 +23,8 @@ pipelines:
               type2: step2
         execution:
           onExecute:
+            - printenv
+            - printenv
             - ls -latr .
             - ls -latr preMatrixTest/preState
             - mkdir -p matrixFiles/${steplet_id}
