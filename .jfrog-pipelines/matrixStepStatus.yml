@@ -1,0 +1,126 @@
+pipelines:
+  - name: test_matrix_stepstatus
+    steps:
+      - name: preMatrixTest
+        type: PreMatrix
+        execution:
+          onExecute:
+            - mkdir -p preState
+            - echo "working" >> preState/working.txt
+            - echo ${steplet_id}
+          
+            
+      - name: matrixStepSuccess
+        type: Matrix
+        configuration:
+          inputSteps:
+            - name: preMatrixTest
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+        execution:
+          onExecute:
+            - ls -latr .
+            - ls -latr preMatrixTest/preState
+            - mkdir -p matrixFiles/${steplet_id}
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
+            - echo ${steplet_id}
+            - echo ${step_node_name}
+
+      - name: matrixStepFailure
+        type: Matrix
+        configuration:
+          inputSteps:
+            - name: preMatrixTest
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+            - name1: a
+              name22: b
+            - type3: c
+              type24: d
+        execution:
+          onExecute:
+            - ls -latr .
+            - ls -latr preMatrixTest/preState
+            - mkdir -p matrixFiles/${steplet_id}
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
+            - echo ${steplet_id}
+            - echo ${step_node_name}
+            - okokokok
+
+      - name: matrixStepError
+        type: Matrix
+        configuration:
+          inputSteps:
+            - name: preMatrixTest
+        stepletMultipliers:
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - '15'
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - '13'
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+        execution:
+          onExecute:
+            - ls -latr .
+            - ls -latr preMatrixTest/preState
+            - mkdir -p matrixFiles/${steplet_id}
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
+            - echo ${steplet_id}
+            - echo ${step_node_name}
+            
+      - name: matrixStepTimeout
+        type: Matrix
+        configuration:
+          timeoutSeconds: 50
+          inputSteps:
+            - name: preMatrixTest
+        stepletMultipliers:
+          environmentVariables:
+            - name: test
+              name2: test2
+            - type: step
+              type2: step2
+            - name1: a
+              name22: b
+            - type3: c
+              type24: d
+        execution:
+          onExecute:
+            - ls -latr .
+            - ls -latr preMatrixTest/preState
+            - mkdir -p matrixFiles/${steplet_id}
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
+            - echo ${steplet_id}
+            - echo ${step_node_name}
+            - sleep 10m
+            
+      - name: postMatrixTest
+        type: PostMatrix
+        configuration:
+          inputSteps:
+            - name: matrixStep
+        execution:
+          onExecute:
+            - ls -latr
+            - ls -latr matrixStep
+            - ls -latr matrixStep/matrixFiles
