@@ -118,9 +118,9 @@ pipelines:
         type: PostMatrix
         configuration:
           inputSteps:
-            - name: matrixStep
+            - name: matrixStepSuccess
         execution:
           onExecute:
             - ls -latr
-            - ls -latr matrixStep
-            - ls -latr matrixStep/matrixFiles
+            - ls -latr matrixStepSuccess
+            - ls -latr matrixStepSuccess/matrixFiles
