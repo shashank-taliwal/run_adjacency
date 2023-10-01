@@ -1,0 +1,38 @@
+pipelines:
+  - name: matrixWith15steplets
+    steps:
+      - name: steplets15
+        type: Matrix
+        stepletMultipliers:
+          environmentVariables:
+            - a: key1
+            - b: key2
+            - c: key3
+            - d: key4
+            - e: key5
+            - f: key6
+            - g: key7
+            - h: key8
+            - i: key9
+            - j: key10
+            - k: key11
+            - l: key12
+            - m: key13
+            - n: key14
+            - o: key15
+            # - a: key1
+            # - b: key2
+            # - c: key3
+        execution:
+          onExecute:
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - printenv
+            - mkdir -p matrixFiles/${steplet_id}
+            - echo "working" >> matrixFiles/${steplet_id}/working.txt
+            - echo ${steplet_id}
+            - echo ${step_node_name}
