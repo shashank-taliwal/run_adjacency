@@ -37,6 +37,8 @@ pipelines:
             - echo ${steplet_id}
             - echo ${step_node_name}
 
+  - name: matrixWith15stepletsMultiNode
+    steps:
       - name: steplets18multiNode
         type: Matrix
         configuration:
