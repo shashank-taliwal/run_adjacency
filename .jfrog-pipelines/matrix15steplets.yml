@@ -3,6 +3,8 @@ pipelines:
     steps:
       - name: steplets15
         type: Matrix
+        configuration:
+          concurrency: 5
         stepletMultipliers:
           environmentVariables:
             - a: key1
@@ -25,11 +27,6 @@ pipelines:
             # - c: key3
         execution:
           onExecute:
-            - printenv
-            - printenv
-            - printenv
-            - printenv
-            - printenv
             - printenv
             - printenv
             - mkdir -p matrixFiles/${steplet_id}
