@@ -431,6 +431,18 @@ pipelines:
         execution:
           onExecute:
             - echo "Executing matrix step on ${steplet_id}"
+            - printenv
+            - wget https://norvig.com/big.txt
+            - cat big.txt  >> bigger_file1.txt
+            - cat big.txt >> bigger_file2.txt
+            - cat big.txt >> bigger_file3.txt
+            - cat big.txt >> bigger_file4.txt
+            - cat big.txt >> bigger_file5.txt
+            - cat bigger_file1.txt
+            - cat bigger_file2.txt
+            - cat bigger_file3.txt
+            - cat bigger_file4.txt
+            - cat bigger_file5.txt
 
       - name: teardown_postmatrix
         type: PostMatrix
