@@ -26,6 +26,7 @@ pipelines:
           onExecute:
             - printenv
             - echo $image_tag
+            - echo $int_s_artifactory_url
             - add_run_variables artifactoryRegistry_url="entplus.jfrog.io"
             - echo $artifactoryRegistry_url
             - pushd $res_gitRepo_push_image_artifactory_resourcePath
