@@ -1,5 +1,5 @@
 FROM ubuntu
   
-ADD . /
+ADD . /scripts
 
-RUN /pipelineRuntimeImageInstall.sh
+RUN /scripts/pipelineRuntimeImageInstall.sh
