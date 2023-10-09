@@ -16,11 +16,12 @@ resources:
 
 pipelines:
   - name: buildAndPushCustomImageToArtifactory
+    configuration:
+      jfrogCliVersion: 2
     steps:
       - name: custom_image_build_push
         type: Bash
         configuration:
-          jfrogCliVersion: 2
           affinityGroup: imageBuildPush
           environmentVariables:
             SKIP_DOCKER_RESOURCES_CLEANUP: "true"
@@ -59,7 +60,6 @@ pipelines:
       - name: custom_image_from_artifactory_step
         type: Bash
         configuration:
-          jfrogCliVersion: 2
           inputResources:
             - name: imageBuildInfo
           affinityGroup: imageBuildPush
