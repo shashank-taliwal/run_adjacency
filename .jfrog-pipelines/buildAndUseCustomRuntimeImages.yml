@@ -58,6 +58,9 @@ pipelines:
       - name: custom_image_from_artifactory_step
         type: Bash
         configuration:
+          inputResources:
+            - name: imageBuildInfo
+          affinityGroup: imageBuildPush
           runtime:
             type: image
             image:
