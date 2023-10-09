@@ -55,7 +55,6 @@ pipelines:
           onComplete:
             - stepCommons_on_complete
 
-    steps:
       - name: custom_image_from_artifactory_step
         type: Bash
         configuration:
