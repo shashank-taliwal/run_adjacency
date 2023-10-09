@@ -7,6 +7,13 @@ resources:
       branches:  # optional
         include: master
 
+  - name: imageBuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: s_artifactory
+      buildName: jfreqCustomImg
+      buildNumber: ${run_id}
+
 pipelines:
   - name: buildAndPushCustomImageToArtifactory
     steps:
@@ -24,7 +31,7 @@ pipelines:
             - name: imageBuildInfo
         execution:
           onStart:
-            - artifactory_registry_url=$(echo "$int_second_s_artifactory_url" | sed 's#.*//\([^/]*\)/.*#\1#')
+            - artifactory_registry_url=$(echo "$int_s_artifactory_url" | sed 's#.*//\([^/]*\)/.*#\1#')
             - add_run_variables artifactory_registry_url="$artifactory_registry_url"
             - echo $artifactory_registry_url
           onExecute:
