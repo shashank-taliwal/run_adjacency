@@ -1,5 +1,5 @@
 FROM ubuntu
   
-ADD ..
+ADD . /
 
 RUN /pipelineRuntimeImageInstall.sh
