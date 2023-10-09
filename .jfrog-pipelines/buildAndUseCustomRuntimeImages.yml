@@ -41,13 +41,13 @@ pipelines:
               repository: pipelines-tasks-virtual
               input:
                 resourceName: gitRepo_push_image_artifactory
-                dockerImage: "$artifactory_registry_url/example-repo-local/jfreq_custom_img:${RUN_NUMBER}"
+                dockerImage: "${artifactory_registry_url}/example-repo-local/jfreq_custom_img:${run_id}"
                 dockerFileName: Dockerfile
                 dockerFileLocation: .
             - task: jfrog/docker-push@v0.0.2
               repository: pipelines-tasks-virtual
               input:
-                dockerImage: "$artifactory_registry_url/example-repo-local/jfreq_custom_img:${RUN_NUMBER}"
+                dockerImage: "${artifactory_registry_url}/example-repo-local/jfreq_custom_img:${run_id}"
                 autoPublishBuildInfo: "true"
                 outputBuildInfoResourceName: "imageBuildInfo"
           onFailure:
@@ -69,7 +69,7 @@ pipelines:
               custom:
                 registry: s_artifactory
                 name: $artifactory_registry_url/example-repo-local/jfreq_custom_img
-                tag: ${RUN_NUMBER}
+                tag: ${run_id}
                 autoPull: true
         execution:
           onExecute:
