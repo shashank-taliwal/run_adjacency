@@ -43,7 +43,7 @@ pipelines:
                 resourceName: gitRepo_push_image_artifactory
                 dockerImage: "${artifactory_registry_url}/example-repo-local/jfreq_custom_img:${run_id}"
                 dockerFileName: Dockerfile
-                dockerFileLocation: .
+                dockerFileLocation: scripts
             - task: jfrog/docker-push@v0.0.2
               repository: pipelines-tasks-virtual
               input:
