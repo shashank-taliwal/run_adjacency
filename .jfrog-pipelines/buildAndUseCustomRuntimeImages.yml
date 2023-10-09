@@ -1,43 +1,43 @@
-# resources:
-#   - name: gitRepo_push_image_artifactory
-#     type: GitRepo
-#     configuration:
-#       gitProvider: varsha_github
-#       path: Varsha-Arun/run_adjacency
-#       branches:  # optional
-#         include: master
+resources:
+  - name: gitRepo_push_image_artifactory
+    type: GitRepo
+    configuration:
+      gitProvider: varsha_github
+      path: Varsha-Arun/run_adjacency
+      branches:  # optional
+        include: master
 
 pipelines:
 
-#   - name: push_image_to_artifactory_pipeline
-#     configuration:
-#       environmentVariables:
-#         readOnly:
-#           image_tag: latest
-#     steps:
-#       - name: push_image_to_artifactory_step
-#         type: Bash
-#         configuration:
-#           inputResources:
-#             - name: gitRepo_push_image_artifactory
-#           integrations:
-#             - name: s_artifactory
-#         execution:
-#           onExecute:
-#             - printenv
-#             - echo $image_tag
-#             - add_run_variables artifactoryRegistry_url="entplus.jfrog.io"
-#             - echo $artifactoryRegistry_url
-#             - pushd $res_gitRepo_push_image_artifactory_resourcePath
-#             - docker build -t $artifactoryRegistry_url/test-automation-docker-local/jfreq:$image_tag .
-#             - jfrog rt c entplus --url=$int_s_artifactory_url --user=$int_s_artifactory_user --apikey=$int_s_artifactory_apikey
-#             - jfrog rt docker-push $artifactoryRegistry_url/test-automation-docker-local/jfreq:$image_tag test-automation-docker-local
+  - name: push_image_to_artifactory_pipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          image_tag: latest
+    steps:
+      - name: push_image_to_artifactory_step
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitRepo_push_image_artifactory
+          integrations:
+            - name: s_artifactory
+        execution:
+          onExecute:
+            - printenv
+            - echo $image_tag
+            - add_run_variables artifactoryRegistry_url="entplus.jfrog.io"
+            - echo $artifactoryRegistry_url
+            - pushd $res_gitRepo_push_image_artifactory_resourcePath
+            - docker build -t $int_s_artifactory_url/test-automation-docker-local/jfreq:$image_tag .
+            - jfrog rt c entplus --url=$int_s_artifactory_url --user=$int_s_artifactory_user --apikey=$int_s_artifactory_apikey
+            - jfrog rt docker-push $artifactoryRegistry_url/test-automation-docker-local/jfreq:$image_tag test-automation-docker-local
 
   - name: custom_image_from_artifactory_pipeline
     configuration:
-      # environmentVariables:
-      #   readOnly:
-      #     image_tag: latest
+      environmentVariables:
+        readOnly:
+          image_tag: latest
       runtime:
         type: image
         image:
@@ -54,8 +54,8 @@ pipelines:
             - printenv
             - echo $step_image_name
             - echo $step_image_tag
-            # - echo $image_tag
-            # - add_run_variables artifactoryRegistry_url="entplus.jfrog.io"
-            # - echo $artifactoryRegistry_url
+            - echo $image_tag
+            - add_run_variables artifactoryRegistry_url="entplus.jfrog.io"
+            - echo $artifactoryRegistry_url
             
-            # -  if ! [[ "$step_image_name" =~ "test-automation-docker-local/jfreq" ]]; then return 1; fi
+            -  if ! [[ "$step_image_name" =~ "test-automation-docker-local/jfreq" ]]; then return 1; fi
