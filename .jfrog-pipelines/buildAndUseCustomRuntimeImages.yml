@@ -20,7 +20,6 @@ pipelines:
             - name: s_artifactory
           inputResources:
             - name: gitRepo_push_image_artifactory
-              <<: *git_resource_trigger_condition
           outputResources:
             - name: imageBuildInfo
         execution:
