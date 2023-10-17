@@ -1,3 +1,9 @@
+resources:
+  - name: testResourceEnv
+    type: PropertyBag
+    configuration:
+      testRes: testVal
+
 pipelines:
 
   - name: pipelineReadOnlyEV
@@ -123,3 +129,17 @@ pipelines:
         execution:
           onExecute:
             - printenv
+
+                        
+  - name: pipelineResourceEnvironmentVariable
+    steps:
+            
+      - name: environment_variable_Resource
+        type: Bash
+        configuration:
+          inputResources:
+            - name: testResourceEnv
+        execution:
+          onExecute:
+            - printenv
+            - echo $testRes
