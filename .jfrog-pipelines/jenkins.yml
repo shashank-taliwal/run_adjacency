@@ -14,7 +14,7 @@ resources:
         include: master
 
 pipelines:
-  - name: jenkins_varsha
+  - name: jenkins_testvarsha
 #     configuration:
 #       nodePool: u18dynamic
     steps:
