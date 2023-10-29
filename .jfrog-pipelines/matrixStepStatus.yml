@@ -76,9 +76,9 @@ pipelines:
                     - '13'
           environmentVariables:
             - name: test
-              name2: test2
-            - type: step
-              type2: step2
+              name2: test2 ok
+            - type: step 
+              type2: step2 ok
         execution:
           onExecute:
             - ls -latr .
