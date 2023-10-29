@@ -8,7 +8,7 @@ pipelines:
             - printenv
             - echo "${pipelines_api_url}"
             - echo "$pipelines_api_url"
-            - curl -H "Authorization:Bearer ${builder_api_token}" -H "Content-type:application/json" "${pipelines_api_url}/projectIntegrations/14" -o int.json
+            - curl -H "Authorization:Bearer ${builder_api_token}" -H "Content-type:application/json" "${pipelines_api_url}/projectIntegrations/3" -o int.json
             - echo $(cat int.json)
             - echo $(cat int.json | jq -r '.formJSONValues')
             - echo $(cat int.json | jq -r '.formJSONValues | .[]')
