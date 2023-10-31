@@ -58,12 +58,14 @@ pipelines:
       - name: matrixStepError
         type: Matrix
         configuration:
+          environmentVariables:
+            test_special_char: "test$#@!"
           inputSteps:
             - name: preMatrixTest
         stepletMultipliers:
           environmentVariables:
-            - name: test$%^&
-            - type: $%^&step 
+            - name: test
+            - type: step 
         execution:
           onExecute:
             - ls -latr .
