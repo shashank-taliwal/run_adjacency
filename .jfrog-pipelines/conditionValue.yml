@@ -1,5 +1,33 @@
 pipelines:
 
+
+  - name: pipelineConditionWorkflowAllowFailure
+    steps:
+      - name: allfailure1step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - add_run_variables "key=value"
+            - failure ok
+
+      - name: allfailure2step
+        type: Bash
+        configuration:
+          environmentVariables:
+              new_env:
+                default: 2
+          condition: 'new_env == 2'
+          inputSteps:
+            - name: allfailure1step
+              allowFailure: true
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - echo $key
+            - sleep 10
+            
+
   - name: pipelineConditionVariable
     steps:
       - name: cv1step
