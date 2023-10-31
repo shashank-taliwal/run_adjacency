@@ -107,7 +107,7 @@ pipelines:
             - echo "executing step..."
             - add_run_variables "testauto=value"
 
-      - name: cv2step
+      - name: cvEnvVar2step
         type: Bash
         configuration:
           environmentVariables:
@@ -122,7 +122,7 @@ pipelines:
             - echo $testauto
             - sleep 10
             
-      - name: cv3step
+      - name: cvRunVar3step
         type: Bash
         configuration:
           condition: 'testauto == "value"'
