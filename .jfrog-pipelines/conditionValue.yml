@@ -15,7 +15,7 @@ pipelines:
         configuration:
           allowFailure: true
           inputSteps:
-            - name: allfailure1step
+            - name: allowfailure1step
               status: 
                 - failure
         execution:
@@ -80,14 +80,14 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: WithStatusesFailure
+            - name: WithStatusFailure
               status: 
                 - failure
-            - name: WithStatusesSuccess
+            - name: WithStatusSuccess
             - name: WithStatusError
               status:
                 - error
-            - name: WithStatusesTimeout
+            - name: WithStatusTimeout
               status: 
                 - timeout
             - name: WithStatusSkipped
