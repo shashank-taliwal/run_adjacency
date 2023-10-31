@@ -5,7 +5,6 @@ pipelines:
       - name: cv1step
         type: Bash
         execution:
-          environmentVariable
           onExecute:
             - echo "executing step..."
             - add_run_variables "key=value"
