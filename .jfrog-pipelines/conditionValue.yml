@@ -26,6 +26,78 @@ pipelines:
             - sleep 10
             
 
+  - name: pipelineConditionWorkflowWithStatuses
+    steps:
+      - name: WithStatusSuccess
+        type: Bash
+        execution:
+          onExecute:
+            - echo "executing step..."
+
+      - name: WithStatusFailure
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: WithStatusSuccess
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - failure ok
+
+      - name: WithStatusSkipped
+        type: Bash
+        configuration:
+          condition: 'test == ok'
+          inputSteps:
+            - name: WithStatusSuccess
+        execution:
+          onExecute:
+            - echo "executing step..."
+
+            
+      - name: WithStatusError
+        type: Bash
+        configuration:
+          condition: 'test == ok'
+          inputSteps:
+            - name: WithStatusSuccess
+        execution:
+          onExecute:
+            - echo "executing step..."
+            
+      - name: WithStatusTimeout
+        type: Bash
+        configuration:
+          timeoutSeconds: 30
+          inputSteps:
+            - name: WithStatusSuccess
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - sleep 10m
+            
+      - name: finalStepStatus
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: WithStatusesFailure
+              status: 
+                - failure
+            - name: WithStatusesSuccess
+            - name: WithStatusError
+              status:
+                - error
+            - name: WithStatusesTimeout
+              status: 
+                - timeout
+            - name: WithStatusSkipped
+              status: 
+                - skipped
+            #not testing for unstable and cancelled
+        execution:
+          onExecute:
+            - echo "allow all status "
+            
   - name: pipelineConditionVariable
     steps:
       - name: cv1step
