@@ -3,7 +3,7 @@ pipelines:
 
   - name: pipelineConditionWorkflowAllowFailure
     steps:
-      - name: allfailure1step
+      - name: allowfailure1step
         type: Bash
         execution:
           onExecute:
