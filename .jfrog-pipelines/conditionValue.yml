@@ -24,12 +24,12 @@ pipelines:
             - echo $key
             - sleep 10
             
-      - name: cv1step
+      - name: cv3step
         type: Bash
         configuration:
           condition: 'key == "value"'
           inputSteps:
-            - name: cv2step
+            - name: cv1step
         execution:
           onExecute:
             - echo "executing step..."
