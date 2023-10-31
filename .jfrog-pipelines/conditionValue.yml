@@ -16,6 +16,7 @@ pipelines:
           allowFailure: true
           inputSteps:
             - name: allfailure1step
+              status: failure
         execution:
           onExecute:
             - echo "Even above step failed. we are not skipping this step"
