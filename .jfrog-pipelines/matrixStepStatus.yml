@@ -59,7 +59,7 @@ pipelines:
         type: Matrix
         configuration:
           environmentVariables:
-            test_special_char: "test$#@!"
+            test_special_char: test$# @!
           inputSteps:
             - name: preMatrixTest
         stepletMultipliers:
