@@ -61,24 +61,9 @@ pipelines:
           inputSteps:
             - name: preMatrixTest
         stepletMultipliers:
-          runtimes:
-            - type: image
-              image:
-                auto:
-                  language: node
-                  versions:
-                    - '15'
-            - type: image
-              image:
-                auto:
-                  language: java
-                  versions:
-                    - '13'
           environmentVariables:
-            - name: test
-              name2: test2 ok
-            - type: step 
-              type2: step2 ok
+            - name: test$%^&
+            - type: $%^&step 
         execution:
           onExecute:
             - ls -latr .
