@@ -105,7 +105,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - add_run_variables "key=value"
+            - add_run_variables "testauto=value"
 
       - name: cv2step
         type: Bash
@@ -119,17 +119,17 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - echo $key
+            - echo $testauto
             - sleep 10
             
       - name: cv3step
         type: Bash
         configuration:
-          condition: 'key == "value"'
+          condition: 'testauto == "value"'
           inputSteps:
             - name: cv1step
         execution:
           onExecute:
             - echo "executing step..."
-            - echo $key
+            - echo $testauto
             - sleep 10
