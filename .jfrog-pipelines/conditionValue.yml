@@ -49,7 +49,7 @@ pipelines:
         configuration:
           condition: 'test == ok'
           inputSteps:
-            - name: WithStatusSuccess
+            - name: WithStatusFailure
         execution:
           onExecute:
             - echo "executing step..."
