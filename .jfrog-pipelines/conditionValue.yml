@@ -80,6 +80,7 @@ pipelines:
       - name: finalStepStatus
         type: Bash
         configuration:
+          allowFailure: true
           inputSteps:
             - name: WithStatusFailure
               status: 
