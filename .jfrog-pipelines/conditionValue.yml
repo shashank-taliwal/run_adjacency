@@ -59,7 +59,7 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-              testKey: eq@#!23
+              testKey: eq ok
           inputSteps:
             - name: WithStatusSuccess
         execution:
