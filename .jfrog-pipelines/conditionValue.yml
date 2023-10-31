@@ -5,14 +5,18 @@ pipelines:
       - name: cv1step
         type: Bash
         execution:
+          environmentVariable
           onExecute:
             - echo "executing step..."
-            - add_run_variables "key=1"
+            - add_run_variables "key=value"
 
       - name: cv2step
         type: Bash
         configuration:
-          condition: "key == 1"
+          environmentVariables:
+              new_env:
+                default: 2
+          condition: 'new_env == 2'
           inputSteps:
             - name: cv1step
         execution:
@@ -21,9 +25,10 @@ pipelines:
             - echo $key
             - sleep 10
             
-      - name: cv3step
+      - name: cv1step
         type: Bash
         configuration:
+          condition: 'key == "value"'
           inputSteps:
             - name: cv2step
         execution:
