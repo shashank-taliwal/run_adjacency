@@ -58,7 +58,8 @@ pipelines:
       - name: WithStatusError
         type: Bash
         configuration:
-          condition: 'test == ok'
+          environmentVariables:
+              testKey: eq@#!23
           inputSteps:
             - name: WithStatusSuccess
         execution:
