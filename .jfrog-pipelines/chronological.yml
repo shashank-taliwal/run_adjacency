@@ -54,4 +54,4 @@ pipelines:
             - echo $BRANCH_NAME
           onExecute:
             - printenv
-            - sleep 1m
+            - sleep 5m
