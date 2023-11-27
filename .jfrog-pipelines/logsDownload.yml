@@ -1,213 +1,213 @@
-resources:
+# resources:
 
-  - name: A_Pipeinfo_gitRepoTest
-    type: GitRepo
-    configuration:
-      path: Varsha-Arun/simple
-      branches:
-        include: master
-      gitProvider: varsha_github
+#   - name: A_Pipeinfo_gitRepoTest
+#     type: GitRepo
+#     configuration:
+#       path: Varsha-Arun/simple
+#       branches:
+#         include: master
+#       gitProvider: varsha_github
 
-  - name: A_stepArtifact_propertyBagTest
-    type: PropertyBag
-    configuration:
-      commitSha: 1
-      runID: 1
+#   - name: A_stepArtifact_propertyBagTest
+#     type: PropertyBag
+#     configuration:
+#       commitSha: 1
+#       runID: 1
 
-pipelines:
-  - name: long_Logs_Pipeline
-    steps:
+# pipelines:
+#   - name: long_Logs_Pipeline
+#     steps:
 
-      - name: long_logs_step
-        type: Bash
-        execution:
-          onExecute:
-            - printenv
-            - wget https://norvig.com/big.txt
-            - cat big.txt  >> bigger_file1.txt
-            - cat big.txt >> bigger_file2.txt
-            - cat big.txt >> bigger_file3.txt
-            - cat big.txt >> bigger_file4.txt
-            - cat big.txt >> bigger_file5.txt
-            - cat big.txt >> bigger_file6.txt
-            - cat big.txt >> bigger_file7.txt
-            - cat big.txt >> bigger_file8.txt
-            - cat bigger_file1.txt
-            - cat bigger_file2.txt
-            - cat bigger_file3.txt
-            - cat bigger_file4.txt
-            - cat bigger_file5.txt
-            - cat bigger_file6.txt
-            - cat bigger_file7.txt
-            - cat bigger_file8.txt
+#       - name: long_logs_step
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - printenv
+#             - wget https://norvig.com/big.txt
+#             - cat big.txt  >> bigger_file1.txt
+#             - cat big.txt >> bigger_file2.txt
+#             - cat big.txt >> bigger_file3.txt
+#             - cat big.txt >> bigger_file4.txt
+#             - cat big.txt >> bigger_file5.txt
+#             - cat big.txt >> bigger_file6.txt
+#             - cat big.txt >> bigger_file7.txt
+#             - cat big.txt >> bigger_file8.txt
+#             - cat bigger_file1.txt
+#             - cat bigger_file2.txt
+#             - cat bigger_file3.txt
+#             - cat bigger_file4.txt
+#             - cat bigger_file5.txt
+#             - cat bigger_file6.txt
+#             - cat bigger_file7.txt
+#             - cat bigger_file8.txt
           
-  - name: RunHooksPipelineWithLogs
-    configuration:
-      environmentVariables:
-        readOnly:
-          TEST_ENV: "pipelines"
-          JUST_FES: "options"
-          LOL_FOO: "test"
-    preRun:
-      execution:
-        onExecute:
-          - printenv
-          - echo "Executing Pre Run"
-          - echo "new"
-          - set_run_name 'pre run name'
-          - update_run_description 'pre run desc'
+#   - name: RunHooksPipelineWithLogs
+#     configuration:
+#       environmentVariables:
+#         readOnly:
+#           TEST_ENV: "pipelines"
+#           JUST_FES: "options"
+#           LOL_FOO: "test"
+#     preRun:
+#       execution:
+#         onExecute:
+#           - printenv
+#           - echo "Executing Pre Run"
+#           - echo "new"
+#           - set_run_name 'pre run name'
+#           - update_run_description 'pre run desc'
             
-    postRun:
-      execution:
-        onExecute:
-          - printenv
-          - echo "Executing Pre Run"
-          - echo "new"
-          - set_run_name 'post run name'
-          - update_run_description 'test post run desc'
+#     postRun:
+#       execution:
+#         onExecute:
+#           - printenv
+#           - echo "Executing Pre Run"
+#           - echo "new"
+#           - set_run_name 'post run name'
+#           - update_run_description 'test post run desc'
 
-    steps:
-      - name: s_stepTestReports_v1Test
-        type: Bash
-        configuration:
-          environmentVariables:
-            key1: "value1"
-            key2: "value2"
-            key3: "value3"
-            JFROG_PIPELINES_RUN_STATE_DEBUG: "true"
-          inputResources:
-            - name: A_Pipeinfo_gitRepoTest
-        execution:
-          onExecute:
-            - mkdir -p testResults
-            - "echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?><testsuite name=\"myTestSuite\" tests=\"5\" errors=\"2\" failures=\"1\" skip=\"1\"><testcase classname=\"test.One\" name=\"test\" time=\"1\"></testcase><testcase classname=\"test.Two\" name=\"test\" time=\"2\"><error message=\"test.Error\" type=\"ErrorType\">myError</error></testcase><testcase classname=\"test.Three\" name=\"test\" time=\"0\"><skipped/></testcase><testcase classname=\"test.Four\" name=\"test\" time=\"3\"><failure type=\"exceptions.AssertionError\" message=\"True is not false\">My failure message</failure></testcase><testcase classname=\"test.Five\" name=\"test\" time=\"1\"><error message=\"test.Error\" type=\"ErrorType\">mySecondError</error></testcase></testsuite>' > testResults/total.xml"
-            - save_tests testResults
-            - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
-#             - ls $res_A_Pipeinfo_gitRepoTest_resourcePath
-#             - ls tests
-#             - ls tests/core
-#             - ls tests/core/sampleExecutionFile
-#             - cat tests/core/sampleExecutionFile/calc.py
-#             - add_run_files tests/core/sampleExecutionFile/calc.py my_files 
-#             - add_run_variables testRunVariable=ok
+#     steps:
+#       - name: s_stepTestReports_v1Test
+#         type: Bash
+#         configuration:
+#           environmentVariables:
+#             key1: "value1"
+#             key2: "value2"
+#             key3: "value3"
+#             JFROG_PIPELINES_RUN_STATE_DEBUG: "true"
+#           inputResources:
+#             - name: A_Pipeinfo_gitRepoTest
+#         execution:
+#           onExecute:
+#             - mkdir -p testResults
+#             - "echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?><testsuite name=\"myTestSuite\" tests=\"5\" errors=\"2\" failures=\"1\" skip=\"1\"><testcase classname=\"test.One\" name=\"test\" time=\"1\"></testcase><testcase classname=\"test.Two\" name=\"test\" time=\"2\"><error message=\"test.Error\" type=\"ErrorType\">myError</error></testcase><testcase classname=\"test.Three\" name=\"test\" time=\"0\"><skipped/></testcase><testcase classname=\"test.Four\" name=\"test\" time=\"3\"><failure type=\"exceptions.AssertionError\" message=\"True is not false\">My failure message</failure></testcase><testcase classname=\"test.Five\" name=\"test\" time=\"1\"><error message=\"test.Error\" type=\"ErrorType\">mySecondError</error></testcase></testsuite>' > testResults/total.xml"
+#             - save_tests testResults
+#             - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
+# #             - ls $res_A_Pipeinfo_gitRepoTest_resourcePath
+# #             - ls tests
+# #             - ls tests/core
+# #             - ls tests/core/sampleExecutionFile
+# #             - cat tests/core/sampleExecutionFile/calc.py
+# #             - add_run_files tests/core/sampleExecutionFile/calc.py my_files 
+# #             - add_run_variables testRunVariable=ok
+# #             - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
+# #             - pip install --upgrade pip
+# #             - hash -d pip
+# #             - pip install pytest
+# #             - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
+# #             - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
+# #             - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
+#             - restore_run_files my_files tests/core/sampleExecutionFile/calc.py
+#             - printenv
+            
+#       - name: s_stepTestReports_v1TestTest
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: A_Pipeinfo_gitRepoTest
+#           integrations:
+#             - name: varsha_github
+#           inputSteps:
+#             - name: s_stepTestReports_v1Test
+#         execution:
+#           onExecute:
+#             - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
+#             - echo "executing step api_pipeinfo_step1"
+#             - printenv
+# #             - "steps=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/steps?runIds=${run_id}&names=S_Bash_util_4075_001_1\")"
+# #             - echo steps:$steps
+# #             - stepId=$(echo $steps | jq -r '.[0].id')
+# #             - if [ -z "$stepId" ] || [ "$stepId" == "null" ]; then return 1; fi
+# #             - "stepTestReports=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/stepTestReports?stepIds=${stepId}\")"
+# #             - durationSeconds=$(echo $stepTestReports | jq -r '.[0].durationSeconds')
+# #             - if [ "$durationSeconds" != "7" ]; then return 1; fi
+# #             - totalTests=$(echo $stepTestReports | jq -r '.[0].totalTests')
+# #             - if [ "$totalTests" != "5" ]; then return 1; fi
+# #             - totalPassing=$(echo $stepTestReports | jq -r '.[0].totalPassing')
+# #             - if [ "$totalPassing" != "1" ]; then return 1; fi
+# #             - totalFailures=$(echo $stepTestReports | jq -r '.[0].totalFailures')
+# #             - if [ "$totalFailures" != "1" ]; then return 1; fi
+# #             - totalErrors=$(echo $stepTestReports | jq -r '.[0].totalErrors')
+# #             - if [ "$totalErrors" != "2" ]; then return 1; fi
+# #             - totalSkipped=$(echo $stepTestReports | jq -r '.[0].totalSkipped')
+# #             - if [ "$totalSkipped" != "1" ]; then return 1; fi
+# #             - errorDetails=$(echo $stepTestReports | jq -r '.[0].errorDetails | length')
+# #             - if [ "$errorDetails" != "2" ]; then return 1; fi
+# #             - failureDetails=$(echo $stepTestReports | jq -r '.[0].failureDetails | length')
+# #             - if [ "$failureDetails" != "1" ]; then return 1; fi
+#           onComplete:
+#             - add_run_variables current_runid=$run_id
+#             - add_run_variables commitSha=$res_jatin_gitrepo2_commitSha
+#             - printenv
+#       - name: s_stepArtifacts_002_v1Test
+#         type: Matrix
+#         stepMode: Bash
+#         configuration:
+#           inputSteps:
+#             - name: s_stepTestReports_v1TestTest
+#         stepletMultipliers:
+#           environmentVariables:
+#             - animal:    dog
+#               mineral:   copper
+#               vegetable: carrot
+#             - animal:    goat
+#               mineral:   iron
+#               vegetable: broccoli
+#             - animal:    lizard
+#               mineral:   lead
+#         execution:
+#           onExecute:
+#             - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
+#             - echo "I am executing matrix steplet \${steplet_id}"
+#             - echo "Envs animal= $animal , mineral = $mineral , vegetable = $vegetable"
+#             - printenv
+#       - name: s_stepArtifacts_003_v1
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: s_stepArtifacts_002_v1Test
+#           outputResources:
+#             - name: A_stepArtifact_propertyBagTest
+#         execution:
+#           onExecute:
+# #             - set_run_name 'testRunName'
+# #             - update_run_description 'testRunDescription'
+#             - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
+#             - echo $current_runid
+#             - add_pipeline_variables prev_runid=$run_id
+#             - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} 
+#             - write_output A_stepArtifact_propertyBagTest commitSha=$commitSha runID=$current_runid
+#             - printenv
+
+
+#   - name: steplet_tests_Pipeline
+#     steps:
+
+#       - name: stepletTests
+#         type: Matrix
+#         stepMode: Bash
+#         configuration:
+#           inputResources:
+#             - name: A_Pipeinfo_gitRepoTest
+#         stepletMultipliers:
+#           environmentVariables:
+#             - animal:    dog
+#             - animal:    goat
+#               mineral:   iron
+#               vegetable: broccoli
+#             - animal:    lizard
+#               mineral:   lead
+#             - keytest1: valuetest1
+#               keytest2: valuetest2
+#               keytest3: valuetest3
+#               keytest4: valuetest4
+#         execution:
+#           onExecute:
+#             - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
 #             - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
 #             - pip install --upgrade pip
 #             - hash -d pip
 #             - pip install pytest
-#             - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
 #             - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
 #             - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
-            - restore_run_files my_files tests/core/sampleExecutionFile/calc.py
-            - printenv
-            
-      - name: s_stepTestReports_v1TestTest
-        type: Bash
-        configuration:
-          inputResources:
-            - name: A_Pipeinfo_gitRepoTest
-          integrations:
-            - name: varsha_github
-          inputSteps:
-            - name: s_stepTestReports_v1Test
-        execution:
-          onExecute:
-            - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
-            - echo "executing step api_pipeinfo_step1"
-            - printenv
-#             - "steps=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/steps?runIds=${run_id}&names=S_Bash_util_4075_001_1\")"
-#             - echo steps:$steps
-#             - stepId=$(echo $steps | jq -r '.[0].id')
-#             - if [ -z "$stepId" ] || [ "$stepId" == "null" ]; then return 1; fi
-#             - "stepTestReports=$(curl -sS -H \"Authorization: Bearer $builder_api_token\" -H 'Content-Type: application/json' \"${pipelines_api_url}/stepTestReports?stepIds=${stepId}\")"
-#             - durationSeconds=$(echo $stepTestReports | jq -r '.[0].durationSeconds')
-#             - if [ "$durationSeconds" != "7" ]; then return 1; fi
-#             - totalTests=$(echo $stepTestReports | jq -r '.[0].totalTests')
-#             - if [ "$totalTests" != "5" ]; then return 1; fi
-#             - totalPassing=$(echo $stepTestReports | jq -r '.[0].totalPassing')
-#             - if [ "$totalPassing" != "1" ]; then return 1; fi
-#             - totalFailures=$(echo $stepTestReports | jq -r '.[0].totalFailures')
-#             - if [ "$totalFailures" != "1" ]; then return 1; fi
-#             - totalErrors=$(echo $stepTestReports | jq -r '.[0].totalErrors')
-#             - if [ "$totalErrors" != "2" ]; then return 1; fi
-#             - totalSkipped=$(echo $stepTestReports | jq -r '.[0].totalSkipped')
-#             - if [ "$totalSkipped" != "1" ]; then return 1; fi
-#             - errorDetails=$(echo $stepTestReports | jq -r '.[0].errorDetails | length')
-#             - if [ "$errorDetails" != "2" ]; then return 1; fi
-#             - failureDetails=$(echo $stepTestReports | jq -r '.[0].failureDetails | length')
-#             - if [ "$failureDetails" != "1" ]; then return 1; fi
-          onComplete:
-            - add_run_variables current_runid=$run_id
-            - add_run_variables commitSha=$res_jatin_gitrepo2_commitSha
-            - printenv
-      - name: s_stepArtifacts_002_v1Test
-        type: Matrix
-        stepMode: Bash
-        configuration:
-          inputSteps:
-            - name: s_stepTestReports_v1TestTest
-        stepletMultipliers:
-          environmentVariables:
-            - animal:    dog
-              mineral:   copper
-              vegetable: carrot
-            - animal:    goat
-              mineral:   iron
-              vegetable: broccoli
-            - animal:    lizard
-              mineral:   lead
-        execution:
-          onExecute:
-            - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
-            - echo "I am executing matrix steplet \${steplet_id}"
-            - echo "Envs animal= $animal , mineral = $mineral , vegetable = $vegetable"
-            - printenv
-      - name: s_stepArtifacts_003_v1
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: s_stepArtifacts_002_v1Test
-          outputResources:
-            - name: A_stepArtifact_propertyBagTest
-        execution:
-          onExecute:
-#             - set_run_name 'testRunName'
-#             - update_run_description 'testRunDescription'
-            - JFROG_PIPELINES_RUN_STATE_DEBUG="true"
-            - echo $current_runid
-            - add_pipeline_variables prev_runid=$run_id
-            - add_run_variables step_one_id=\${step_id} step_one_stepletId=\${steplet_id} 
-            - write_output A_stepArtifact_propertyBagTest commitSha=$commitSha runID=$current_runid
-            - printenv
-
-
-  - name: steplet_tests_Pipeline
-    steps:
-
-      - name: stepletTests
-        type: Matrix
-        stepMode: Bash
-        configuration:
-          inputResources:
-            - name: A_Pipeinfo_gitRepoTest
-        stepletMultipliers:
-          environmentVariables:
-            - animal:    dog
-            - animal:    goat
-              mineral:   iron
-              vegetable: broccoli
-            - animal:    lizard
-              mineral:   lead
-            - keytest1: valuetest1
-              keytest2: valuetest2
-              keytest3: valuetest3
-              keytest4: valuetest4
-        execution:
-          onExecute:
-            - cd $res_A_Pipeinfo_gitRepoTest_resourcePath
-            - python3 -m py_compile tests/core/sampleExecutionFile/calc.py
-            - pip install --upgrade pip
-            - hash -d pip
-            - pip install pytest
-            - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
-            - save_tests $res_A_Pipeinfo_gitRepo_v1_resourcePath/test-reports/results.xml
-            - printenv
+#             - printenv
