@@ -22,12 +22,12 @@ pipelines:
 
   - name: test_nodepool_pipeline2
     configuration:
-      nodePool: runAdj
+      nodePool: shashank_np_2
     steps:
       - name: test_nodepool_step3
         type: Bash
         configuration:
-          nodePool: u18dynamic
+          nodePool: shashank_np_3
         execution:
           onExecute:
             - printenv
