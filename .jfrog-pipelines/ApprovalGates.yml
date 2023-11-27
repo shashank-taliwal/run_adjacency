@@ -1,11 +1,4 @@
-
-resources:
-  - name: gitRepoSimple
-    type: GitRepo
-    configuration:
-      gitProvider: varsha_github
-      path: Varsha-Arun/simple
-      
+    
 pipelines:
   - name: ApprovalGatesPipeline
     configuration:
@@ -16,8 +9,6 @@ pipelines:
       - name: step1ap1
         type: Bash
         configuration:
-          inputResources:
-            - name: gitRepoSimple
           requiresApproval:
             approvers:
               - member
@@ -28,8 +19,6 @@ pipelines:
       - name: step2ap2
         type: Bash
         configuration:
-          inputResources:
-            - name: gitRepoSimple
           requiresApproval:
             approvers:
               - member
