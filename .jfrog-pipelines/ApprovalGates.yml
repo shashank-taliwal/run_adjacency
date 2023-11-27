@@ -18,6 +18,8 @@ pipelines:
       - name: step2ap2
         type: Bash
         configuration:
+          inputSteps:
+            - name: step1ap1
           requiresApproval:
             approvers:
               - member
