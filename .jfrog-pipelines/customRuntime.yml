@@ -1,31 +1,31 @@
-resources:
-  - name: propertyBag_runtime_cTest
-    type: PropertyBag
-    configuration:
-      foo: bar
-      foo1: bar1
-      foo2: bar2
+# resources:
+#   - name: propertyBag_runtime_cTest
+#     type: PropertyBag
+#     configuration:
+#       foo: bar
+#       foo1: bar1
+#       foo2: bar2
 
 
-pipelines:
-  - name: pipeline_runtime_custom_sanity_Varsha
-    configuration:
-      runtime: 
-        type: image
-        image: 
-          custom:
-            name: jfpip.jfrog.io/jfrog/pipelines-api
-            tag: 1.42.2
-            registry: aditya_ent
-            sourceRepository: dev-releases-docker-local
-    steps: #step_r_c definiton
-      - name: step_r_c_s1Test
-        type: Bash
-        configuration:
-          affinityGroup: ag1
-          inputResources:
-            - name: propertyBag_runtime_cTest
-        execution:
-          onExecute:
-            - printenv
-            - echo "step executed"
+# pipelines:
+#   - name: pipeline_runtime_custom_sanity_Varsha
+#     configuration:
+#       runtime: 
+#         type: image
+#         image: 
+#           custom:
+#             name: jfpip.jfrog.io/jfrog/pipelines-api
+#             tag: 1.42.2
+#             registry: aditya_ent
+#             sourceRepository: dev-releases-docker-local
+#     steps: #step_r_c definiton
+#       - name: step_r_c_s1Test
+#         type: Bash
+#         configuration:
+#           affinityGroup: ag1
+#           inputResources:
+#             - name: propertyBag_runtime_cTest
+#         execution:
+#           onExecute:
+#             - printenv
+#             - echo "step executed"
