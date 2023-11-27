@@ -20,9 +20,9 @@ pipelines:
             - type: step
               type2: step2
           nodePools:
-            - win_2019
-            - u18dynamic
-            - testu18
+            - shashank_np
+            - shashank_np_2
+            - default-dynamic-nodepool
         execution:
           onExecute:
             - echo Im executing
@@ -74,9 +74,9 @@ pipelines:
             - name: test
             - test: hello
           nodePools:
-            - win_2019
-            - u18dynamic
-            - testu18
+            - shashank_np
+            - shashank_np_2
+            - default-dynamic-nodepool
         execution:
           onExecute:
             - echo Im executing
@@ -120,9 +120,9 @@ pipelines:
             - name: test
             - test: hello
           nodePools:
-            - win_2019
-            - u18dynamic
-            - testu18
+            - shashank_np
+            - shashank_np_2
+            - default-dynamic-nodepool
         execution:
           onExecute:
             - echo Im executing
