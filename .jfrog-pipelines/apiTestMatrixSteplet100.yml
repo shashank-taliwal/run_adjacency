@@ -2,10 +2,10 @@ resources:
   - name: simple_gitrepo
     type: GitRepo
     configuration:
-      gitProvider: varsha_github
-      path: Varsha-Arun/simple
+      gitProvider: git_int
+      path: shashank-taliwal/run_adjacency
       branches:
-        include: master
+        include: main
 
 pipelines:
   - name: api_testsSample
@@ -266,7 +266,7 @@ pipelines:
             default: "testing,PIPELINES"
             allowCustom: true
       integrations:
-        - name: varsha_github
+        - name: git_int
 
     steps:
       - name: setup_prematrix

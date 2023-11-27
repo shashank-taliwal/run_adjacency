@@ -6,7 +6,7 @@
 #       path: Varsha-Arun/simple
 #       branches:
 #         include: master
-#       gitProvider: varsha_github
+#       gitProvider: git_int
 
 #   - name: A_stepArtifact_propertyBagTest
 #     type: PropertyBag
@@ -106,7 +106,7 @@
 #           inputResources:
 #             - name: A_Pipeinfo_gitRepoTest
 #           integrations:
-#             - name: varsha_github
+#             - name: git_int
 #           inputSteps:
 #             - name: s_stepTestReports_v1Test
 #         execution:

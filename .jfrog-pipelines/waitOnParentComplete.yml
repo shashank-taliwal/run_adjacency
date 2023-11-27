@@ -7,8 +7,8 @@ resources:
   - name: dependencyModeRepo
     type: GitRepo
     configuration:
-      gitProvider: varsha_github
-      path: Varsha-Arun/simple
+      gitProvider: git_int
+      path: shashank-taliwal/run_adjacency
       branches:
         include: main
 

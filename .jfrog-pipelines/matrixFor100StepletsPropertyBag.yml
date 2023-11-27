@@ -265,7 +265,7 @@ pipelines:
             default: "testing,PIPELINES"
             allowCustom: true
       integrations:
-        - name: varsha_github
+        - name: git_int
 
     steps:
       - name: setup_prematrixtest

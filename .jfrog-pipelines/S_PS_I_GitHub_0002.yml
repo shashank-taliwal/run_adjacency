@@ -6,22 +6,22 @@
 #         configuration:
 #           nodePool: win_2019
 #           integrations:
-#             - name: varsha_github
+#             - name: git_int
 #         execution:
 #           onExecute:
 #             - write-output "executing step..."
-#             - if($int_varsha_github_url -eq $null){
+#             - if($int_git_int_url -eq $null){
 #               Write-Error "Stop" -ErrorAction Stop
 #               }
-#             - if($int_varsha_github_masterName -eq $null){
+#             - if($int_git_int_masterName -eq $null){
 #               Write-Error "Stop" -ErrorAction Stop
 #               }
-#             - if($int_varsha_github_name -eq $null){
+#             - if($int_git_int_name -eq $null){
 #               Write-Error "Stop" -ErrorAction Stop
 #               }
-#             - if($int_varsha_github_token -eq $null){
+#             - if($int_git_int_token -eq $null){
 #               Write-Error "Stop" -ErrorAction Stop
 #               }
-#             - if($int_varsha_github_id -eq $null){
+#             - if($int_git_int_id -eq $null){
 #               Write-Error "Stop" -ErrorAction Stop
 #               }  

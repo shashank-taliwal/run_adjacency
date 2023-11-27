@@ -8,10 +8,10 @@ resources:
   - name: sample_script_repo
     type: GitRepo
     configuration:
-      gitProvider: varsha_github
-      path: Varsha-Arun/sample-script
+      gitProvider: git_int
+      path: shashank-taliwal/run_adjacency
       branches:
-        include: master
+        include: main
 
 pipelines:
   - name: jenkins_testvarsha

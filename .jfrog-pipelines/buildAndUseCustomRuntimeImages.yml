@@ -2,10 +2,10 @@ resources:
   - name: gitRepo_push_image_artifactory
     type: GitRepo
     configuration:
-      gitProvider: varsha_github
-      path: Varsha-Arun/run_adjacency
+      gitProvider: git_int
+      path: shashank-taliwal/run_adjacency
       branches:  # optional
-        include: master
+        include: main
 
   - name: imageBuildInfo
     type: BuildInfo

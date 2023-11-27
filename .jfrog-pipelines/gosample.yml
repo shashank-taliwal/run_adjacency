@@ -2,7 +2,7 @@
 #   - name: S_GoPublishBinary_0024_GitRepo_resource
 #     type: GitRepo
 #     configuration:
-#       gitProvider: varsha_github
+#       gitProvider: git_int
 #       path: jfbetapipeorg/Org_test_Automation_bash
 #       branches:
 #         include: main

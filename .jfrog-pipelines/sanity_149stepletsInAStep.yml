@@ -230,7 +230,7 @@
 #           AWS_NODEPOOL_CUSTOMTAG_KEYS: "test"
 #           AWS_NODEPOOL_CUSTOMTAG_VALUES: "test"
 #       integrations:
-#         - name: varsha_github
+#         - name: git_int
 
 #     steps:
 #       - name: setup_prematrixTest1Test

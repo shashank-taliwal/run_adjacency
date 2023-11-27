@@ -2,8 +2,8 @@ resources:
   - name: S_Bash_Generic_5858_0010
     type: GitRepo
     configuration:
-      gitProvider: varsha_github
-      path: Varsha-Arun/simple
+      gitProvider: git_int
+      path: shashank-taliwal/run_adjacency
       
 pipelines:
   - name: Pipeline_S_Bash_Generic_5858_0010
